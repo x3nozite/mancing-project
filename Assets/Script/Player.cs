@@ -1,16 +1,45 @@
+using System;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private float maxSpeed = 10f;
-    [SerializeField] private float acceleration = 20f; 
-    [SerializeField] private float deceleration = 5f;
+    public Animator anim;
 
-    private Vector3 currentVelocity;
-
+    [SerializeField] private float moveSpeed = 5f;
+    public bool playerMovement = true; 
+    
+    private bool isPlayerMoving = false;
+    Vector3 targetDirection;
     void Update()
     {
-        HandleMovement();
+        if(playerMovement == true)
+        {
+            HandleMovement();
+        }
+        Animate();
+    }
+
+    void Animate()
+    {
+        Vector3 mouseScreenPos = Input.mousePosition;
+        mouseScreenPos.z = 10f; 
+
+        Vector3 mouseWorldPos = UnityEngine.Camera.main.ScreenToWorldPoint(mouseScreenPos);
+        Vector3 lookDirection = (mouseWorldPos - transform.position).normalized;
+
+        anim.SetFloat("mouseX", lookDirection.x);
+        anim.SetFloat("mouseY", lookDirection.y);
+        anim.SetBool("isMoving", isPlayerMoving);
+        anim.SetFloat("moveX", targetDirection.x);
+        anim.SetFloat("moveX", targetDirection.y);
+
+        if(mouseWorldPos.x < transform.position.x)
+        {
+            gameObject.GetComponent<SpriteRenderer>().flipX = true;
+        }else
+        {
+            gameObject.GetComponent<SpriteRenderer>().flipX = false;
+        }
     }
 
     void HandleMovement()
@@ -23,17 +52,10 @@ public class Player : MonoBehaviour
         if(Input.GetKey(KeyCode.D)) inputX++;
         if(Input.GetKey(KeyCode.A)) inputX--;
 
-        Vector3 targetDirection = new Vector3(inputX, inputY, 0).normalized;
+        if(inputX != 0f || inputY != 0f) isPlayerMoving = true;
+        else isPlayerMoving = false;
 
-        if(targetDirection.sqrMagnitude > 0)
-        {
-            currentVelocity = Vector3.MoveTowards(currentVelocity, targetDirection * maxSpeed, acceleration * Time.deltaTime);
-        }
-        else
-        {
-            currentVelocity = Vector3.MoveTowards(currentVelocity, Vector3.zero, deceleration * Time.deltaTime);
-        }
-
-        transform.position += currentVelocity * Time.deltaTime;
+        targetDirection = new Vector3(inputX, inputY, 0).normalized;
+        transform.position += targetDirection * moveSpeed * Time.deltaTime;
     }
 }
