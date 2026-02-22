@@ -15,8 +15,7 @@ public class MainMenuScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W))
         {
             GameManager.instance.updateState(GameState.Gameplay);
-            SceneManager.LoadScene("GameplayPlaceholder");
-            Debug.Log("aaa");
+            SceneManager.LoadScene("BrandonScene");
         }
     }
 }
