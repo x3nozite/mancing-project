@@ -12,11 +12,16 @@ public class Player : MonoBehaviour
     Vector3 targetDirection;
     void Update()
     {
+        Animate();
+    }
+
+    void FixedUpdate()
+    {
         if(playerMovement == true)
         {
             HandleMovement();
         }
-        Animate();
+
     }
 
     void Animate()
