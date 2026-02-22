@@ -3,6 +3,7 @@ using UnityEngine;
 public class PopUpMenuManager : MonoBehaviour
 {
     public static PopUpMenuManager Instance;
+    private GameObject currentPrimaryPopUp;
     
     void Awake()
     {
@@ -14,14 +15,22 @@ public class PopUpMenuManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void OpenPopUpMenu(GameObject menuPrefab)
+    public void OpenPrimaryPopUpMenu(GameObject menuPrefab)
     {
+        if(currentPrimaryPopUp != null)
+        {
+            ClosePrimaryPopUpMenu(currentPrimaryPopUp);
+        }
         Canvas canvas = FindFirstObjectByType<Canvas>();
-        Instantiate(menuPrefab, canvas.transform);
+        currentPrimaryPopUp = Instantiate(menuPrefab, canvas.transform);
     }
 
-    public void ClosePopUpMenu(GameObject menu)
+    public void ClosePrimaryPopUpMenu(GameObject menu)
     {
-        Destroy(menu);
+        if (currentPrimaryPopUp != null)
+        {
+            Destroy(menu);
+            currentPrimaryPopUp = null;
+        }
     }
 }

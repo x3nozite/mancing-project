@@ -8,6 +8,6 @@ public class OptionsScript : MonoBehaviour, IPointerClickHandler
     {
         if (PopUpMenuManager.Instance == null) Debug.Log("Manager is null");
         if (optionMenu == null) Debug.Log("optionMenu prefab is null");
-        PopUpMenuManager.Instance.OpenPopUpMenu(optionMenu);
+        PopUpMenuManager.Instance.OpenPrimaryPopUpMenu(optionMenu);
     }
 }
