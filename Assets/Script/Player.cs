@@ -4,7 +4,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public Animator anim;
-
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private float moveSpeed = 5f;
     public bool playerMovement = true; 
     
@@ -21,7 +22,6 @@ public class Player : MonoBehaviour
         {
             HandleMovement();
         }
-
     }
 
     void Animate()
@@ -36,14 +36,14 @@ public class Player : MonoBehaviour
         anim.SetFloat("mouseY", lookDirection.y);
         anim.SetBool("isMoving", isPlayerMoving);
         anim.SetFloat("moveX", targetDirection.x);
-        anim.SetFloat("moveX", targetDirection.y);
+        anim.SetFloat("moveY", targetDirection.y);
 
         if(mouseWorldPos.x < transform.position.x)
         {
-            gameObject.GetComponent<SpriteRenderer>().flipX = true;
+            spriteRenderer.flipX = true;
         }else
         {
-            gameObject.GetComponent<SpriteRenderer>().flipX = false;
+            spriteRenderer.flipX = false;
         }
     }
 
@@ -61,6 +61,10 @@ public class Player : MonoBehaviour
         else isPlayerMoving = false;
 
         targetDirection = new Vector3(inputX, inputY, 0).normalized;
-        transform.position += targetDirection * moveSpeed * Time.deltaTime;
+        if(isPlayerMoving) rb.linearVelocity = targetDirection * moveSpeed;
+        else
+        {
+            rb.linearVelocity = Vector2.zero;
+        }
     }
 }
