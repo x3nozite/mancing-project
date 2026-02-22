@@ -6,7 +6,7 @@ public class StartGameScript : MonoBehaviour, IPointerClickHandler
 {
     public void OnPointerClick(PointerEventData eventData)
     {
-        GameManager.instance.updateState(GameState.Gameplay);
+        GameManager.Instance.updateState(GameState.Gameplay);
         SceneManager.LoadScene("BrandonScene");
     }
 }

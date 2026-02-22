@@ -53,6 +53,24 @@ TextureImporter:
   - first:
       213: 3744732116330649567
     second: Door, windows_16
+  - first:
+      213: -3736078499722511895
+    second: Door, windows_17
+  - first:
+      213: -2884290312732119677
+    second: Door, windows_18
+  - first:
+      213: 3540116175681469971
+    second: Door, windows_19
+  - first:
+      213: -3702397332508778487
+    second: Door, windows_20
+  - first:
+      213: 2413335918711045198
+    second: Door, windows_21
+  - first:
+      213: -258511899697995375
+    second: Door, windows_22
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -144,19 +162,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -164,10 +169,10 @@ TextureImporter:
       name: Door, windows_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 102
-        width: 13
-        height: 19
+        x: 16
+        y: 127
+        width: 47
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,8 +191,8 @@ TextureImporter:
       name: Door, windows_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 95
+        x: 80
+        y: 127
         width: 47
         height: 27
       alignment: 0
@@ -208,10 +213,10 @@ TextureImporter:
       name: Door, windows_2
       rect:
         serializedVersion: 2
-        x: 80
-        y: 95
-        width: 47
-        height: 27
+        x: 129
+        y: 127
+        width: 31
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,8 +235,8 @@ TextureImporter:
       name: Door, windows_3
       rect:
         serializedVersion: 2
-        x: 129
-        y: 95
+        x: 161
+        y: 127
         width: 31
         height: 26
       alignment: 0
@@ -252,10 +257,10 @@ TextureImporter:
       name: Door, windows_4
       rect:
         serializedVersion: 2
-        x: 161
+        x: 7
         y: 95
-        width: 31
-        height: 26
+        width: 33
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,10 +279,10 @@ TextureImporter:
       name: Door, windows_5
       rect:
         serializedVersion: 2
-        x: 2
-        y: 70
-        width: 13
-        height: 19
+        x: 65
+        y: 81
+        width: 15
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -296,8 +301,8 @@ TextureImporter:
       name: Door, windows_6
       rect:
         serializedVersion: 2
-        x: 23
-        y: 63
+        x: 71
+        y: 95
         width: 33
         height: 21
       alignment: 0
@@ -318,10 +323,10 @@ TextureImporter:
       name: Door, windows_7
       rect:
         serializedVersion: 2
-        x: 87
-        y: 63
-        width: 33
-        height: 21
+        x: 125
+        y: 92
+        width: 13
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -340,8 +345,8 @@ TextureImporter:
       name: Door, windows_8
       rect:
         serializedVersion: 2
-        x: 13
-        y: 28
+        x: 165
+        y: 92
         width: 13
         height: 23
       alignment: 0
@@ -362,10 +367,10 @@ TextureImporter:
       name: Door, windows_9
       rect:
         serializedVersion: 2
-        x: 53
-        y: 28
+        x: 2
+        y: 70
         width: 13
-        height: 23
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -384,10 +389,10 @@ TextureImporter:
       name: Door, windows_10
       rect:
         serializedVersion: 2
-        x: 90
-        y: 41
-        width: 26
-        height: 23
+        x: 18
+        y: 70
+        width: 13
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -406,10 +411,10 @@ TextureImporter:
       name: Door, windows_11
       rect:
         serializedVersion: 2
-        x: 138
-        y: 41
-        width: 26
-        height: 23
+        x: 34
+        y: 70
+        width: 13
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -428,10 +433,10 @@ TextureImporter:
       name: Door, windows_12
       rect:
         serializedVersion: 2
-        x: 17
-        y: 1
-        width: 15
-        height: 14
+        x: 50
+        y: 70
+        width: 13
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -450,10 +455,10 @@ TextureImporter:
       name: Door, windows_13
       rect:
         serializedVersion: 2
-        x: 33
-        y: 1
+        x: 65
+        y: 65
         width: 15
-        height: 15
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -472,8 +477,8 @@ TextureImporter:
       name: Door, windows_14
       rect:
         serializedVersion: 2
-        x: 51
-        y: 7
+        x: 99
+        y: 71
         width: 9
         height: 9
       alignment: 0
@@ -494,10 +499,10 @@ TextureImporter:
       name: Door, windows_15
       rect:
         serializedVersion: 2
-        x: 93
-        y: 9
-        width: 22
-        height: 21
+        x: 10
+        y: 41
+        width: 26
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -516,7 +521,73 @@ TextureImporter:
       name: Door, windows_16
       rect:
         serializedVersion: 2
-        x: 141
+        x: 58
+        y: 41
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd792e4f406f7f330800000000000000
+      internalID: 3744732116330649567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Door, windows_17
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 41
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e9b01b2668c62cc0800000000000000
+      internalID: -3736078499722511895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Door, windows_18
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 41
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38d60800e31f8f7d0800000000000000
+      internalID: -2884290312732119677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Door, windows_19
+      rect:
+        serializedVersion: 2
+        x: 13
         y: 9
         width: 22
         height: 21
@@ -528,8 +599,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fd792e4f406f7f330800000000000000
-      internalID: 3744732116330649567
+      spriteID: 31ebb1bc7e4012130800000000000000
+      internalID: 3540116175681469971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Door, windows_20
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 9
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 900e5720e317e9cc0800000000000000
+      internalID: -3702397332508778487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Door, windows_21
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 9
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4c767e4b34ed7120800000000000000
+      internalID: 2413335918711045198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Door, windows_22
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 9
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1912a400cc4996cf0800000000000000
+      internalID: -258511899697995375
       vertices: []
       indices: 
       edges: []
@@ -557,7 +694,13 @@ TextureImporter:
       Door, windows_14: -447351752987584713
       Door, windows_15: -170368861159923164
       Door, windows_16: 3744732116330649567
+      Door, windows_17: -3736078499722511895
+      Door, windows_18: -2884290312732119677
+      Door, windows_19: 3540116175681469971
       Door, windows_2: 3338972195184488770
+      Door, windows_20: -3702397332508778487
+      Door, windows_21: 2413335918711045198
+      Door, windows_22: -258511899697995375
       Door, windows_3: -4204262994475936012
       Door, windows_4: 6439126427107652765
       Door, windows_5: -7133559143947329587

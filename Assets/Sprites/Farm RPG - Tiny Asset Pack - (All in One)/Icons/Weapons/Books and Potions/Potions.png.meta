@@ -89,6 +89,21 @@ TextureImporter:
   - first:
       213: -4827988376881342917
     second: Potions_28
+  - first:
+      213: 1152693816632332367
+    second: Potions_29
+  - first:
+      213: -4281154887353889082
+    second: Potions_30
+  - first:
+      213: 7505194234833031526
+    second: Potions_31
+  - first:
+      213: 5533858432813650269
+    second: Potions_32
+  - first:
+      213: 7741721744188925002
+    second: Potions_33
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -180,19 +195,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -201,7 +203,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 80
+        y: 96
         width: 14
         height: 13
       alignment: 0
@@ -223,7 +225,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 17
-        y: 80
+        y: 96
         width: 14
         height: 15
       alignment: 0
@@ -245,7 +247,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 33
-        y: 80
+        y: 96
         width: 14
         height: 15
       alignment: 0
@@ -267,7 +269,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 49
-        y: 80
+        y: 96
         width: 14
         height: 15
       alignment: 0
@@ -289,7 +291,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 65
-        y: 80
+        y: 96
         width: 14
         height: 15
       alignment: 0
@@ -311,7 +313,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 47
+        y: 63
         width: 14
         height: 18
       alignment: 0
@@ -333,7 +335,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 15
-        y: 65
+        y: 81
         width: 17
         height: 11
       alignment: 0
@@ -355,7 +357,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 47
+        y: 63
         width: 16
         height: 18
       alignment: 0
@@ -377,7 +379,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 31
-        y: 65
+        y: 81
         width: 17
         height: 11
       alignment: 0
@@ -399,7 +401,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 47
+        y: 63
         width: 16
         height: 18
       alignment: 0
@@ -421,7 +423,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 47
-        y: 65
+        y: 81
         width: 17
         height: 11
       alignment: 0
@@ -443,7 +445,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 47
+        y: 63
         width: 16
         height: 18
       alignment: 0
@@ -465,7 +467,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 63
-        y: 65
+        y: 81
         width: 17
         height: 11
       alignment: 0
@@ -487,7 +489,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 47
+        y: 63
         width: 16
         height: 18
       alignment: 0
@@ -509,7 +511,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3
-        y: 32
+        y: 48
         width: 11
         height: 15
       alignment: 0
@@ -531,7 +533,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 32
+        y: 48
         width: 16
         height: 15
       alignment: 0
@@ -553,7 +555,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 32
+        y: 48
         width: 16
         height: 15
       alignment: 0
@@ -575,7 +577,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 32
+        y: 48
         width: 16
         height: 15
       alignment: 0
@@ -597,7 +599,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 32
+        y: 48
         width: 16
         height: 15
       alignment: 0
@@ -619,7 +621,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2
-        y: 16
+        y: 32
         width: 13
         height: 14
       alignment: 0
@@ -641,7 +643,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 18
-        y: 16
+        y: 32
         width: 13
         height: 14
       alignment: 0
@@ -663,7 +665,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 34
-        y: 16
+        y: 32
         width: 13
         height: 14
       alignment: 0
@@ -685,7 +687,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 50
-        y: 16
+        y: 32
         width: 13
         height: 14
       alignment: 0
@@ -707,7 +709,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 66
-        y: 16
+        y: 32
         width: 13
         height: 14
       alignment: 0
@@ -729,7 +731,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2
-        y: 0
+        y: 16
         width: 13
         height: 15
       alignment: 0
@@ -751,7 +753,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 18
-        y: 0
+        y: 16
         width: 13
         height: 15
       alignment: 0
@@ -773,7 +775,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 34
-        y: 0
+        y: 16
         width: 13
         height: 15
       alignment: 0
@@ -795,7 +797,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 50
-        y: 0
+        y: 16
         width: 13
         height: 15
       alignment: 0
@@ -817,7 +819,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 66
-        y: 0
+        y: 16
         width: 13
         height: 15
       alignment: 0
@@ -830,6 +832,116 @@ TextureImporter:
       bones: []
       spriteID: b36d548a62a8ffcb0800000000000000
       internalID: -4827988376881342917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Potions_29
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f40d8234be03fff00800000000000000
+      internalID: 1152693816632332367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Potions_30
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ce08deff484694c0800000000000000
+      internalID: -4281154887353889082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Potions_31
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6615881746ec72860800000000000000
+      internalID: 7505194234833031526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Potions_32
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d51582dcce63ccc40800000000000000
+      internalID: 5533858432813650269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Potions_33
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a446c40b8ee107b60800000000000000
+      internalID: 7741721744188925002
       vertices: []
       indices: 
       edges: []
@@ -870,7 +982,12 @@ TextureImporter:
       Potions_26: -7293215197781682108
       Potions_27: -8747828868849804721
       Potions_28: -4827988376881342917
+      Potions_29: 1152693816632332367
       Potions_3: 6997616985800771554
+      Potions_30: -4281154887353889082
+      Potions_31: 7505194234833031526
+      Potions_32: 5533858432813650269
+      Potions_33: 7741721744188925002
       Potions_4: 8618505411793156745
       Potions_5: -1972361127685065434
       Potions_6: -5226445311955339714

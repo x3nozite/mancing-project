@@ -35,6 +35,18 @@ TextureImporter:
   - first:
       213: 2748538027976083391
     second: Deluxe Barn_10
+  - first:
+      213: -8661175000993527885
+    second: Deluxe Barn_11
+  - first:
+      213: 7016698696660515196
+    second: Deluxe Barn_12
+  - first:
+      213: 7666644957991916162
+    second: Deluxe Barn_13
+  - first:
+      213: 8244795287504005219
+    second: Deluxe Barn_14
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,19 +138,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -147,7 +146,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 15
-        y: 127
+        y: 143
         width: 122
         height: 129
       alignment: 0
@@ -169,7 +168,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 159
-        y: 128
+        y: 144
         width: 113
         height: 128
       alignment: 0
@@ -191,7 +190,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 287
-        y: 163
+        y: 179
         width: 113
         height: 88
       alignment: 0
@@ -213,7 +212,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 399
-        y: 163
+        y: 179
         width: 113
         height: 88
       alignment: 0
@@ -235,7 +234,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 511
-        y: 163
+        y: 179
         width: 113
         height: 88
       alignment: 0
@@ -257,7 +256,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 623
-        y: 163
+        y: 179
         width: 113
         height: 88
       alignment: 0
@@ -278,10 +277,10 @@ TextureImporter:
       name: Deluxe Barn_6
       rect:
         serializedVersion: 2
-        x: 159
-        y: 0
-        width: 113
-        height: 129
+        x: 15
+        y: 15
+        width: 122
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,10 +299,10 @@ TextureImporter:
       name: Deluxe Barn_7
       rect:
         serializedVersion: 2
-        x: 294
-        y: 80
-        width: 99
-        height: 69
+        x: 159
+        y: 16
+        width: 113
+        height: 129
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -322,8 +321,8 @@ TextureImporter:
       name: Deluxe Barn_8
       rect:
         serializedVersion: 2
-        x: 406
-        y: 80
+        x: 294
+        y: 96
         width: 99
         height: 69
       alignment: 0
@@ -344,10 +343,10 @@ TextureImporter:
       name: Deluxe Barn_9
       rect:
         serializedVersion: 2
-        x: 518
-        y: 80
-        width: 99
-        height: 69
+        x: 339
+        y: 42
+        width: 9
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -366,8 +365,8 @@ TextureImporter:
       name: Deluxe Barn_10
       rect:
         serializedVersion: 2
-        x: 630
-        y: 80
+        x: 406
+        y: 96
         width: 99
         height: 69
       alignment: 0
@@ -380,6 +379,94 @@ TextureImporter:
       bones: []
       spriteID: fb7ca2926c4c42620800000000000000
       internalID: 2748538027976083391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deluxe Barn_11
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 96
+        width: 99
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b78948b9335dc780800000000000000
+      internalID: -8661175000993527885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deluxe Barn_12
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 96
+        width: 99
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c79756ed942506160800000000000000
+      internalID: 7016698696660515196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deluxe Barn_13
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 5
+        width: 51
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 282d52c38f4656a60800000000000000
+      internalID: 7666644957991916162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deluxe Barn_14
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 5
+        width: 51
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 368ad7591a56b6270800000000000000
+      internalID: 8244795287504005219
       vertices: []
       indices: 
       edges: []
@@ -401,6 +488,10 @@ TextureImporter:
       Deluxe Barn_0: -4661392844511881379
       Deluxe Barn_1: -8348358511847237681
       Deluxe Barn_10: 2748538027976083391
+      Deluxe Barn_11: -8661175000993527885
+      Deluxe Barn_12: 7016698696660515196
+      Deluxe Barn_13: 7666644957991916162
+      Deluxe Barn_14: 8244795287504005219
       Deluxe Barn_2: -2662492100783881695
       Deluxe Barn_3: -5409209418887103013
       Deluxe Barn_4: 9087259822346899221

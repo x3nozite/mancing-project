@@ -56,6 +56,24 @@ TextureImporter:
   - first:
       213: 7720552135500433751
     second: Walk_17
+  - first:
+      213: -8953822836050947745
+    second: Walk_18
+  - first:
+      213: -6148190078763333420
+    second: Walk_19
+  - first:
+      213: -404497435793420480
+    second: Walk_20
+  - first:
+      213: 8198118753440594053
+    second: Walk_21
+  - first:
+      213: -7385022159944432617
+    second: Walk_22
+  - first:
+      213: 5662401404901316715
+    second: Walk_23
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -147,19 +165,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -168,7 +173,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 9
-        y: 69
+        y: 101
         width: 15
         height: 20
       alignment: 0
@@ -190,7 +195,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 41
-        y: 69
+        y: 101
         width: 15
         height: 20
       alignment: 0
@@ -212,7 +217,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 73
-        y: 69
+        y: 101
         width: 15
         height: 21
       alignment: 0
@@ -234,7 +239,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 105
-        y: 69
+        y: 101
         width: 15
         height: 20
       alignment: 0
@@ -256,7 +261,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 137
-        y: 69
+        y: 101
         width: 15
         height: 20
       alignment: 0
@@ -278,7 +283,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 169
-        y: 69
+        y: 101
         width: 15
         height: 21
       alignment: 0
@@ -300,7 +305,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 9
-        y: 37
+        y: 69
         width: 15
         height: 20
       alignment: 0
@@ -322,7 +327,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 41
-        y: 37
+        y: 69
         width: 15
         height: 20
       alignment: 0
@@ -344,7 +349,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 73
-        y: 37
+        y: 69
         width: 15
         height: 21
       alignment: 0
@@ -366,7 +371,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 105
-        y: 37
+        y: 69
         width: 15
         height: 20
       alignment: 0
@@ -388,7 +393,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 137
-        y: 37
+        y: 69
         width: 15
         height: 20
       alignment: 0
@@ -410,7 +415,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 169
-        y: 37
+        y: 69
         width: 15
         height: 21
       alignment: 0
@@ -432,7 +437,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 9
-        y: 5
+        y: 37
         width: 15
         height: 20
       alignment: 0
@@ -454,7 +459,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 41
-        y: 5
+        y: 37
         width: 15
         height: 20
       alignment: 0
@@ -476,7 +481,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 73
-        y: 5
+        y: 37
         width: 15
         height: 21
       alignment: 0
@@ -498,7 +503,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 105
-        y: 5
+        y: 37
         width: 15
         height: 20
       alignment: 0
@@ -520,7 +525,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 137
-        y: 5
+        y: 37
         width: 15
         height: 20
       alignment: 0
@@ -542,7 +547,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 169
-        y: 5
+        y: 37
         width: 15
         height: 21
       alignment: 0
@@ -555,6 +560,138 @@ TextureImporter:
       bones: []
       spriteID: 75903621349e42b60800000000000000
       internalID: 7720552135500433751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_18
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 5
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f51176be191adb380800000000000000
+      internalID: -8953822836050947745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_19
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 5
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d80bb7a2bd3daaa0800000000000000
+      internalID: -6148190078763333420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_20
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 5
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04f0afaa9bfe26af0800000000000000
+      internalID: -404497435793420480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_21
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 5
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5887b4d129195c170800000000000000
+      internalID: 8198118753440594053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_22
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 5
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 714cf1a1971238990800000000000000
+      internalID: -7385022159944432617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_23
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 5
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b68d0dab314e49e40800000000000000
+      internalID: 5662401404901316715
       vertices: []
       indices: 
       edges: []
@@ -583,7 +720,13 @@ TextureImporter:
       Walk_15: -1258472680374559522
       Walk_16: 2155107402851330559
       Walk_17: 7720552135500433751
+      Walk_18: -8953822836050947745
+      Walk_19: -6148190078763333420
       Walk_2: -350908408369970039
+      Walk_20: -404497435793420480
+      Walk_21: 8198118753440594053
+      Walk_22: -7385022159944432617
+      Walk_23: 5662401404901316715
       Walk_3: -5409570386352685021
       Walk_4: 1553940418269799609
       Walk_5: 2416434504916517810

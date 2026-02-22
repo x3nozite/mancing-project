@@ -35,6 +35,18 @@ TextureImporter:
   - first:
       213: 6830378336254848011
     second: Big Barn_10
+  - first:
+      213: 2939269279585912774
+    second: Big Barn_11
+  - first:
+      213: -7139732701785610662
+    second: Big Barn_12
+  - first:
+      213: -7157600216881683103
+    second: Big Barn_13
+  - first:
+      213: 6154565046922033596
+    second: Big Barn_14
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,19 +138,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -147,7 +146,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4
-        y: 95
+        y: 111
         width: 100
         height: 97
       alignment: 0
@@ -169,7 +168,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 116
-        y: 96
+        y: 112
         width: 89
         height: 96
       alignment: 0
@@ -191,7 +190,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 212
-        y: 119
+        y: 135
         width: 89
         height: 68
       alignment: 0
@@ -213,7 +212,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 308
-        y: 119
+        y: 135
         width: 89
         height: 68
       alignment: 0
@@ -235,7 +234,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 404
-        y: 119
+        y: 135
         width: 89
         height: 68
       alignment: 0
@@ -257,7 +256,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 500
-        y: 119
+        y: 135
         width: 89
         height: 68
       alignment: 0
@@ -278,9 +277,9 @@ TextureImporter:
       name: Big Barn_6
       rect:
         serializedVersion: 2
-        x: 116
+        x: 4
         y: 0
-        width: 89
+        width: 100
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -300,10 +299,10 @@ TextureImporter:
       name: Big Barn_7
       rect:
         serializedVersion: 2
-        x: 219
-        y: 64
-        width: 75
-        height: 49
+        x: 116
+        y: 0
+        width: 89
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -322,8 +321,8 @@ TextureImporter:
       name: Big Barn_8
       rect:
         serializedVersion: 2
-        x: 315
-        y: 64
+        x: 219
+        y: 80
         width: 75
         height: 49
       alignment: 0
@@ -344,8 +343,8 @@ TextureImporter:
       name: Big Barn_9
       rect:
         serializedVersion: 2
-        x: 411
-        y: 64
+        x: 315
+        y: 80
         width: 75
         height: 49
       alignment: 0
@@ -366,8 +365,8 @@ TextureImporter:
       name: Big Barn_10
       rect:
         serializedVersion: 2
-        x: 507
-        y: 64
+        x: 411
+        y: 80
         width: 75
         height: 49
       alignment: 0
@@ -380,6 +379,94 @@ TextureImporter:
       bones: []
       spriteID: b0c6efd68e06ace50800000000000000
       internalID: 6830378336254848011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big Barn_11
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 80
+        width: 75
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c7cfec36d16ac820800000000000000
+      internalID: 2939269279585912774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big Barn_12
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 11
+        width: 40
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5624d68fe29aec90800000000000000
+      internalID: -7139732701785610662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big Barn_13
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 36
+        width: 9
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 165228c76881bac90800000000000000
+      internalID: -7157600216881683103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big Barn_14
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 11
+        width: 40
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb9b2d84d48696550800000000000000
+      internalID: 6154565046922033596
       vertices: []
       indices: 
       edges: []
@@ -401,6 +488,10 @@ TextureImporter:
       Big Barn_0: 857390358587971714
       Big Barn_1: 5746147508672314350
       Big Barn_10: 6830378336254848011
+      Big Barn_11: 2939269279585912774
+      Big Barn_12: -7139732701785610662
+      Big Barn_13: -7157600216881683103
+      Big Barn_14: 6154565046922033596
       Big Barn_2: 8600343628734010223
       Big Barn_3: 2203095003894701303
       Big Barn_4: -5135134828522071788

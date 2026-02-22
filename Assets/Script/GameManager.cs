@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
+    public static GameManager Instance;
     public GameState currentState;
 
     public void updateState(GameState state)
@@ -12,11 +12,11 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        if (instance != null && instance != this)
+        if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
         }
-        instance = this;
+        Instance = this;
         DontDestroyOnLoad(gameObject);
     }
 }

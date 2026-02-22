@@ -128,6 +128,18 @@ TextureImporter:
   - first:
       213: 5955541145985682540
     second: Big Chicken Coop_41
+  - first:
+      213: -4609537021526806699
+    second: Big Chicken Coop_42
+  - first:
+      213: -3311488925022378187
+    second: Big Chicken Coop_43
+  - first:
+      213: -7573778880196512430
+    second: Big Chicken Coop_44
+  - first:
+      213: 4185714062288678148
+    second: Big Chicken Coop_45
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -208,19 +220,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -811,10 +810,10 @@ TextureImporter:
       name: Big Chicken Coop_26
       rect:
         serializedVersion: 2
-        x: 228
-        y: 50
-        width: 31
-        height: 19
+        x: 112
+        y: 20
+        width: 32
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -833,10 +832,10 @@ TextureImporter:
       name: Big Chicken Coop_27
       rect:
         serializedVersion: 2
-        x: 261
-        y: 48
-        width: 55
-        height: 48
+        x: 143
+        y: 22
+        width: 30
+        height: 69
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -855,10 +854,10 @@ TextureImporter:
       name: Big Chicken Coop_28
       rect:
         serializedVersion: 2
-        x: 340
-        y: 50
-        width: 31
-        height: 19
+        x: 172
+        y: 52
+        width: 9
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -877,10 +876,10 @@ TextureImporter:
       name: Big Chicken Coop_29
       rect:
         serializedVersion: 2
-        x: 373
-        y: 48
-        width: 55
-        height: 48
+        x: 180
+        y: 22
+        width: 30
+        height: 69
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -899,7 +898,7 @@ TextureImporter:
       name: Big Chicken Coop_30
       rect:
         serializedVersion: 2
-        x: 452
+        x: 228
         y: 50
         width: 31
         height: 19
@@ -921,7 +920,7 @@ TextureImporter:
       name: Big Chicken Coop_31
       rect:
         serializedVersion: 2
-        x: 485
+        x: 261
         y: 48
         width: 55
         height: 48
@@ -943,7 +942,7 @@ TextureImporter:
       name: Big Chicken Coop_32
       rect:
         serializedVersion: 2
-        x: 564
+        x: 340
         y: 50
         width: 31
         height: 19
@@ -965,7 +964,7 @@ TextureImporter:
       name: Big Chicken Coop_33
       rect:
         serializedVersion: 2
-        x: 597
+        x: 373
         y: 48
         width: 55
         height: 48
@@ -987,8 +986,8 @@ TextureImporter:
       name: Big Chicken Coop_34
       rect:
         serializedVersion: 2
-        x: 228
-        y: 2
+        x: 452
+        y: 50
         width: 31
         height: 19
       alignment: 0
@@ -1009,8 +1008,8 @@ TextureImporter:
       name: Big Chicken Coop_35
       rect:
         serializedVersion: 2
-        x: 261
-        y: 0
+        x: 485
+        y: 48
         width: 55
         height: 48
       alignment: 0
@@ -1031,8 +1030,8 @@ TextureImporter:
       name: Big Chicken Coop_36
       rect:
         serializedVersion: 2
-        x: 340
-        y: 2
+        x: 564
+        y: 50
         width: 31
         height: 19
       alignment: 0
@@ -1053,8 +1052,8 @@ TextureImporter:
       name: Big Chicken Coop_37
       rect:
         serializedVersion: 2
-        x: 373
-        y: 0
+        x: 597
+        y: 48
         width: 55
         height: 48
       alignment: 0
@@ -1075,7 +1074,7 @@ TextureImporter:
       name: Big Chicken Coop_38
       rect:
         serializedVersion: 2
-        x: 452
+        x: 228
         y: 2
         width: 31
         height: 19
@@ -1097,7 +1096,7 @@ TextureImporter:
       name: Big Chicken Coop_39
       rect:
         serializedVersion: 2
-        x: 485
+        x: 261
         y: 0
         width: 55
         height: 48
@@ -1119,7 +1118,7 @@ TextureImporter:
       name: Big Chicken Coop_40
       rect:
         serializedVersion: 2
-        x: 564
+        x: 340
         y: 2
         width: 31
         height: 19
@@ -1141,7 +1140,7 @@ TextureImporter:
       name: Big Chicken Coop_41
       rect:
         serializedVersion: 2
-        x: 597
+        x: 373
         y: 0
         width: 55
         height: 48
@@ -1155,6 +1154,94 @@ TextureImporter:
       bones: []
       spriteID: c6c03b35e1556a250800000000000000
       internalID: 5955541145985682540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big Chicken Coop_42
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 2
+        width: 31
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55fe1e45082a700c0800000000000000
+      internalID: -4609537021526806699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big Chicken Coop_43
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 0
+        width: 55
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 537a6622e5a3b02d0800000000000000
+      internalID: -3311488925022378187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big Chicken Coop_44
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 2
+        width: 31
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 255f78e6c3884e690800000000000000
+      internalID: -7573778880196512430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big Chicken Coop_45
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 0
+        width: 55
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40de21643c4a61a30800000000000000
+      internalID: 4185714062288678148
       vertices: []
       indices: 
       edges: []
@@ -1210,6 +1297,10 @@ TextureImporter:
       Big Chicken Coop_4: -6610440812478963712
       Big Chicken Coop_40: 4648173030405441030
       Big Chicken Coop_41: 5955541145985682540
+      Big Chicken Coop_42: -4609537021526806699
+      Big Chicken Coop_43: -3311488925022378187
+      Big Chicken Coop_44: -7573778880196512430
+      Big Chicken Coop_45: 4185714062288678148
       Big Chicken Coop_5: 4212935812734009570
       Big Chicken Coop_6: -1611101221839546840
       Big Chicken Coop_7: -6898819702928710583
