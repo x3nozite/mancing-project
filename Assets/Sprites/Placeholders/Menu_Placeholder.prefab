@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 7667601356860205464}
   - component: {fileID: 1279390107724004246}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: CloseButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -165,3 +165,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   prefabRoot: {fileID: 933629228454330041}
+  buttonImage: {fileID: 7667601356860205464}
+  normal: {fileID: -1817749194, guid: b6643a90b9ac4db438f29918790e6a45, type: 3}
+  pressed: {fileID: -591922160, guid: b6643a90b9ac4db438f29918790e6a45, type: 3}

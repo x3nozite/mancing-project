@@ -7,6 +7,6 @@ public class StartGameScript : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         GameManager.Instance.updateState(GameState.Gameplay);
-        SceneManager.LoadScene("GameplayPlaceholder");
+        SceneManager.LoadScene("GameplayScene");
     }
 }
