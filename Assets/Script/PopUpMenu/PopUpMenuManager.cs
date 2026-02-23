@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PopUpMenuManager : MonoBehaviour
 {
     public static PopUpMenuManager Instance;
     private GameObject currentPrimaryPopUp;
     private Stack<GameObject> modals = new Stack<GameObject>();
+    private List<GameObject> overlayPopUps = new List<GameObject>();
     [SerializeField] private Transform PopUpRoot;
     
     void Awake()
@@ -14,8 +16,21 @@ public class PopUpMenuManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        SceneManager.sceneLoaded += OnSceneLoaded;
         Instance = this;
         DontDestroyOnLoad(gameObject);
+    }
+
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Transform canvas = GameObject.FindGameObjectWithTag("PopUpRoot").transform;
+        if (canvas != null) {
+            SetPopUpRoot(canvas);
+        }
+        else
+        {
+            return;
+        }
     }
 
     public void SetPopUpRoot(Transform newRoot)
@@ -56,13 +71,19 @@ public class PopUpMenuManager : MonoBehaviour
         }
     }
 
-    public void OpenOverlayPopUpMenu(GameObject menu)
+    public GameObject OpenOverlayPopUpMenu(GameObject menu)
     {
-        Instantiate(menu, PopUpRoot);
+        GameObject activePopUp = Instantiate(menu, PopUpRoot);
+        overlayPopUps.Add(activePopUp);
+        return activePopUp;
     }
 
     public void CloseOverlayPopUpMenu(GameObject menu)
     {
-        Destroy(menu);
+        if (overlayPopUps.Contains(menu))
+        {
+            overlayPopUps.Remove(menu);
+            Destroy(menu);
+        }
     }
 }
