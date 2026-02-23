@@ -6,8 +6,10 @@ public class Ship : MonoBehaviour
     [SerializeField] private float acceleration = 20f; 
     [SerializeField] private float deceleration = 5f;
     [SerializeField] private GameObject interactPopup;
+    [SerializeField] private Transform playerPlaceholder;
     private BoxCollider2D collider2D;
-    public bool isPlayerOnShip = false;
+    private bool isPlayerOnShip = false;
+    private bool isPlayerNearShip = false;
 
     void Start()
     {
@@ -16,7 +18,29 @@ public class Ship : MonoBehaviour
 
     void Update()
     {
-        if(isPlayerOnShip) ShipMovement(); 
+        if(isPlayerOnShip)
+        {
+            ShipMovement();
+            interactPopup.SetActive(false);
+        }
+        PlayerInteract();
+    }
+
+    private Player player = null;
+    void PlayerInteract()
+    {
+        if(Input.GetKeyDown(KeyCode.E) && isPlayerNearShip && !isPlayerOnShip)
+        {
+            // Player Enter Ship
+            isPlayerOnShip = true;
+            player.playerMovement = false;
+        }else if(Input.GetKeyDown(KeyCode.E) && isPlayerNearShip && isPlayerOnShip)
+        {
+            // Player Exit Ship
+            isPlayerOnShip = false;
+            player.playerMovement = true;
+            player = null;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -24,7 +48,10 @@ public class Ship : MonoBehaviour
         if(col.CompareTag("Player"))
         {
             interactPopup.SetActive(true);
+            isPlayerNearShip = true;
+            player = col.GetComponent<Player>();
         }
+
     }
 
     void OnTriggerExit2D(Collider2D col)
@@ -32,6 +59,7 @@ public class Ship : MonoBehaviour
         if(col.CompareTag("Player"))
         {
             interactPopup.SetActive(false);
+            isPlayerNearShip = false;
         }
     }
 
@@ -58,6 +86,6 @@ public class Ship : MonoBehaviour
         }
 
         transform.position += currentVelocity * Time.deltaTime;
-
+        player.transform.position = playerPlaceholder.position;
     }
 }
