@@ -5,11 +5,34 @@ public class Ship : MonoBehaviour
     [SerializeField] private float maxSpeed = 10f;
     [SerializeField] private float acceleration = 20f; 
     [SerializeField] private float deceleration = 5f;
+    [SerializeField] private GameObject interactPopup;
+    private BoxCollider2D collider2D;
     public bool isPlayerOnShip = false;
+
+    void Start()
+    {
+        collider2D = gameObject.GetComponent<BoxCollider2D>();
+    }
 
     void Update()
     {
         if(isPlayerOnShip) ShipMovement(); 
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.CompareTag("Player"))
+        {
+            interactPopup.SetActive(true);
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if(col.CompareTag("Player"))
+        {
+            interactPopup.SetActive(false);
+        }
     }
 
     private Vector3 currentVelocity;

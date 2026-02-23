@@ -32,8 +32,7 @@ public class PopUpMenuManager : MonoBehaviour
             return;
         }
     }
-
-    public void SetPopUpRoot(Transform newRoot)
+public void SetPopUpRoot(Transform newRoot)
     {
         PopUpRoot = newRoot;
     }
