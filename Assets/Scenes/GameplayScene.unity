@@ -2993,7 +2993,7 @@ CompositeCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
+  m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
@@ -4027,12 +4027,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29576a3eab084d2499410d34b70a1bd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
+  moveSpeed: 5
+  swimmingSlowMultiplier: 0.4
+  isPlayerWalking: 1
+  isPlayerSwimming: 0
   anim: {fileID: 1558876240}
   transform: {fileID: 1558876238}
   rb: {fileID: 1558876242}
   spriteRenderer: {fileID: 1558876237}
-  moveSpeed: 5
-  isPlayerWalking: 1
+  col: {fileID: 1558876241}
 --- !u!95 &1558876240
 Animator:
   serializedVersion: 7
@@ -4089,7 +4092,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.028163865, y: -0.57103544}
+  m_Offset: {x: 0.03812036, y: -0.20264582}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4099,7 +4102,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.59872675, y: 0.23292911}
+  m_Size: {x: 0.37968427, y: 0.23292932}
   m_EdgeRadius: 0
 --- !u!50 &1558876242
 Rigidbody2D:
@@ -4223,7 +4226,7 @@ GameObject:
   - component: {fileID: 1778738866}
   m_Layer: 10
   m_Name: Sea
-  m_TagString: Untagged
+  m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46067,7 +46070,7 @@ Tilemap:
       - {fileID: 406223676, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
       - {fileID: 458840726, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
       - {fileID: 1971235677, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
-      m_AnimationSpeed: 2.5000002
+      m_AnimationSpeed: 2.5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 3, y: -8, z: 0}
@@ -46111,7 +46114,7 @@ Tilemap:
       - {fileID: 406223676, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
       - {fileID: 458840726, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
       - {fileID: 1971235677, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
-      m_AnimationSpeed: 2.5
+      m_AnimationSpeed: 2.5000002
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -8, y: -7, z: 0}
@@ -46177,7 +46180,7 @@ Tilemap:
       - {fileID: 1978327214, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
       - {fileID: -749286367, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
       - {fileID: 843175089, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
-      m_AnimationSpeed: 2.5
+      m_AnimationSpeed: 2.5000002
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -11, y: -5, z: 0}
@@ -46287,7 +46290,7 @@ Tilemap:
       - {fileID: 406223676, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
       - {fileID: 458840726, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
       - {fileID: 1971235677, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
-      m_AnimationSpeed: 2.5000002
+      m_AnimationSpeed: 2.5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 7, y: -2, z: 0}
@@ -46562,7 +46565,7 @@ Tilemap:
       - {fileID: -1965857811, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
       - {fileID: 1453363962, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
       - {fileID: -1098760667, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
-      m_AnimationSpeed: 2.5000002
+      m_AnimationSpeed: 2.5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 3, y: 7, z: 0}
@@ -46953,12 +46956,12 @@ CompositeCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
+  m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
@@ -47276,7 +47279,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -47290,7 +47293,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1813636817
 BoxCollider2D:
   m_ObjectHideFlags: 0

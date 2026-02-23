@@ -42,6 +42,7 @@ public class Player : MonoBehaviour
         anim.SetFloat("mouseX", lookDirection.x);
         anim.SetFloat("mouseY", lookDirection.y);
         anim.SetBool("isMoving", isPlayerMoving);
+        anim.SetBool("isSwimming", isPlayerSwimming);
         anim.SetFloat("moveX", targetDirection.x);
         anim.SetFloat("moveY", targetDirection.y);
 
@@ -82,7 +83,6 @@ public class Player : MonoBehaviour
         if(col.CompareTag("Water"))
         {
             isPlayerSwimming = true;
-            anim.SetBool("isSwimming", isPlayerSwimming);
         }
     }
 
@@ -91,7 +91,6 @@ public class Player : MonoBehaviour
         if(col.CompareTag("Water"))
         {
             isPlayerSwimming = false;
-            anim.SetBool("isSwimming", isPlayerSwimming);
         }
     }
 }
