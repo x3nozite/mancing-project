@@ -28,6 +28,9 @@ public class Player : MonoBehaviour
         if(isPlayerWalking == true)
         {
             HandleMovement();
+        }else
+        {
+            targetDirection = Vector3.zero;
         }
     }
 
@@ -38,6 +41,9 @@ public class Player : MonoBehaviour
 
         Vector3 mouseWorldPos = UnityEngine.Camera.main.ScreenToWorldPoint(mouseScreenPos);
         Vector3 lookDirection = (mouseWorldPos - transform.position).normalized;
+
+        if(targetDirection.sqrMagnitude != 0) isPlayerMoving = true;
+        else isPlayerMoving = false;
 
         anim.SetFloat("mouseX", lookDirection.x);
         anim.SetFloat("mouseY", lookDirection.y);
@@ -65,8 +71,6 @@ public class Player : MonoBehaviour
         if(Input.GetKey(KeyCode.D)) inputX++;
         if(Input.GetKey(KeyCode.A)) inputX--;
 
-        if(inputX != 0f || inputY != 0f) isPlayerMoving = true;
-        else isPlayerMoving = false;
 
         targetDirection = new Vector3(inputX, inputY, 0).normalized;
 
