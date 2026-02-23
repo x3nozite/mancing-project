@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class HealthBarFillScript : MonoBehaviour
@@ -19,6 +20,7 @@ public class HealthBarFillScript : MonoBehaviour
     void Update()
     {
         percent = currentHealth / maxHealth;
+        percent = Math.Min(percent, 1);
         setRemainingHealth();
     }
 

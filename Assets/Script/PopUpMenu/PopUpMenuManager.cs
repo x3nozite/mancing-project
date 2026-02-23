@@ -27,12 +27,9 @@ public class PopUpMenuManager : MonoBehaviour
         if (canvas != null) {
             SetPopUpRoot(canvas);
         }
-        else
-        {
-            return;
-        }
     }
-public void SetPopUpRoot(Transform newRoot)
+
+    public void SetPopUpRoot(Transform newRoot)
     {
         PopUpRoot = newRoot;
     }
@@ -44,6 +41,15 @@ public void SetPopUpRoot(Transform newRoot)
             ClosePrimaryPopUpMenu(currentPrimaryPopUp);
         }
         currentPrimaryPopUp = Instantiate(menu, PopUpRoot);
+    }
+
+    public void OpenPrimaryPopUpMenu(GameObject menu, Canvas canvas)
+    {
+        if (currentPrimaryPopUp != null)
+        {
+            ClosePrimaryPopUpMenu(currentPrimaryPopUp);
+        }
+        currentPrimaryPopUp = Instantiate(menu, canvas.transform);
     }
 
     public void ClosePrimaryPopUpMenu(GameObject menu)
@@ -61,6 +67,12 @@ public void SetPopUpRoot(Transform newRoot)
         modals.Push(newModal);
     }
 
+    public void OpenBlockingModal(GameObject modal, Canvas canvas)
+    {
+        GameObject newModal = Instantiate(modal, canvas.transform);
+        modals.Push(newModal);
+    }
+
     public void CloseBlockingModal()
     {
         if(modals.Count > 0)
@@ -73,6 +85,13 @@ public void SetPopUpRoot(Transform newRoot)
     public GameObject OpenOverlayPopUpMenu(GameObject menu)
     {
         GameObject activePopUp = Instantiate(menu, PopUpRoot);
+        overlayPopUps.Add(activePopUp);
+        return activePopUp;
+    }
+
+    public GameObject OpenOverlayPopUpMenu(GameObject menu, Canvas canvas)
+    {
+        GameObject activePopUp = Instantiate(menu, canvas.transform);
         overlayPopUps.Add(activePopUp);
         return activePopUp;
     }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2946230013312464074}
   - component: {fileID: 2475723963824456862}
   - component: {fileID: 3574291926068297292}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PopUpTriggerZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}

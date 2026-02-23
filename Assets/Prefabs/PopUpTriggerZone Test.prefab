@@ -86,7 +86,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5599839228943229965, guid: 29c38f2ccdaa39f478f8c15101016ac7, type: 3}
       propertyPath: m_Name
-      value: PopUpTriggerZone Variant
+      value: PopUpTriggerZone Test
+      objectReference: {fileID: 0}
+    - target: {fileID: 5599839228943229965, guid: 29c38f2ccdaa39f478f8c15101016ac7, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
