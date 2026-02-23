@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0ebfec2f039abcc158d11d8b1084637c
+guid: 6497d37a1abbc53fb9553e1e7fc24880
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -102,7 +102,7 @@ ScriptedImporter:
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
   importFileNodeState: 1
-  platformSettingsDirtyTick: 639074647573156160
+  platformSettingsDirtyTick: 639074638653962220
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -129,7 +129,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: WoodenRaft
     originalName: 
-    pivot: {x: 0.48333335, y: 0}
+    pivot: {x: 0.47727275, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -137,8 +137,8 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 120
-      height: 32
+      width: 88
+      height: 29
     spriteID: d0a73fa7f179f3b5b89bcfdb02bdfbfa
     spriteBone: []
     spriteOutline: []
@@ -149,7 +149,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
   spriteSheetImportData:
-  - name: WoodenRaft_0
+  - name: SpriteSheet_1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -158,10 +158,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 10
+      y: 8
       width: 20
       height: 22
-    spriteID: c90650bf3b5aa0b54a1183e5ba12503e
+    spriteID: 507f8eec61a5ad9d29acd0764b452ca8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -170,7 +170,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: WoodenRaft_1
+  - name: SpriteSheet_2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -179,10 +179,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 35
-      y: 9
+      y: 7
       width: 22
       height: 23
-    spriteID: 7dcb4d33320adfd398722d3a12240196
+    spriteID: 63acb1309aa2a1802ae2c410bcdb3b99
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -191,7 +191,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: WoodenRaft_2
+  - name: SpriteSheet_3
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -200,31 +200,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 64
-      y: 6
-      width: 28
-      height: 29
-    spriteID: 0d974bffdb2289f28a6a44d1b6eeea6f
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: WoodenRaft_3
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 96
       y: 4
       width: 28
-      height: 32
-    spriteID: 793788aa1b12be442aeb2ac7b2adefdf
+      height: 29
+    spriteID: 1be94244efbb2bd949fabedf74802b9f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -247,14 +226,14 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: WoodenRaft
+    - name: SpriteSheet
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 6
         y: 0
-        width: 120
-        height: 32
+        width: 88
+        height: 29
       spriteId: d0a73fa7f179f3b5b89bcfdb02bdfbfa
     linkedCells: []
     tileCells: []
@@ -301,5 +280,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 128, y: 34}
+  canvasSize: {x: 96, y: 32}
   previousTextureSize: {x: 128, y: 64}
