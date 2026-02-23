@@ -119,6 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!1001 &380150751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -190,6 +191,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7491083210191162814, guid: bbefcbf2cd6c48120b3d99bf0e2502c9, type: 3}
   m_PrefabInstance: {fileID: 380150751}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &609382770
 GameObject:
   m_ObjectHideFlags: 0
@@ -2969,6 +2972,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1475628487}
+<<<<<<< Updated upstream
+=======
+  - {fileID: 1558876238}
+>>>>>>> Stashed changes
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &689862300
@@ -3419,6 +3426,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+<<<<<<< Updated upstream
 --- !u!1 &1260804090
 GameObject:
   m_ObjectHideFlags: 0
@@ -3450,6 +3458,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1813636814}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1286426053
 GameObject:
   m_ObjectHideFlags: 0
@@ -3485,6 +3495,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
 --- !u!1 &1379122556
 GameObject:
   m_ObjectHideFlags: 0
@@ -3576,6 +3587,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1813636814}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -450.19598}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1475628486
 GameObject:
   m_ObjectHideFlags: 0
@@ -3696,7 +3709,11 @@ GameObject:
   - component: {fileID: 1558876242}
   m_Layer: 9
   m_Name: Player
+<<<<<<< Updated upstream
   m_TagString: Player
+=======
+  m_TagString: Untagged
+>>>>>>> Stashed changes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3748,7 +3765,11 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1972689839
   m_SortingLayer: 2
+<<<<<<< Updated upstream
   m_SortingOrder: 1000
+=======
+  m_SortingOrder: 0
+>>>>>>> Stashed changes
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4723107735738678597, guid: 80ecebbd2e4cd5e52bdbde50bee41177, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3773,7 +3794,11 @@ Transform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children: []
+<<<<<<< Updated upstream
   m_Father: {fileID: 0}
+=======
+  m_Father: {fileID: 633087997}
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1558876239
 MonoBehaviour:
@@ -3788,7 +3813,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   anim: {fileID: 1558876240}
+<<<<<<< Updated upstream
   transform: {fileID: 1558876238}
+=======
+>>>>>>> Stashed changes
   rb: {fileID: 1558876242}
   spriteRenderer: {fileID: 1558876237}
   moveSpeed: 5
@@ -3849,7 +3877,11 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
+<<<<<<< Updated upstream
   m_Offset: {x: 0.028163865, y: -0.57103544}
+=======
+  m_Offset: {x: 0, y: 0}
+>>>>>>> Stashed changes
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3859,7 +3891,11 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
+<<<<<<< Updated upstream
   m_Size: {x: 0.59872675, y: 0.23292911}
+=======
+  m_Size: {x: 1, y: 1.375}
+>>>>>>> Stashed changes
   m_EdgeRadius: 0
 --- !u!50 &1558876242
 Rigidbody2D:
@@ -45717,7 +45753,7 @@ Tilemap:
       - {fileID: 1978327214, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
       - {fileID: -749286367, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
       - {fileID: 843175089, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
-      m_AnimationSpeed: 2.5
+      m_AnimationSpeed: 2.5000002
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -7, y: -8, z: 0}
@@ -45981,7 +46017,7 @@ Tilemap:
       - {fileID: 1978327214, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
       - {fileID: -749286367, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
       - {fileID: 843175089, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
-      m_AnimationSpeed: 2.5
+      m_AnimationSpeed: 2.5000002
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -12, y: -4, z: 0}
@@ -46487,7 +46523,7 @@ Tilemap:
       - {fileID: 406223676, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
       - {fileID: 458840726, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
       - {fileID: 1971235677, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
-      m_AnimationSpeed: 2.5
+      m_AnimationSpeed: 2.5000002
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -2, y: 9, z: 0}
@@ -46923,6 +46959,7 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+<<<<<<< Updated upstream
 --- !u!1 &1813636811
 GameObject:
   m_ObjectHideFlags: 0
@@ -47022,6 +47059,8 @@ MonoBehaviour:
   deceleration: 5
   interactPopup: {fileID: 456894058}
   playerPlaceholder: {fileID: 1260804091}
+=======
+>>>>>>> Stashed changes
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -47032,5 +47071,8 @@ SceneRoots:
   - {fileID: 1160769466}
   - {fileID: 856663494}
   - {fileID: 1148208038}
+<<<<<<< Updated upstream
   - {fileID: 1558876238}
   - {fileID: 1813636814}
+=======
+>>>>>>> Stashed changes
