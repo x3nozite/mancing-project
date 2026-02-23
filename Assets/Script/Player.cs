@@ -3,14 +3,20 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [Header("Movement Settings")]
+    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float swimmingSlowMultiplier = 0.4f;
+    public bool isPlayerWalking = true;
+    public bool isPlayerSwimming = false;
+    private bool isPlayerMoving = false;
+
+    [Header("References")]
     public Animator anim;
     public Transform transform;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private SpriteRenderer spriteRenderer;
-    [SerializeField] private float moveSpeed = 5f;
-    public bool playerMovement = true; 
+    public BoxCollider2D col;
     
-    private bool isPlayerMoving = false;
     Vector3 targetDirection;
     void Update()
     {
@@ -19,7 +25,7 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(playerMovement == true)
+        if(isPlayerWalking == true)
         {
             HandleMovement();
         }
@@ -62,10 +68,30 @@ public class Player : MonoBehaviour
         else isPlayerMoving = false;
 
         targetDirection = new Vector3(inputX, inputY, 0).normalized;
-        if(isPlayerMoving) rb.linearVelocity = targetDirection * moveSpeed;
+
+        float swimmingSlowDebuff = (isPlayerSwimming == true) ? swimmingSlowMultiplier : 1f; 
+        if(isPlayerMoving) rb.linearVelocity = targetDirection * moveSpeed * swimmingSlowDebuff;
         else
         {
             rb.linearVelocity = Vector2.zero;
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D col)
+    {
+        if(col.CompareTag("Water"))
+        {
+            isPlayerSwimming = true;
+            anim.SetBool("isSwimming", isPlayerSwimming);
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if(col.CompareTag("Water"))
+        {
+            isPlayerSwimming = false;
+            anim.SetBool("isSwimming", isPlayerSwimming);
         }
     }
 }

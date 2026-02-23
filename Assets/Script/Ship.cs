@@ -1,91 +1,106 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))] // Ensures the GameObject has a Rigidbody2D
 public class Ship : MonoBehaviour
 {
+    [Header("Movement Settings")]
     [SerializeField] private float maxSpeed = 10f;
     [SerializeField] private float acceleration = 20f; 
-    [SerializeField] private float deceleration = 5f;
+    [SerializeField] private float deceleration = 15f; // Increased for better feel
+
+    [Header("References")]
     [SerializeField] private GameObject interactPopup;
     [SerializeField] private Transform playerPlaceholder;
-    private BoxCollider2D collider2D;
+
+    private Rigidbody2D rb;
     private bool isPlayerOnShip = false;
     private bool isPlayerNearShip = false;
+    private Player player = null;
 
     void Start()
     {
-        collider2D = gameObject.GetComponent<BoxCollider2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        if(isPlayerOnShip)
+        if (isPlayerOnShip)
         {
-            ShipMovement();
             interactPopup.SetActive(false);
+            player.transform.position = playerPlaceholder.position;
         }
+        
         PlayerInteract();
     }
 
-    private Player player = null;
+    void FixedUpdate()
+    {
+        if (isPlayerOnShip)
+        {
+            MoveShip();
+        }
+        else
+        {
+            rb.linearVelocity = Vector2.MoveTowards(rb.linearVelocity, Vector2.zero, deceleration * Time.fixedDeltaTime);
+        }
+    }
+
+    private void MoveShip()
+    {
+        float inputX = Input.GetAxisRaw("Horizontal");
+        float inputY = Input.GetAxisRaw("Vertical");
+
+        Vector2 targetDirection = new Vector2(inputX, inputY).normalized;
+        Vector2 targetVelocity = targetDirection * maxSpeed;
+
+        if (targetDirection.sqrMagnitude > 0.01f)
+        {
+            rb.linearVelocity = Vector2.MoveTowards(rb.linearVelocity, targetVelocity, acceleration * Time.fixedDeltaTime);
+        }
+        else
+        {
+            rb.linearVelocity = Vector2.MoveTowards(rb.linearVelocity, Vector2.zero, deceleration * Time.fixedDeltaTime);
+        }
+    }
+
     void PlayerInteract()
     {
-        if(Input.GetKeyDown(KeyCode.E) && isPlayerNearShip && !isPlayerOnShip)
+        if (Input.GetKeyDown(KeyCode.E) && (isPlayerNearShip || isPlayerOnShip))
         {
-            // Player Enter Ship
-            isPlayerOnShip = true;
-            player.playerMovement = false;
-        }else if(Input.GetKeyDown(KeyCode.E) && isPlayerNearShip && isPlayerOnShip)
-        {
-            // Player Exit Ship
-            isPlayerOnShip = false;
-            player.playerMovement = true;
-            player = null;
+            if (isPlayerOnShip == false)
+            {
+                isPlayerOnShip = true; 
+                player.isPlayerWalking = false;
+                player.col.enabled = false;
+                player.transform.SetParent(gameObject.transform);
+            }
+            else
+            {
+                player.isPlayerWalking = true;
+                isPlayerOnShip = false;
+                player.col.enabled = true;
+                player.transform.SetParent(null);
+            }
         }
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.CompareTag("Player"))
+        if (col.CompareTag("Player"))
         {
             interactPopup.SetActive(true);
             isPlayerNearShip = true;
             player = col.GetComponent<Player>();
         }
-
     }
 
     void OnTriggerExit2D(Collider2D col)
     {
-        if(col.CompareTag("Player"))
+        if (col.CompareTag("Player"))
         {
             interactPopup.SetActive(false);
             isPlayerNearShip = false;
+            if (!isPlayerOnShip) player = null;
         }
-    }
-
-    private Vector3 currentVelocity;
-    void ShipMovement()
-    {
-        float inputX = 0;
-        float inputY = 0;
-
-        if(Input.GetKey(KeyCode.W)) inputY++;
-        if(Input.GetKey(KeyCode.S)) inputY--;
-        if(Input.GetKey(KeyCode.D)) inputX++;
-        if(Input.GetKey(KeyCode.A)) inputX--;
-
-        Vector3 targetDirection = new Vector3(inputX, inputY, 0).normalized;
-
-        if(targetDirection.sqrMagnitude > 0)
-        {
-            currentVelocity = Vector3.MoveTowards(currentVelocity, targetDirection * maxSpeed, acceleration * Time.deltaTime);
-        }
-        else
-        {
-            currentVelocity = Vector3.MoveTowards(currentVelocity, Vector3.zero, deceleration * Time.deltaTime);
-        }
-
-        transform.position += currentVelocity * Time.deltaTime;
-        player.transform.position = playerPlaceholder.position;
     }
 }
