@@ -6,6 +6,7 @@ public class PopUpMenuManager : MonoBehaviour
     public static PopUpMenuManager Instance;
     private GameObject currentPrimaryPopUp;
     private Stack<GameObject> modals = new Stack<GameObject>();
+    [SerializeField] private Transform PopUpRoot;
     
     void Awake()
     {
@@ -17,14 +18,18 @@ public class PopUpMenuManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    public void SetPopUpRoot(Transform newRoot)
+    {
+        PopUpRoot = newRoot;
+    }
+
     public void OpenPrimaryPopUpMenu(GameObject menu)
     {
         if(currentPrimaryPopUp != null)
         {
             ClosePrimaryPopUpMenu(currentPrimaryPopUp);
         }
-        Canvas canvas = FindFirstObjectByType<Canvas>();
-        currentPrimaryPopUp = Instantiate(menu, canvas.transform);
+        currentPrimaryPopUp = Instantiate(menu, PopUpRoot);
     }
 
     public void ClosePrimaryPopUpMenu(GameObject menu)
@@ -38,8 +43,7 @@ public class PopUpMenuManager : MonoBehaviour
 
     public void OpenBlockingModal(GameObject modal)
     {
-        Canvas canvas = FindFirstObjectByType<Canvas>();
-        GameObject newModal = Instantiate(modal, canvas.transform);
+        GameObject newModal = Instantiate(modal, PopUpRoot);
         modals.Push(newModal);
     }
 
@@ -54,8 +58,7 @@ public class PopUpMenuManager : MonoBehaviour
 
     public void OpenOverlayPopUpMenu(GameObject menu)
     {
-        Canvas canvas = FindFirstObjectByType<Canvas>();
-        Instantiate(menu, canvas.transform);
+        Instantiate(menu, PopUpRoot);
     }
 
     public void CloseOverlayPopUpMenu(GameObject menu)
