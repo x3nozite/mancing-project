@@ -149,15 +149,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7491083210191162814, guid: bbefcbf2cd6c48120b3d99bf0e2502c9, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7491083210191162814, guid: bbefcbf2cd6c48120b3d99bf0e2502c9, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7491083210191162814, guid: bbefcbf2cd6c48120b3d99bf0e2502c9, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7491083210191162814, guid: bbefcbf2cd6c48120b3d99bf0e2502c9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -165,7 +165,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7491083210191162814, guid: bbefcbf2cd6c48120b3d99bf0e2502c9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.33
+      value: 2.37
       objectReference: {fileID: 0}
     - target: {fileID: 7491083210191162814, guid: bbefcbf2cd6c48120b3d99bf0e2502c9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3696,7 +3696,7 @@ Transform:
   m_GameObject: {fileID: 1260804090}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.768, y: 0.43, z: 0}
+  m_LocalPosition: {x: 0.58, y: 0.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3803,7 +3803,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -7191988446231784938, guid: 7290440cdba249c89838cd07ab259f56, type: 3}
+  m_Sprite: {fileID: 6053682942697153334, guid: 0ebfec2f039abcc158d11d8b1084637c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3822,7 +3822,7 @@ Transform:
   m_GameObject: {fileID: 1379122556}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7105706, y: -0.18909979, z: 0}
+  m_LocalPosition: {x: 0.59, y: -1.13, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -46302,7 +46302,7 @@ Tilemap:
       - {fileID: 406223676, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
       - {fileID: 458840726, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
       - {fileID: 1971235677, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
-      m_AnimationSpeed: 2.5
+      m_AnimationSpeed: 2.5000002
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 7, y: -2, z: 0}
@@ -46511,7 +46511,7 @@ Tilemap:
       - {fileID: 1978327214, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
       - {fileID: -749286367, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
       - {fileID: 843175089, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
-      m_AnimationSpeed: 2.5
+      m_AnimationSpeed: 2.5000002
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -11, y: 6, z: 0}
@@ -46731,7 +46731,7 @@ Tilemap:
       - {fileID: 406223676, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
       - {fileID: 458840726, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
       - {fileID: 1971235677, guid: 794de77986e69b14c8f09f7ff5df901d, type: 3}
-      m_AnimationSpeed: 2.5000002
+      m_AnimationSpeed: 2.5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -3, y: 9, z: 0}
@@ -47232,7 +47232,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 1.0449102, y: -0.007858276}
+  m_Offset: {x: 0.50540686, y: -0.007858276}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -47242,7 +47242,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 7.5659184, y: 8.873806}
+  m_Size: {x: 8.644925, y: 8.873806}
   m_EdgeRadius: 0
 --- !u!4 &1813636814
 Transform:
@@ -47253,8 +47253,8 @@ Transform:
   m_GameObject: {fileID: 1813636811}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.11, y: -8.39, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalPosition: {x: -0.82, y: -8.29, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1379122558}
