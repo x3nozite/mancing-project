@@ -1,25 +1,16 @@
 fileFormatVersion: 2
-guid: 4609769de06364271bf7a5cb92ab1876
+guid: 8749e826baf21084ab217e2c7b081982
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5670732621190257608
-    second: Money_0
+      213: 6774170353698114165
+    second: health-bar-Sheet_0
   - first:
-      213: 2429705866556353255
-    second: Money_1
+      213: -774254587957043367
+    second: health-bar-Sheet_1
   - first:
-      213: -8490346600704463052
-    second: Money_2
-  - first:
-      213: -2552588362852645552
-    second: Money_3
-  - first:
-      213: -1282214387447324998
-    second: Money_4
-  - first:
-      213: -3827101018466894660
-    second: Money_5
+      213: -7296404099453883686
+    second: health-bar-Sheet_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,133 +106,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Money_0
+      name: health-bar-Sheet_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 3
+        x: 0
+        y: 640
+        width: 2000
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57a882cab00b20e50800000000000000
+      internalID: 6774170353698114165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: health-bar-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95f9a1fed8b4145f0800000000000000
+      internalID: -774254587957043367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: health-bar-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 40
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adae85a2127fdba90800000000000000
+      internalID: -7296404099453883686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: health-bar-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 0
         width: 10
-        height: 10
+        height: 320
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8cbd34e264d72be40800000000000000
-      internalID: 5670732621190257608
+      spriteID: 1d888d591982fb1489df5890b94573ea
+      internalID: -1658542033
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Money_1
+      name: health-bar-Sheet_4
       rect:
         serializedVersion: 2
-        x: 20
-        y: 3
-        width: 9
-        height: 10
+        x: 1130
+        y: 0
+        width: 20
+        height: 320
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7ea26cccc9c08b120800000000000000
-      internalID: 2429705866556353255
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Money_2
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 3
-        width: 8
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 43fa01d10ca3c2a80800000000000000
-      internalID: -8490346600704463052
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Money_3
-      rect:
-        serializedVersion: 2
-        x: 53
-        y: 3
-        width: 6
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0554f5e7862639cd0800000000000000
-      internalID: -2552588362852645552
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Money_4
-      rect:
-        serializedVersion: 2
-        x: 68
-        y: 3
-        width: 8
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: abe9e4edec8a43ee0800000000000000
-      internalID: -1282214387447324998
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Money_5
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 3
-        width: 9
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cbcbeba86e763eac0800000000000000
-      internalID: -3827101018466894660
+      spriteID: 1743339c5b292f649a321dd4cba47bef
+      internalID: -2080949647
       vertices: []
       indices: 
       edges: []
@@ -250,7 +219,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d0aedf575d9360e419f652582dce23ad
     internalID: 0
     vertices: []
     indices: 
@@ -258,14 +227,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":3.0},"gridSpriteSize":{"x":2000.0,"y":320.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Money_0: 5670732621190257608
-      Money_1: 2429705866556353255
-      Money_2: -8490346600704463052
-      Money_3: -2552588362852645552
-      Money_4: -1282214387447324998
-      Money_5: -3827101018466894660
+      health-bar-Sheet_0: 6774170353698114165
+      health-bar-Sheet_1: -774254587957043367
+      health-bar-Sheet_2: -7296404099453883686
+      health-bar-Sheet_3: -1658542033
+      health-bar-Sheet_4: -2080949647
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
