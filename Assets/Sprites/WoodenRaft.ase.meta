@@ -158,7 +158,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 10
+      y: 4
       width: 20
       height: 22
     spriteID: c90650bf3b5aa0b54a1183e5ba12503e
@@ -172,16 +172,16 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: WoodenRaft_1
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 35
-      y: 9
-      width: 22
-      height: 23
+      x: 36
+      y: 4
+      width: 20
+      height: 22
     spriteID: 7dcb4d33320adfd398722d3a12240196
     spriteBone: []
     spriteOutline: []
@@ -193,16 +193,16 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: WoodenRaft_2
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 64
-      y: 6
-      width: 28
-      height: 29
+      x: 68
+      y: 4
+      width: 20
+      height: 22
     spriteID: 0d974bffdb2289f28a6a44d1b6eeea6f
     spriteBone: []
     spriteOutline: []
@@ -214,16 +214,16 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: WoodenRaft_3
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 96
+      x: 100
       y: 4
-      width: 28
-      height: 32
+      width: 20
+      height: 22
     spriteID: 793788aa1b12be442aeb2ac7b2adefdf
     spriteBone: []
     spriteOutline: []
@@ -252,9 +252,9 @@ ScriptedImporter:
       additiveSortOrder: 0
       cellRect:
         x: 6
-        y: 0
-        width: 120
-        height: 32
+        y: 6
+        width: 116
+        height: 22
       spriteId: d0a73fa7f179f3b5b89bcfdb02bdfbfa
     linkedCells: []
     tileCells: []
@@ -302,4 +302,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 128, y: 34}
-  previousTextureSize: {x: 128, y: 64}
+  previousTextureSize: {x: 128, y: 32}
