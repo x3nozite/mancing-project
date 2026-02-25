@@ -210,7 +210,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &132172034
 RectTransform:
   m_ObjectHideFlags: 0
@@ -250,9 +250,6 @@ MonoBehaviour:
   startRect: {fileID: 678553439}
   middleRect: {fileID: 991458903}
   endRect: {fileID: 309718892}
-  expCircle: {fileID: 0}
-  currentEXP: 0
-  EXPUntilNextLevel: 0
 --- !u!1 &258692012
 GameObject:
   m_ObjectHideFlags: 0
@@ -1823,9 +1820,6 @@ MonoBehaviour:
   startRect: {fileID: 1299383634}
   middleRect: {fileID: 258692013}
   endRect: {fileID: 1089842329}
-  expCircle: {fileID: 1565293070}
-  currentEXP: 0
-  EXPUntilNextLevel: 5000
 --- !u!1 &1840428358
 GameObject:
   m_ObjectHideFlags: 0
