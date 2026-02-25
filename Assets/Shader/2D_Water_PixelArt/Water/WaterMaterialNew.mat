@@ -80,8 +80,8 @@ Material:
     - _CausticFaderMultiplier: 0.05
     - _CausticFaderScale: 0.17
     - _CausticMovementAmount: 0.018
-    - _CausticMovementScale: 1.63
-    - _CausticScale: 0.08
+    - _CausticMovementScale: 2
+    - _CausticScale: 0.1
     - _CausticSpeed: 0.8
     - _CausticSquashAmount: 1.3
     - _CurrentWorldTextureScale: 0.005681818
@@ -94,13 +94,13 @@ Material:
     - _SpecularThreshold: -0.84
     m_Colors:
     - White: {r: 1, g: 1, b: 1, a: 1}
-    - _CausticColour: {r: 0, g: 0.8039216, b: 0.9764706, a: 0.12156863}
-    - _CausticHighlightColour: {r: 1, g: 1, b: 1, a: 0.36862746}
+    - _CausticColour: {r: 0, g: 0.8039216, b: 0.97647053, a: 0.28235295}
+    - _CausticHighlightColour: {r: 1, g: 1, b: 1, a: 0.5882353}
     - _CurrentWorldTexturePos: {r: -48, g: 3792, b: 0, a: 0}
-    - _FoamColour: {r: 1, g: 1, b: 1, a: 1}
+    - _FoamColour: {r: 1, g: 1, b: 1, a: 0.79607844}
     - _FoamTexelSize: {r: 0.005, g: 0.005, b: 0, a: 0}
     - _MainColour: {r: 0.12156863, g: 0.6862745, b: 0.85882354, a: 0.5254902}
-    - _SpecularColour: {r: 1, g: 1, b: 1, a: 0.87058824}
+    - _SpecularColour: {r: 1, g: 1, b: 1, a: 0.92156863}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &1576172767386937083
