@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Camera : MonoBehaviour
+public class CameraFollow : MonoBehaviour
 {
     [SerializeField] public Transform target;
     [SerializeField] public Player targetScript;
