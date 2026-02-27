@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Hook : MonoBehaviour
 {
+    public GameObject rodTip;
     public void Launch(float force)
     {
 
@@ -25,7 +26,7 @@ public class Hook : MonoBehaviour
         {
             float castDistance = Mathf.Lerp(start.x, target.x, t);
 
-            float arc = start.y + Mathf.Sin(t * Mathf.PI) * arcHeight;
+            float arc = Mathf.Sin(t * Mathf.PI) * arcHeight;
             float newY = Mathf.Lerp(start.y + arc, target.y, t);
             transform.position = new Vector2(castDistance, newY);
 
