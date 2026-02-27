@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,6 +8,9 @@ public class StartFishing : MonoBehaviour
     public Slider forceUI;
     private float sliderDirection;
     public float force;
+    private float gaugeSpeed = 2.5f;
+
+    public Action<float> onCastConfirmed;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,7 +27,7 @@ public class StartFishing : MonoBehaviour
     {
         if (force > 1f) sliderDirection = -1f;
         else if (force < 0f) sliderDirection = 1f;
-        force += 2f * Time.deltaTime * sliderDirection;
+        force += gaugeSpeed * sliderDirection * Time.deltaTime;
         slider();
 
 
@@ -37,7 +41,7 @@ public class StartFishing : MonoBehaviour
 
     void castRod()
     {
-        
+        onCastConfirmed?.Invoke(force);
     }
 
     void slider()
@@ -54,6 +58,7 @@ public class StartFishing : MonoBehaviour
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(1.5f);
+        PopUpMenuManager.Instance.CloseOverlayPopUpMenu(gameObject);
         resetGauge();
     }
 }
