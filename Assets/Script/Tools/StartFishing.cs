@@ -31,7 +31,7 @@ public class StartFishing : MonoBehaviour
         slider();
 
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             castRod();
             StartCoroutine(Wait());
