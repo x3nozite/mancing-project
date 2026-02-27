@@ -6,6 +6,7 @@ public class PopUpMenuManager : MonoBehaviour
 {
     public static PopUpMenuManager Instance;
     private GameObject currentPrimaryPopUp;
+    private GameObject currentPrimaryPopUpPrefab;
     private Stack<GameObject> modals = new Stack<GameObject>();
     private List<GameObject> overlayPopUps = new List<GameObject>();
     [SerializeField] private Transform PopUpRoot;
@@ -36,10 +37,17 @@ public class PopUpMenuManager : MonoBehaviour
 
     public void OpenPrimaryPopUpMenu(GameObject menu)
     {
-        if(currentPrimaryPopUp != null)
+        if(currentPrimaryPopUp != null && currentPrimaryPopUpPrefab == menu)
         {
+            Debug.Log("first");
+            return;
+        }
+        else if(currentPrimaryPopUp != null)
+        {
+            Debug.Log("second");
             ClosePrimaryPopUpMenu(currentPrimaryPopUp);
         }
+        currentPrimaryPopUpPrefab = menu;
         currentPrimaryPopUp = Instantiate(menu, PopUpRoot);
     }
 
