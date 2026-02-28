@@ -11,7 +11,7 @@ public class CameraFollow : MonoBehaviour
     void FixedUpdate()
     {
         if(targetScript.isPlayerWalking == true) smoothIntensity = 0.15f;
-        else smoothIntensity = 0.5f;
+        else smoothIntensity = 0.2f;
 
         if (target != null)
         {
