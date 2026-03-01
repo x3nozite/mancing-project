@@ -54,7 +54,7 @@ public class CastingRodGauge : MonoBehaviour
         
         Arrow.anchoredPosition = new Vector2(Arrow.anchoredPosition.x, Arrow.anchoredPosition.y + movement);
 
-        if (Input.GetKey(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             CheckAccuracy();
             castRod();
@@ -103,7 +103,7 @@ public class CastingRodGauge : MonoBehaviour
 
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
         PopUpMenuManager.Instance.CloseOverlayPopUpMenu(gameObject);
     }
 }

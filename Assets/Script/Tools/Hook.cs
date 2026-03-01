@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -5,11 +6,13 @@ public class Hook : MonoBehaviour
 {
     public GameObject rodTip;
     public float Gravity = 1f;
-    public void Launch(float force)
+    public Action onCastFinished;
+    public void Launch(float force, Action hookFinish)
     {
+        onCastFinished = hookFinish;
         Vector2 start = transform.position;
 
-        float arcHeight = Random.Range(0.1f, 0.5f) * Gravity;
+        float arcHeight = UnityEngine.Random.Range(0.1f, 0.5f) * Gravity;
         float startY = start.y;
 
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -31,5 +34,6 @@ public class Hook : MonoBehaviour
             t += Time.deltaTime / duration;
             yield return null;
         }
+        onCastFinished?.Invoke();
     }
 }

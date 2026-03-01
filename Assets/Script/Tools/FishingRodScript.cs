@@ -18,6 +18,12 @@ public class FishingRodScript : MonoBehaviour
     [SerializeField] private GameObject rodTip;
     [SerializeField] private GameObject hook;
 
+    [Header("Minigames")]
+    [SerializeField] private GameObject IdleMinigame;
+    private GameObject currentMinigame;
+
+    public FishingState state = FishingState.Idle;
+
     void Awake()
     {
         spriteRenderer.sprite = fishingRod.FishingRodSprite;
@@ -29,22 +35,30 @@ public class FishingRodScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.F) && currentGauge == null)
+        if (Input.GetKeyDown(KeyCode.F) && currentGauge == null && state == FishingState.Idle)
         {
             currentGauge = PopUpMenuManager.Instance.OpenOverlayPopUpMenu(castingGauge, worldCanvas);
             gauge = currentGauge.GetComponent<CastingRodGauge>();
             gauge.onCastConfirmed += HandleCastConfirmed;
+            state = FishingState.Casting;
+        }
+
+        // TEMPORARY. ONLY FOR TESTING
+        if(state == FishingState.Waiting)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                PopUpMenuManager.Instance.CloseOverlayPopUpMenu(currentMinigame);
+                state = FishingState.Idle;
+                ResetRod();
+            }
         }
     }
 
     void HandleCastConfirmed(float accuracy)
     {
-        // TODO cast the rod
         CastRod(accuracy);
-
-        // cleanup
-        gauge.onCastConfirmed -= HandleCastConfirmed;
-        
+        gauge.onCastConfirmed -= HandleCastConfirmed; 
         currentGauge = null;
     }
 
@@ -53,8 +67,33 @@ public class FishingRodScript : MonoBehaviour
         hook.transform.SetParent(null);
         hook.transform.position = rodTip.transform.position;
         Hook hookScript = hook.GetComponentInChildren<Hook>();
-        hookScript.Launch(force);
+        hookScript.Launch(force, OnHookCastFinished);
     }
 
+    void ResetRod()
+    {
+        hook.transform.SetParent(gameObject.transform);
+        hook.transform.position = rodTip.transform.position;
+    }
 
+    void OnHookCastFinished()
+    {
+        if (state != FishingState.Casting) return;
+
+        state = FishingState.Waiting;
+        StartWaitingMinigame();
+    }
+
+    void StartWaitingMinigame()
+    {
+        currentMinigame = PopUpMenuManager.Instance.OpenOverlayPopUpMenu(IdleMinigame);
+    }
+}
+
+public enum FishingState
+{
+    Idle,
+    Casting,
+    Waiting,
+    Reeling
 }
