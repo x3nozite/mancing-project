@@ -32,13 +32,13 @@ public class IdleFishingMinigame : MonoBehaviour
         HandleNoteSpawns();
 
         // Debug
-        if(currentNotes.Count > 0)
-        {
-            float notesPosition = currentNotes.Peek().GetComponent<Notes>().notesTransform.position.x;
-            float deltaPosition = Math.Abs(notesPosition - judgmentWindow.position.x);
-
-            Debug.Log(deltaPosition);
-        }
+        // if(currentNotes.Count > 0)
+        // {
+        //     float notesPosition = currentNotes.Peek().GetComponent<Notes>().notesTransform.position.x;
+        //     float deltaPosition = Math.Abs(notesPosition - judgmentWindow.position.x);
+        //
+        //     Debug.Log(deltaPosition);
+        // }
     }
 
     void HandleNoteSpawns()
@@ -70,6 +70,7 @@ public class IdleFishingMinigame : MonoBehaviour
         KeyCode currentTopType = currentNotes.Peek().GetComponent<Notes>().notesType;
         if(currentTopType == buttonPressed)
         {
+            // Debug.Log(currentTopType);
             if(deltaPosition <= perfectJudgment)
             {
                 Debug.Log("Perfect");
@@ -83,8 +84,7 @@ public class IdleFishingMinigame : MonoBehaviour
                 Debug.Log("Bad");
                 PopNotes();
             }
-        }
-        if(deltaPosition <= missJudgment)
+        }else if(deltaPosition <= missJudgment)
         {
             Debug.Log("Miss");
             PopNotes();
@@ -98,7 +98,7 @@ public class IdleFishingMinigame : MonoBehaviour
             float notesPosition = currentNotes.Peek().GetComponent<Notes>().notesTransform.position.x;
             float deltaPosition = Math.Abs(notesPosition - judgmentWindow.position.x);
 
-            if(deltaPosition > perfectJudgment && notesPosition > judgmentWindow.position.x)
+            if(deltaPosition > greatJudgment && notesPosition > judgmentWindow.position.x)
             {
                 PopNotes();
             }
