@@ -12,7 +12,7 @@ public class FishingRodScript : MonoBehaviour
 
     public GameObject castingGauge;
     private GameObject currentGauge;
-    private StartFishing gauge;
+    private CastingRodGauge gauge;
 
     [Header("Fishing Rod Compartments")]
     [SerializeField] private GameObject rodTip;
@@ -32,15 +32,15 @@ public class FishingRodScript : MonoBehaviour
         if (Input.GetKey(KeyCode.F) && currentGauge == null)
         {
             currentGauge = PopUpMenuManager.Instance.OpenOverlayPopUpMenu(castingGauge, worldCanvas);
-            gauge = currentGauge.GetComponent<StartFishing>();
+            gauge = currentGauge.GetComponent<CastingRodGauge>();
             gauge.onCastConfirmed += HandleCastConfirmed;
         }
     }
 
-    void HandleCastConfirmed(float force)
+    void HandleCastConfirmed(float accuracy)
     {
         // TODO cast the rod
-        CastRod(force);
+        CastRod(accuracy);
 
         // cleanup
         gauge.onCastConfirmed -= HandleCastConfirmed;
@@ -50,8 +50,6 @@ public class FishingRodScript : MonoBehaviour
 
     void CastRod(float force)
     {
-        Debug.Log("rod casted" + force);
-
         hook.transform.SetParent(null);
         hook.transform.position = rodTip.transform.position;
         Hook hookScript = hook.GetComponentInChildren<Hook>();

@@ -200,10 +200,73 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 27
-      y: 4
+      y: 37
       width: 3
-      height: 60
+      height: 3
     spriteID: 1d7ee3e30a7ff1db8a15c73cf79d1d3a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: castMeter_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 40
+      width: 3
+      height: 1
+    spriteID: 106738bc3ac2dd34ead89f7d7264de30
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: castMeter_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 35
+      width: 3
+      height: 2
+    spriteID: 3a6381288a7140e49a0286ca082525ca
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: castMeter_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 34
+      width: 3
+      height: 1
+    spriteID: 541455a8d933b594da0ba8fba1d72fbf
     spriteBone: []
     spriteOutline: []
     vertices: []
