@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4873f5891ec81d54fbd12078e23a8e25, type: 3}
   m_Name: FishingRod_test
   m_EditorClassIdentifier: Assembly-CSharp::FishingRod
-  name: test
+  itemName: 
   description: tets object
+  sprite: {fileID: -4424780041397978121, guid: 2146a8b95cdda7af68e724abbde36771, type: 3}
+  uiPrefab: {fileID: 0}
   luck: 100
-  sprite: {fileID: 3191122964850554743, guid: 2146a8b95cdda7af68e724abbde36771, type: 3}

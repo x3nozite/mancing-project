@@ -35,29 +35,34 @@ public class PopUpMenuManager : MonoBehaviour
         PopUpRoot = newRoot;
     }
 
-    public void OpenPrimaryPopUpMenu(GameObject menu)
+    public GameObject OpenPrimaryPopUpMenu(GameObject menu)
     {
         if(currentPrimaryPopUp != null && currentPrimaryPopUpPrefab == menu)
         {
-            Debug.Log("first");
-            return;
+            return currentPrimaryPopUp;
         }
         else if(currentPrimaryPopUp != null)
         {
-            Debug.Log("second");
             ClosePrimaryPopUpMenu(currentPrimaryPopUp);
         }
         currentPrimaryPopUpPrefab = menu;
         currentPrimaryPopUp = Instantiate(menu, PopUpRoot);
+        return currentPrimaryPopUp;
     }
 
-    public void OpenPrimaryPopUpMenu(GameObject menu, Canvas canvas)
+    public GameObject OpenPrimaryPopUpMenu(GameObject menu, Canvas canvas)
     {
-        if (currentPrimaryPopUp != null)
+        if (currentPrimaryPopUp != null && currentPrimaryPopUpPrefab == menu)
+        {
+            return currentPrimaryPopUp;
+        }
+        else if (currentPrimaryPopUp != null)
         {
             ClosePrimaryPopUpMenu(currentPrimaryPopUp);
         }
+        currentPrimaryPopUpPrefab = menu;
         currentPrimaryPopUp = Instantiate(menu, canvas.transform);
+        return currentPrimaryPopUp;
     }
 
     public void ClosePrimaryPopUpMenu(GameObject menu)
@@ -69,16 +74,18 @@ public class PopUpMenuManager : MonoBehaviour
         }
     }
 
-    public void OpenBlockingModal(GameObject modal)
+    public GameObject OpenBlockingModal(GameObject modal)
     {
         GameObject newModal = Instantiate(modal, PopUpRoot);
         modals.Push(newModal);
+        return newModal;
     }
 
-    public void OpenBlockingModal(GameObject modal, Canvas canvas)
+    public GameObject OpenBlockingModal(GameObject modal, Canvas canvas)
     {
         GameObject newModal = Instantiate(modal, canvas.transform);
         modals.Push(newModal);
+        return newModal;
     }
 
     public void CloseBlockingModal()
