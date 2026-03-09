@@ -111,6 +111,13 @@ public class PopUpMenuManager : MonoBehaviour
         return activePopUp;
     }
 
+    public GameObject OpenOverlayPopUpMenu(GameObject menu, Transform parent)
+    {
+        GameObject activePopUp = Instantiate(menu, parent);
+        overlayPopUps.Add(activePopUp);
+        return activePopUp;
+    }
+
     public void CloseOverlayPopUpMenu(GameObject menu)
     {
         if (overlayPopUps.Contains(menu))

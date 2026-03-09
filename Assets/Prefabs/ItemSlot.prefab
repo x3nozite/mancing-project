@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1408691873058338687, guid: 4fc1b325db23d44128cbaca340c48b6e, type: 3}
+  m_Sprite: {fileID: 6454173655185244239, guid: be937465f649b244abe14cc05f45d2db, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -90,6 +90,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   image: {fileID: 4921022689984737560}
+  border: {fileID: 176755355596068749}
+  descriptionPrefab: {fileID: 4108586943112410785, guid: 5f71b32350c45174cbbe55fbe675be3c, type: 3}
 --- !u!1 &4464874029538712928
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,14 +150,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1408691873058338687, guid: 4fc1b325db23d44128cbaca340c48b6e, type: 3}
+  m_Sprite: {fileID: 6454173655185244239, guid: be937465f649b244abe14cc05f45d2db, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

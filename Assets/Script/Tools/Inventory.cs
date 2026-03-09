@@ -4,14 +4,17 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public List<ItemInstance> items = new List<ItemInstance>();
-    [SerializeField] private ItemData placeholder;
+    [SerializeField] private ItemData placeholder_common;
+    [SerializeField] private ItemData placeholder_uncommon;
     private ItemInstance placeholder_rod;
     [SerializeField] GameObject inventoryPrefab;
     private GameObject inventoryUIInstance;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        placeholder_rod = new ItemInstance { item = placeholder};
+        placeholder_rod = new ItemInstance { item = placeholder_common};
+        populate_placeholder();
+        placeholder_rod = new ItemInstance { item = placeholder_uncommon };
         populate_placeholder();
     }
 

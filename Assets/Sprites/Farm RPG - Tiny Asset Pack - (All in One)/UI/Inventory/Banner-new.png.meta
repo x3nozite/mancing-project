@@ -1,0 +1,1157 @@
+fileFormatVersion: 2
+guid: be937465f649b244abe14cc05f45d2db
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8211910859952781075
+    second: Banner-new_0
+  - first:
+      213: 8161257518876354124
+    second: Banner-new_1
+  - first:
+      213: 6454173655185244239
+    second: Banner-new_2
+  - first:
+      213: -5620245581550888328
+    second: Banner-new_3
+  - first:
+      213: 7386158146975217551
+    second: Banner-new_4
+  - first:
+      213: 1112298302445278896
+    second: Banner-new_5
+  - first:
+      213: -1833469113085423433
+    second: Banner-new_6
+  - first:
+      213: 9150781840275351320
+    second: Banner-new_7
+  - first:
+      213: -6786076879832030360
+    second: Banner-new_8
+  - first:
+      213: 8045048149717717174
+    second: Banner-new_9
+  - first:
+      213: 7689162383210528606
+    second: Banner-new_10
+  - first:
+      213: 6059030727365558965
+    second: Banner-new_11
+  - first:
+      213: 4361579310001439612
+    second: Banner-new_12
+  - first:
+      213: -2337223759228379478
+    second: Banner-new_13
+  - first:
+      213: 8711661318928489955
+    second: Banner-new_14
+  - first:
+      213: -2549330987151303036
+    second: Banner-new_15
+  - first:
+      213: -1932462122859432917
+    second: Banner-new_16
+  - first:
+      213: -7780903506858015183
+    second: Banner-new_17
+  - first:
+      213: 4127692393454928254
+    second: Banner-new_18
+  - first:
+      213: 1311901372719045102
+    second: Banner-new_19
+  - first:
+      213: 3695277988935055891
+    second: Banner-new_20
+  - first:
+      213: 5572768105187381444
+    second: Banner-new_21
+  - first:
+      213: 9088143526158004479
+    second: Banner-new_22
+  - first:
+      213: 7148638021039505299
+    second: Banner-new_23
+  - first:
+      213: -8550491311689683878
+    second: Banner-new_24
+  - first:
+      213: -8707842167012055440
+    second: Banner-new_25
+  - first:
+      213: 667599088519196556
+    second: Banner-new_26
+  - first:
+      213: -6376449431544443565
+    second: Banner-new_27
+  - first:
+      213: 3595141279275853850
+    second: Banner-new_28
+  - first:
+      213: 4663553722475780784
+    second: Banner-new_29
+  - first:
+      213: -1058394868302555798
+    second: Banner-new_30
+  - first:
+      213: 8686876017084887063
+    second: Banner-new_31
+  - first:
+      213: 3071677914338127823
+    second: Banner-new_32
+  - first:
+      213: -2439434413246632836
+    second: Banner-new_33
+  - first:
+      213: -5344380503295706132
+    second: Banner-new_34
+  - first:
+      213: 2942666872335889566
+    second: Banner-new_35
+  - first:
+      213: 2011248454304167459
+    second: Banner-new_36
+  - first:
+      213: -2223894241112190161
+    second: Banner-new_37
+  - first:
+      213: 4695135805509352479
+    second: Banner-new_38
+  - first:
+      213: -7289174953872411198
+    second: Banner-new_39
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Banner-new_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1599
+        width: 481
+        height: 961
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31778a62b6196f170800000000000000
+      internalID: 8211910859952781075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_1
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 2109
+        width: 422
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c466c15297c924170800000000000000
+      internalID: 8161257518876354124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_2
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 1629
+        width: 422
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4040046eb4d19950800000000000000
+      internalID: 6454173655185244239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1349
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87a5331cb60e002b0800000000000000
+      internalID: -5620245581550888328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_4
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1279
+        width: 442
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f87b05d73b7e08660800000000000000
+      internalID: 7386158146975217551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_5
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 1349
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b65581b96daf6f00800000000000000
+      internalID: 1112298302445278896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_6
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 1169
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b094e74e853e86e0800000000000000
+      internalID: -1833469113085423433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_7
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 1149
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81725bec99b1efe70800000000000000
+      internalID: 9150781840275351320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1029
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 863ee1f280303d1a0800000000000000
+      internalID: -6786076879832030360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_9
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 959
+        width: 442
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b096dceaa0c5af60800000000000000
+      internalID: 8045048149717717174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_10
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 1029
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5f3f87d27465ba60800000000000000
+      internalID: 7689162383210528606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_11
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 939
+        width: 12
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b20dcb2850061450800000000000000
+      internalID: 6059030727365558965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_12
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 919
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7344581641778c30800000000000000
+      internalID: 4361579310001439612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_13
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 839
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaed696cf53809fd0800000000000000
+      internalID: -2337223759228379478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_14
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 629
+        width: 182
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ed5e3e20d906e870800000000000000
+      internalID: 8711661318928489955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_15
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 679
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48e53ff59f4fe9cd0800000000000000
+      internalID: -2549330987151303036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_16
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 709
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b24f01910f38e25e0800000000000000
+      internalID: -1932462122859432917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_17
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 709
+        width: 202
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 136032a4c7da40490800000000000000
+      internalID: -7780903506858015183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_18
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 709
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7186f5cc52884930800000000000000
+      internalID: 4127692393454928254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_19
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 679
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee91445095fc43210800000000000000
+      internalID: 1311901372719045102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_20
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 349
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31a3bc4a0c3484330800000000000000
+      internalID: 3695277988935055891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_21
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 349
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c0125dd013765d40800000000000000
+      internalID: 5572768105187381444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_22
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 349
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff0f960d2629f1e70800000000000000
+      internalID: 9088143526158004479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_23
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 439
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39f39efa760153360800000000000000
+      internalID: 7148638021039505299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_24
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 439
+        width: 82
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5c2ca7547d865980800000000000000
+      internalID: -8550491311689683878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_25
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 439
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 076241b6fa7872780800000000000000
+      internalID: -8707842167012055440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_26
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 349
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8faf8b75d9c34900800000000000000
+      internalID: 667599088519196556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_27
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 309
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35d4d80a60d4287a0800000000000000
+      internalID: -6376449431544443565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_28
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 309
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a18a49412f184e130800000000000000
+      internalID: 3595141279275853850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_29
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 189
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ba9e1be66548b040800000000000000
+      internalID: 4663553722475780784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_30
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 189
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a65dab29973df41f0800000000000000
+      internalID: -1058394868302555798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_31
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 199
+        width: 12
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 710743666bbfd8870800000000000000
+      internalID: 8686876017084887063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_32
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 199
+        width: 12
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcf6984e9cac0aa20800000000000000
+      internalID: 3071677914338127823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_33
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 159
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7c22996353652ed0800000000000000
+      internalID: -2439434413246632836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_34
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 159
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceb398c7f32f4d5b0800000000000000
+      internalID: -5344380503295706132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_35
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 29
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e94f3e1fde376d820800000000000000
+      internalID: 2942666872335889566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_36
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 29
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3267ad920d369eb10800000000000000
+      internalID: 2011248454304167459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_37
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 29
+        width: 82
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f23987c68f32321e0800000000000000
+      internalID: -2223894241112190161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_38
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 29
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1c3a93a329782140800000000000000
+      internalID: 4695135805509352479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner-new_39
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 29
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c5b2c8cff5a7da90800000000000000
+      internalID: -7289174953872411198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Banner-new_0: 8211910859952781075
+      Banner-new_1: 8161257518876354124
+      Banner-new_10: 7689162383210528606
+      Banner-new_11: 6059030727365558965
+      Banner-new_12: 4361579310001439612
+      Banner-new_13: -2337223759228379478
+      Banner-new_14: 8711661318928489955
+      Banner-new_15: -2549330987151303036
+      Banner-new_16: -1932462122859432917
+      Banner-new_17: -7780903506858015183
+      Banner-new_18: 4127692393454928254
+      Banner-new_19: 1311901372719045102
+      Banner-new_2: 6454173655185244239
+      Banner-new_20: 3695277988935055891
+      Banner-new_21: 5572768105187381444
+      Banner-new_22: 9088143526158004479
+      Banner-new_23: 7148638021039505299
+      Banner-new_24: -8550491311689683878
+      Banner-new_25: -8707842167012055440
+      Banner-new_26: 667599088519196556
+      Banner-new_27: -6376449431544443565
+      Banner-new_28: 3595141279275853850
+      Banner-new_29: 4663553722475780784
+      Banner-new_3: -5620245581550888328
+      Banner-new_30: -1058394868302555798
+      Banner-new_31: 8686876017084887063
+      Banner-new_32: 3071677914338127823
+      Banner-new_33: -2439434413246632836
+      Banner-new_34: -5344380503295706132
+      Banner-new_35: 2942666872335889566
+      Banner-new_36: 2011248454304167459
+      Banner-new_37: -2223894241112190161
+      Banner-new_38: 4695135805509352479
+      Banner-new_39: -7289174953872411198
+      Banner-new_4: 7386158146975217551
+      Banner-new_5: 1112298302445278896
+      Banner-new_6: -1833469113085423433
+      Banner-new_7: 9150781840275351320
+      Banner-new_8: -6786076879832030360
+      Banner-new_9: 8045048149717717174
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

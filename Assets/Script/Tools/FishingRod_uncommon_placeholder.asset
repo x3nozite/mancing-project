@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4873f5891ec81d54fbd12078e23a8e25, type: 3}
-  m_Name: FishingRod_test
-  m_EditorClassIdentifier: Assembly-CSharp::FishingRod
-  itemName: bad rod
-  description: tets object
-  rank: 1
-  sprite: {fileID: -4424780041397978121, guid: 2146a8b95cdda7af68e724abbde36771, type: 3}
+  m_Name: FishingRod_uncommon_placeholder
+  m_EditorClassIdentifier: Assembly-CSharp::FishingRodData
+  itemName: okay rod
+  description: this is a placeholder
+  rank: 2
+  sprite: {fileID: -128642785104722354, guid: 657393a68fc985a58a9f0dbc2418f2ee, type: 3}
   uiPrefab: {fileID: 0}
-  luck: 100
+  luck: 200
