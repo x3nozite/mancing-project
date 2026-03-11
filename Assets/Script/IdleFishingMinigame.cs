@@ -16,12 +16,9 @@ public class IdleFishingMinigame : MonoBehaviour
     [SerializeField] private float scrollSpeed = 0.5f;
 
     [Header ("Judgement Setting")]
-    [SerializeField] private float perfectJudgment;
-    [SerializeField] private float greatJudgment;
-    [SerializeField] private float badJudgment;
-    [SerializeField] private float missJudgment;
-    [SerializeField] private float minTimeBetweenNotes;
-    [SerializeField] private float maxTimeBetweenNotes;
+    [SerializeField] private int minNotes;
+    [SerializeField] private int maxNotes;
+    [SerializeField] private float gapBetween;
     private float currentTime = 0f;
 
     private Queue<GameObject> currentNotes = new Queue<GameObject>();
@@ -29,7 +26,11 @@ public class IdleFishingMinigame : MonoBehaviour
     void Update()
     {
         HandleInputs(); 
-        HandleNoteSpawns();
+
+        if(currentNotes.Count == 0)
+        {
+            HandleNoteSpawns();
+        }
 
         // Debug
         // if(currentNotes.Count > 0)
@@ -41,19 +42,19 @@ public class IdleFishingMinigame : MonoBehaviour
         // }
     }
 
+
     void HandleNoteSpawns()
     {
-        currentTime += Time.deltaTime;
-        float randomLimit = UnityEngine.Random.Range(minTimeBetweenNotes, maxTimeBetweenNotes);
-        if(randomLimit > currentTime) return;
+        int toSpawn = UnityEngine.Random.Range(minNotes, maxNotes);
 
-        // spawn Notes
-        currentTime = 0;
-        int chosenNotes = UnityEngine.Random.Range(0, availableNotes.Count);
-        GameObject notesToSpawn = Instantiate(availableNotes[chosenNotes], notesSpawnLocation.position, Quaternion.identity, mainBorder);
+        while(currentNotes.Count < toSpawn)
+        {
+            int chosenNotes = UnityEngine.Random.Range(0, availableNotes.Count);
+            Vector2 spawnLocation = new Vector2(notesSpawnLocation.position.x + (gapBetween * currentNotes.Count), notesSpawnLocation.position.y);
+            GameObject notesToSpawn = Instantiate(availableNotes[chosenNotes], spawnLocation, Quaternion.identity, mainBorder);
 
-        notesToSpawn.GetComponent<Notes>().SetSpeed(scrollSpeed);
-        currentNotes.Enqueue(notesToSpawn);
+            currentNotes.Enqueue(notesToSpawn);
+        }
     }
 
     void PopNotes()
@@ -63,28 +64,16 @@ public class IdleFishingMinigame : MonoBehaviour
         Destroy(buffer);
     }
 
-    void HandleJudgment(KeyCode buttonPressed, float deltaPosition)
+    void HandleJudgment(KeyCode buttonPressed)
     {
         if(currentNotes.Count == 0) return;
 
         KeyCode currentTopType = currentNotes.Peek().GetComponent<Notes>().notesType;
         if(currentTopType == buttonPressed)
         {
-            // Debug.Log(currentTopType);
-            if(deltaPosition <= perfectJudgment)
-            {
-                Debug.Log("Perfect");
-                PopNotes();
-            }else if(deltaPosition <= greatJudgment)
-            {
-                Debug.Log("Great");
-                PopNotes();
-            }else if(deltaPosition <= badJudgment)
-            {
-                Debug.Log("Bad");
-                PopNotes();
-            }
-        }else if(deltaPosition <= missJudgment)
+            Debug.Log("Hit");
+            PopNotes();
+        }else
         {
             Debug.Log("Miss");
             PopNotes();
@@ -95,19 +84,11 @@ public class IdleFishingMinigame : MonoBehaviour
     {
         if(currentNotes.Count > 0)
         {
-            float notesPosition = currentNotes.Peek().GetComponent<Notes>().notesTransform.position.x;
-            float deltaPosition = Math.Abs(notesPosition - judgmentWindow.position.x);
-
-            if(deltaPosition > greatJudgment && notesPosition > judgmentWindow.position.x)
-            {
-                PopNotes();
-            }
-
             // for handling inputs
-            if(Input.GetKeyDown(KeyCode.UpArrow)) HandleJudgment(KeyCode.UpArrow, deltaPosition);  
-            if(Input.GetKeyDown(KeyCode.LeftArrow)) HandleJudgment(KeyCode.LeftArrow, deltaPosition);  
-            if(Input.GetKeyDown(KeyCode.DownArrow)) HandleJudgment(KeyCode.DownArrow, deltaPosition);  
-            if(Input.GetKeyDown(KeyCode.RightArrow)) HandleJudgment(KeyCode.RightArrow, deltaPosition);  
+            if(Input.GetKeyDown(KeyCode.UpArrow)) HandleJudgment(KeyCode.UpArrow);  
+            if(Input.GetKeyDown(KeyCode.LeftArrow)) HandleJudgment(KeyCode.LeftArrow);  
+            if(Input.GetKeyDown(KeyCode.DownArrow)) HandleJudgment(KeyCode.DownArrow);  
+            if(Input.GetKeyDown(KeyCode.RightArrow)) HandleJudgment(KeyCode.RightArrow);  
         }
 
         bool hasInput = false;
