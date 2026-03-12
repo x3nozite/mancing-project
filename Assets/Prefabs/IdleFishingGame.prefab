@@ -89,7 +89,6 @@ GameObject:
   - component: {fileID: 155965341883331903}
   - component: {fileID: 6668830601529669052}
   - component: {fileID: 5931481891036822540}
-  - component: {fileID: 1502654307528616008}
   m_Layer: 5
   m_Name: BorderFiller
   m_TagString: Untagged
@@ -151,21 +150,6 @@ MonoBehaviour:
     y: 0
     width: 10
     height: 1
---- !u!114 &1502654307528616008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3783889150429455769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82f8f95af172ae814a571987105dcb41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::IdlefishingScroller
-  img: {fileID: 5931481891036822540}
-  x: -1
-  y: 0
 --- !u!1 &4337167403236353827
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,12 +284,10 @@ MonoBehaviour:
   - {fileID: 619868872981471135, guid: 59275b09c1a8c716dacbf3f1524ddc79, type: 3}
   - {fileID: 2579276003073314107, guid: 3f4100884d1e8b957a190e17b0156eab, type: 3}
   scrollSpeed: 3
-  perfectJudgment: 100
-  greatJudgment: 250
-  badJudgment: 400
-  missJudgment: 500
-  minTimeBetweenNotes: 0.5
-  maxTimeBetweenNotes: 3
+  minNotes: 0
+  maxNotes: 0
+  gapBetween: 0
+  gapMultiplierBasedOnNumberOfNotes: 0
 --- !u!1 &6501387487779975682
 GameObject:
   m_ObjectHideFlags: 0

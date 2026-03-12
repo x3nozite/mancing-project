@@ -6,28 +6,22 @@ using UnityEngine;
 public class IdleFishingMinigame : MonoBehaviour
 {
     [Header ("References")]
-    [SerializeField] private GameObject judgmentWindowCover;
-    [SerializeField] private Transform judgmentWindow;
-    [SerializeField] private Transform notesSpawnLocation;
-    [SerializeField] private Transform mainBorder;
+    [SerializeField] private RectTransform notesSpawnLocation;
     public List<GameObject> availableNotes;
-
-    [Header ("Player Settings")]
-    [SerializeField] private float scrollSpeed = 0.5f;
 
     [Header ("Judgement Setting")]
     [SerializeField] private int minNotes;
     [SerializeField] private int maxNotes;
-    [SerializeField] private float gapBetween;
-    private float currentTime = 0f;
 
     private Queue<GameObject> currentNotes = new Queue<GameObject>();
-
+    
+    private float timeoutMiss = 0f;
     void Update()
     {
-        HandleInputs(); 
+        if(timeoutMiss > 0) timeoutMiss -= Time.deltaTime;
 
-        if(currentNotes.Count == 0)
+        HandleInputs(); 
+        if(currentNotes.Count == 0 && timeoutMiss <= 0)
         {
             HandleNoteSpawns();
         }
@@ -42,16 +36,16 @@ public class IdleFishingMinigame : MonoBehaviour
         // }
     }
 
-
     void HandleNoteSpawns()
     {
-        int toSpawn = UnityEngine.Random.Range(minNotes, maxNotes);
+        int toSpawn = UnityEngine.Random.Range(minNotes, maxNotes + 1);
 
         while(currentNotes.Count < toSpawn)
         {
             int chosenNotes = UnityEngine.Random.Range(0, availableNotes.Count);
-            Vector2 spawnLocation = new Vector2(notesSpawnLocation.position.x + (gapBetween * currentNotes.Count), notesSpawnLocation.position.y);
-            GameObject notesToSpawn = Instantiate(availableNotes[chosenNotes], spawnLocation, Quaternion.identity, mainBorder);
+            GameObject notesToSpawn = Instantiate(availableNotes[chosenNotes], notesSpawnLocation);
+            notesToSpawn.transform.localPosition = Vector3.zero;
+            notesToSpawn.transform.localScale = Vector3.one;
 
             currentNotes.Enqueue(notesToSpawn);
         }
@@ -71,12 +65,15 @@ public class IdleFishingMinigame : MonoBehaviour
         KeyCode currentTopType = currentNotes.Peek().GetComponent<Notes>().notesType;
         if(currentTopType == buttonPressed)
         {
+            // TODO adding what happened on hit
             Debug.Log("Hit");
             PopNotes();
         }else
         {
             Debug.Log("Miss");
-            PopNotes();
+            // Reset on miss
+            while(currentNotes.Count > 0) PopNotes();
+            timeoutMiss = 1f;
         }
     }
 
@@ -90,17 +87,5 @@ public class IdleFishingMinigame : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.DownArrow)) HandleJudgment(KeyCode.DownArrow);  
             if(Input.GetKeyDown(KeyCode.RightArrow)) HandleJudgment(KeyCode.RightArrow);  
         }
-
-        bool hasInput = false;
-
-        // for animation
-        if(Input.GetKey(KeyCode.UpArrow)) hasInput = true;  
-        if(Input.GetKey(KeyCode.LeftArrow)) hasInput = true;  
-        if(Input.GetKey(KeyCode.DownArrow)) hasInput = true;  
-        if(Input.GetKey(KeyCode.RightArrow)) hasInput = true;  
-
-        if(hasInput) judgmentWindowCover.SetActive(true);
-        else judgmentWindowCover.SetActive(false);
-
     }
 }
