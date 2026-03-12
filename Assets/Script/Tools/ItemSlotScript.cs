@@ -18,8 +18,7 @@ public class ItemSlotScript : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     {
         this.item = item;
         image.sprite = item.item.sprite;
-        if (item.item.rank == 1) border.color = new Color32(147, 147, 147, 255); // 939393
-        else if (item.item.rank == 2) border.color = new Color32(156, 255, 124, 255); // 9CFF7C
+        border.color = item.item.RankColor; // 939393
     }
 
     public void OnPointerEnter(PointerEventData eventData)
