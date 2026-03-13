@@ -55,6 +55,12 @@ public class FishingRodScript : MonoBehaviour
         }
     }
 
+    public void SetItem(FishingRodData item)
+    {
+        fishingRod = item;
+        spriteRenderer.sprite = fishingRod.FishingRodSprite;
+    }
+
     void HandleCastConfirmed(float accuracy)
     {
         CastRod(accuracy);

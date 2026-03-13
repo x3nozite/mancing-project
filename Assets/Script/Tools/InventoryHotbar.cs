@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class InventoryHotbar : MonoBehaviour
 {
-    public Inventory inventory;
+    [SerializeField] private Inventory inventory;
+    [SerializeField] private PlayerItemManager playerItemManager;
     [SerializeField] HotbarSlot[] slots = new HotbarSlot[8];
 
     private int selectedItem;
@@ -36,5 +37,6 @@ public class InventoryHotbar : MonoBehaviour
         {
             slots[i].SetFocused(i == selectedItem);
         }
+        playerItemManager.SetEquippedItem(slots[selectedItem].item);
     }
 }
