@@ -68,12 +68,12 @@ public class FishingRodScript : MonoBehaviour
     currentGauge = null;
   }
 
-  void CastRod(float force)
+  void CastRod(float accuracy)
   {
     hook.transform.SetParent(null);
     hook.transform.position = rodTip.transform.position;
     Hook hookScript = hook.GetComponentInChildren<Hook>();
-    hookScript.Launch(force, OnHookCastFinished);
+    hookScript.Launch(accuracy, OnHookCastFinished);
   }
 
   void ResetRod()

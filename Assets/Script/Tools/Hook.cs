@@ -7,7 +7,10 @@ public class Hook : MonoBehaviour
     public GameObject rodTip;
     public float Gravity = 1f;
     public Action onCastFinished;
-    public void Launch(float force, Action hookFinish)
+
+    [SerializeField] private float maxDistance;
+    [SerializeField] private float maxDeviationRadius;
+    public void Launch(float accuracy, Action hookFinish)
     {
         onCastFinished = hookFinish;
         Vector2 start = transform.position;
@@ -18,6 +21,18 @@ public class Hook : MonoBehaviour
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 target = new Vector2(mousePos.x, mousePos.y);
 
+        float currentDistance = Vector2.Distance(start, target);
+
+        if(currentDistance > maxDistance)
+        {
+            Vector2 dir = (target - start).normalized;
+            target = start + (dir * maxDistance);
+        }
+
+        float errorRange = (1f - accuracy) * maxDeviationRadius;
+
+        Vector2 randomOffset = UnityEngine.Random.insideUnitCircle * errorRange;
+        target += randomOffset;
 
         StartCoroutine(MoveHook(start, target, 1f, arcHeight));
     }

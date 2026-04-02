@@ -65,7 +65,7 @@ public class CastingRodGauge : MonoBehaviour
 
     void CheckAccuracy()
     {
-        float arrowCenter = Arrow.anchoredPosition.y - Arrow.rect.height * 0.5f;
+        float arrowCenter = Arrow.anchoredPosition.y;
 
         float GreatUpperLimit = GreatZone.anchoredPosition.y + GreatZone.rect.height *  0.5f;
         float GreatLowerLimit = GreatZone.anchoredPosition.y - GreatZone.rect.height * 0.5f;
