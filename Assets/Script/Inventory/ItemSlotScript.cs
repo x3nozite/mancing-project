@@ -2,13 +2,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class ItemSlotScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class ItemSlotScript : MonoBehaviour, IPointerClickHandler, IPointerExitHandler
 {
     private ItemInstance item;
     [SerializeField] private Image image;
     [SerializeField] private Image border;
     [SerializeField] private GameObject descriptionPrefab;
     private GameObject openedDescription;
+    private InventoryItemDescription popup;
     void Update()
     {
         
@@ -21,16 +22,21 @@ public class ItemSlotScript : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         border.color = item.item.RankColor; // 939393
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
+    public void OnPointerClick(PointerEventData eventData)
     {
-        openedDescription = PopUpMenuManager.Instance.OpenOverlayPopUpMenu(descriptionPrefab);
-        openedDescription.transform.position = transform.position;
+        if(eventData.button == PointerEventData.InputButton.Right && !openedDescription)
+        {
+            openedDescription = PopUpMenuManager.Instance.OpenOverlayPopUpMenu(descriptionPrefab);
+            openedDescription.transform.position = transform.position;
 
-        openedDescription.GetComponent<InventoryItemDescription>().SetDescription(item);
+            popup = openedDescription.GetComponent<InventoryItemDescription>();
+            popup.SetDescription(item);
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         PopUpMenuManager.Instance.CloseOverlayPopUpMenu(openedDescription);
+        openedDescription = null;
     }
 }

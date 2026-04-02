@@ -6,16 +6,7 @@ public class InventoryItemDescription : MonoBehaviour
     public TextMeshProUGUI description;
     public TextMeshProUGUI itemName;
     public ItemInstance item;
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void SetDescription(ItemInstance item)
     {

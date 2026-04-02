@@ -39,4 +39,14 @@ public class InventoryHotbar : MonoBehaviour
         }
         playerItemManager.SetEquippedItem(slots[selectedItem].item);
     }
+
+    public void changeSelecteditem(int newSelected)
+    {
+        selectedItem = newSelected;
+        for (int i = 0; i < slots.Length; i++)
+        {
+            slots[i].SetFocused(i == selectedItem);
+        }
+        playerItemManager.SetEquippedItem(slots[selectedItem].item);
+    }
 }
