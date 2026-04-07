@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class HotbarSlot : MonoBehaviour, IPointerClickHandler
+public class HotbarSlot : MonoBehaviour, IPointerClickHandler, IDropHandler
 {
     [SerializeField] private Sprite unfocused;
     [SerializeField] private Sprite focused;
@@ -26,7 +26,7 @@ public class HotbarSlot : MonoBehaviour, IPointerClickHandler
 
     public void SetFocused(bool isFocusedItem)
     {
-        if(isFocusedItem) border.sprite = focused;
+        if (isFocusedItem) border.sprite = focused;
         else border.sprite = unfocused;
     }
 
@@ -34,6 +34,16 @@ public class HotbarSlot : MonoBehaviour, IPointerClickHandler
     {
         InventoryHotbar hotbar = GetComponentInParent<InventoryHotbar>();
         hotbar.changeSelecteditem(Index);
+
+    }
+
+    public void OnDrop(PointerEventData eventData)
+    {
+        if (eventData.pointerDrag != null)
+        {
+            ItemSlotScript dragged = eventData.pointerDrag.GetComponent<ItemSlotScript>();
+            InventoryEvents.instance.OnItemDropped?.Invoke(dragged, this);
+        }
 
     }
 }

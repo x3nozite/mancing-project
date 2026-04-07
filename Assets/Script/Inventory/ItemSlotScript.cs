@@ -39,9 +39,20 @@ public class ItemSlotScript : MonoBehaviour, IPointerClickHandler, IPointerExitH
         slotIndex = i;
     }
 
+    public void SetDraggable()
+    {
+        DragDrop dd = GetComponent<DragDrop>();
+        if (item == null)
+        {
+            dd.enabled = false;
+        }
+        else dd.enabled = true;
+
+    }
+
     public void OnPointerClick(PointerEventData eventData)
     {
-        if(eventData.button == PointerEventData.InputButton.Right && !openedDescription)
+        if (eventData.button == PointerEventData.InputButton.Right && !openedDescription)
         {
             openedDescription = PopUpMenuManager.Instance.OpenOverlayPopUpMenu(descriptionPrefab);
             openedDescription.transform.position = transform.position;
@@ -62,8 +73,6 @@ public class ItemSlotScript : MonoBehaviour, IPointerClickHandler, IPointerExitH
         if (eventData.pointerDrag != null)
         {
             ItemSlotScript dragged = eventData.pointerDrag.GetComponent<ItemSlotScript>();
-            Debug.Log("from:" + dragged.inventory);
-            Debug.Log("to:" + this.inventory);
             InventoryEvents.instance.OnItemDropped?.Invoke(dragged, this);
         }
     }

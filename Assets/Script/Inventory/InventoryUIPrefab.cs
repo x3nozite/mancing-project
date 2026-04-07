@@ -16,7 +16,7 @@ public class InventoryUIPrefab : MonoBehaviour
     {
         int totalSlots = CalculateTotalSlots();
 
-        for (int i=0; i < totalSlots; i++)
+        for (int i = 0; i < totalSlots; i++)
         {
             Transform currentParent = (i < totalSlots / 2) ? slotRootLeft.transform : slotRootRight.transform;
 
@@ -27,16 +27,21 @@ public class InventoryUIPrefab : MonoBehaviour
 
             slots.Add(iss);
 
-            if (i < inventory.items.Count &&  inventory.items[i] != null)
-            {    
+            if (i < inventory.items.Count && inventory.items[i] != null)
+            {
                 iss.SetItem(inventory.items[i]);
             }
+            else
+            {
+                iss.SetItem(null);
+            }
+            iss.SetDraggable();
         }
     }
 
     public void RefreshInventory()
     {
-        for(int i=0; i < slots.Count; i++)
+        for (int i = 0; i < slots.Count; i++)
         {
             ItemSlotScript iss = slots[i];
 
@@ -51,6 +56,7 @@ public class InventoryUIPrefab : MonoBehaviour
             {
                 iss.SetItem(null);
             }
+            iss.SetDraggable();
         }
     }
 

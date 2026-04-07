@@ -11,7 +11,7 @@ public class InventoryHotbar : MonoBehaviour
     void Start()
     {
         int i = 0;
-        foreach(HotbarSlot s in slots)
+        foreach (HotbarSlot s in slots)
         {
             s.SetItem(inventory.hotbarItems[i]);
             i++;
