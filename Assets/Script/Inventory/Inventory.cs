@@ -5,8 +5,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public List<ItemInstance> items = new List<ItemInstance>();
-    public ItemInstance[] hotbarItems = new ItemInstance[8];
-    public int inventorySize = 100;
+    [SerializeField] private int inventorySize = 100;
 
     [SerializeField] private ItemData placeholder_common;
     [SerializeField] private ItemData placeholder_uncommon;
@@ -24,8 +23,6 @@ public class Inventory : MonoBehaviour
         populate_placeholder();
         placeholder_rod = new ItemInstance { item = placeholder_uncommon };
         populate_placeholder();
-
-        hotbar_items_placeholder();
     }
 
     void Start() {
@@ -65,14 +62,7 @@ public class Inventory : MonoBehaviour
         items.Add(placeholder_rod);
     }
 
-    void hotbar_items_placeholder()
-    {
-        hotbarItems[0] = items[0];
-        hotbarItems[1] = items[5];
-        hotbarItems[4] = items[2];
-    }
-
-    void HandleInventoryItemDrop(ItemSlotScript from, ItemSlotScript to)
+    void HandleInventoryItemDrop(InventorySlot from, InventorySlot to)
     {
         if(from.inventory == to.inventory)
         {
@@ -82,13 +72,10 @@ public class Inventory : MonoBehaviour
         OnInventoryChanged?.Invoke();
     }
 
-    void Swap(ItemSlotScript from, ItemSlotScript to)
+    void Swap(InventorySlot from, InventorySlot to)
     {
         ItemInstance temp = items[from.getIndex()];
         items[from.getIndex()] = items[to.getIndex()];
         items[to.getIndex()] = temp;
-
-        Debug.Log("swapped");
-
     }
 }

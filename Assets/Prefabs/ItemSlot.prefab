@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 6548244645011672405}
   - component: {fileID: 4921022689984737560}
   - component: {fileID: 1699827700130338371}
+  - component: {fileID: 215852412175930443}
   - component: {fileID: 4213973534858542971}
+  - component: {fileID: 5930909106879744287}
   - component: {fileID: 1018393640040994116}
   m_Layer: 5
   m_Name: ItemSlot
@@ -91,10 +93,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0215d7ce24193254a84fe3e039a847e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  inventory: {fileID: 0}
+  descriptionPrefab: {fileID: 4108586943112410785, guid: 5f71b32350c45174cbbe55fbe675be3c, type: 3}
+  visuals: {fileID: 215852412175930443}
+--- !u!114 &215852412175930443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3128882664168655416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad69688bd068a2a4ebee5319e9b1fe77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSlotVisuals
   image: {fileID: 4921022689984737560}
   border: {fileID: 176755355596068749}
-  descriptionPrefab: {fileID: 4108586943112410785, guid: 5f71b32350c45174cbbe55fbe675be3c, type: 3}
   noItemImage: {fileID: 8995154407686431259, guid: 5eb06de9f19c43046a0a29a2becf8568, type: 3}
 --- !u!114 &4213973534858542971
 MonoBehaviour:
@@ -108,6 +122,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b073897c2f759434da98ccd313d019f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragDrop
+--- !u!114 &5930909106879744287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3128882664168655416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e264f22497d35184bbc4d17289759cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
+  inventory: {fileID: 0}
 --- !u!225 &1018393640040994116
 CanvasGroup:
   m_ObjectHideFlags: 0

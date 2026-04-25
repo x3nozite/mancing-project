@@ -13,8 +13,10 @@ public class InventoryHotbar : MonoBehaviour
         int i = 0;
         foreach (HotbarSlot s in slots)
         {
-            s.SetItem(inventory.hotbarItems[i]);
+            s.SetItem(-1, inventory);
             i++;
+
+            s.hotbar = this;
         }
     }
 
@@ -37,7 +39,8 @@ public class InventoryHotbar : MonoBehaviour
         {
             slots[i].SetFocused(i == selectedItem);
         }
-        playerItemManager.SetEquippedItem(slots[selectedItem].item);
+        int itemIndex = slots[selectedItem].GetItemIndex();
+        playerItemManager.SetEquippedItem(inventory.items[itemIndex]);
     }
 
     public void changeSelecteditem(int newSelected)
@@ -47,6 +50,7 @@ public class InventoryHotbar : MonoBehaviour
         {
             slots[i].SetFocused(i == selectedItem);
         }
-        playerItemManager.SetEquippedItem(slots[selectedItem].item);
+        int itemIndex = slots[selectedItem].GetItemIndex();
+        playerItemManager.SetEquippedItem(inventory.items[itemIndex]);
     }
 }

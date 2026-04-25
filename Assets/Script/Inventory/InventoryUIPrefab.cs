@@ -21,21 +21,23 @@ public class InventoryUIPrefab : MonoBehaviour
             Transform currentParent = (i < totalSlots / 2) ? slotRootLeft.transform : slotRootRight.transform;
 
             GameObject itemSlot = Instantiate(itemSlotPrefab, currentParent);
-            ItemSlotScript iss = itemSlot.GetComponent<ItemSlotScript>();
-            iss.inventory = inventory;
-            iss.SetIndex(i);
+            InventorySlot IS = itemSlot.GetComponent<InventorySlot>();
+            ItemSlotScript ISS = itemSlot.GetComponent<ItemSlotScript>();
 
-            slots.Add(iss);
+            IS.inventory = inventory;
+            IS.SetIndex(i);
+
+            slots.Add(ISS);
 
             if (i < inventory.items.Count && inventory.items[i] != null)
             {
-                iss.SetItem(inventory.items[i]);
+                ISS.SetItem(inventory.items[i]);
             }
             else
             {
-                iss.SetItem(null);
+                ISS.SetItem(null);
             }
-            iss.SetDraggable();
+            ISS.SetDraggable();
         }
     }
 
@@ -44,9 +46,10 @@ public class InventoryUIPrefab : MonoBehaviour
         for (int i = 0; i < slots.Count; i++)
         {
             ItemSlotScript iss = slots[i];
+            InventorySlot inventorySlot = iss.GetComponent<InventorySlot>();
 
-            iss.inventory = inventory;
-            iss.SetIndex(i);
+            inventorySlot.inventory = inventory;
+            inventorySlot.SetIndex(i);
 
             if (i < inventory.items.Count && inventory.items[i] != null)
             {

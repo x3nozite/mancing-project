@@ -6,37 +6,16 @@ using System;
 public class ItemSlotScript : MonoBehaviour, IPointerClickHandler, IPointerExitHandler, IDropHandler
 {
     private ItemInstance item;
-    private int slotIndex;
-    public Inventory inventory;
-    [SerializeField] private Image image;
-    [SerializeField] private Image border;
     [SerializeField] private GameObject descriptionPrefab;
-    [SerializeField] private Sprite noItemImage;
     private GameObject openedDescription;
     private InventoryItemDescription popup;
-
-    public int getIndex()
-    {
-        return slotIndex;
-    }
+    [SerializeField] private ItemSlotVisuals visuals;
 
     public void SetItem(ItemInstance item)
     {
         this.item = item;
 
-        if (item == null)
-        {
-            image.sprite = noItemImage;
-            border.color = new Color32(120, 86, 32, 255);
-            return;
-        }
-        image.sprite = item.item.sprite;
-        border.color = item.item.RankColor; // 939393
-    }
-
-    public void SetIndex(int i)
-    {
-        slotIndex = i;
+        visuals.SetVisuals(item);
     }
 
     public void SetDraggable()
@@ -72,8 +51,9 @@ public class ItemSlotScript : MonoBehaviour, IPointerClickHandler, IPointerExitH
     {
         if (eventData.pointerDrag != null)
         {
-            ItemSlotScript dragged = eventData.pointerDrag.GetComponent<ItemSlotScript>();
-            InventoryEvents.instance.OnItemDropped?.Invoke(dragged, this);
+            InventorySlot dragged = eventData.pointerDrag.GetComponent<InventorySlot>();
+            InventorySlot to = GetComponent<InventorySlot>();
+            InventoryEvents.instance.OnItemDropped?.Invoke(dragged, to);
         }
     }
 }

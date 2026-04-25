@@ -4,7 +4,7 @@ using UnityEngine;
 public class InventoryEvents: MonoBehaviour
 {
     public static InventoryEvents instance;
-    public Action<ItemSlotScript, ItemSlotScript> OnItemDropped;
+    public Action<InventorySlot, InventorySlot> OnItemDropped;
 
     public void Awake()
     {

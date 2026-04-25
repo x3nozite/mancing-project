@@ -8,20 +8,27 @@ public class HotbarSlot : MonoBehaviour, IPointerClickHandler, IDropHandler
     [SerializeField] private Sprite unfocused;
     [SerializeField] private Sprite focused;
     [SerializeField] private int Index;
-    public ItemInstance item;
+    private int itemIndex;
     public Image icon;
     public Image border;
-    public void SetItem(ItemInstance i)
+    public InventoryHotbar hotbar;
+
+    public int GetItemIndex()
     {
-        if (i == null)
+        Debug.Log("item index: " + itemIndex);
+        return itemIndex;
+    }
+
+    public void SetItem(int i, Inventory inventory)
+    {
+        if (i == -1)
         {
             icon.enabled = false;
             return;
         }
         icon.enabled = true;
-        item = i;
-        Debug.Log("icon set");
-        icon.sprite = item.item.sprite;
+        itemIndex = i;
+        icon.sprite = inventory.items[i].item.sprite;
     }
 
     public void SetFocused(bool isFocusedItem)
@@ -32,9 +39,7 @@ public class HotbarSlot : MonoBehaviour, IPointerClickHandler, IDropHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        InventoryHotbar hotbar = GetComponentInParent<InventoryHotbar>();
         hotbar.changeSelecteditem(Index);
-
     }
 
     public void OnDrop(PointerEventData eventData)
@@ -42,9 +47,8 @@ public class HotbarSlot : MonoBehaviour, IPointerClickHandler, IDropHandler
         if (eventData.pointerDrag != null)
         {
             ItemSlotScript dragged = eventData.pointerDrag.GetComponent<ItemSlotScript>();
-            InventoryEvents.instance.OnItemDropped?.Invoke(dragged, this);
+            //InventoryEvents.instance.OnItemDropped?.Invoke(dragged, this);
         }
-
     }
 }
 
