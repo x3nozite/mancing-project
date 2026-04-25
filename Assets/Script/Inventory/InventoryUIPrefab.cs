@@ -11,6 +11,7 @@ public class InventoryUIPrefab : MonoBehaviour
     [SerializeField] private GameObject slotRootLeft;
     [SerializeField] private GameObject slotRootRight;
     private List<ItemSlotScript> slots = new List<ItemSlotScript>();
+    [SerializeField] private int hotbarLength = 8;
 
     void PopulateInventory()
     {
@@ -25,13 +26,13 @@ public class InventoryUIPrefab : MonoBehaviour
             ItemSlotScript ISS = itemSlot.GetComponent<ItemSlotScript>();
 
             IS.inventory = inventory;
-            IS.SetIndex(i);
+            IS.SetIndex(i+ hotbarLength);
 
             slots.Add(ISS);
 
-            if (i < inventory.items.Count && inventory.items[i] != null)
+            if (i + hotbarLength < inventory.items.Count && inventory.items[i + hotbarLength] != null)
             {
-                ISS.SetItem(inventory.items[i]);
+                ISS.SetItem(inventory.items[i + hotbarLength], true);
             }
             else
             {
@@ -49,11 +50,11 @@ public class InventoryUIPrefab : MonoBehaviour
             InventorySlot inventorySlot = iss.GetComponent<InventorySlot>();
 
             inventorySlot.inventory = inventory;
-            inventorySlot.SetIndex(i);
+            inventorySlot.SetIndex(i + hotbarLength);
 
-            if (i < inventory.items.Count && inventory.items[i] != null)
+            if (i + hotbarLength < inventory.items.Count && inventory.items[i + hotbarLength] != null)
             {
-                iss.SetItem(inventory.items[i]);
+                iss.SetItem(inventory.items[i + hotbarLength], true);
             }
             else
             {

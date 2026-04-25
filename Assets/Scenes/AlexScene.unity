@@ -283,7 +283,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -855298285791758126, guid: af2f8a670a552930aa8c46152c8b38bf, type: 3}
+  m_Sprite: {fileID: 8995154407686431259, guid: 5eb06de9f19c43046a0a29a2becf8568, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -416,6 +416,11 @@ GameObject:
   - component: {fileID: 165440115}
   - component: {fileID: 165440114}
   - component: {fileID: 165440113}
+  - component: {fileID: 165440116}
+  - component: {fileID: 165440118}
+  - component: {fileID: 165440117}
+  - component: {fileID: 165440119}
+  - component: {fileID: 165440120}
   m_Layer: 5
   m_Name: HotbarSlot_5
   m_TagString: Untagged
@@ -458,8 +463,8 @@ MonoBehaviour:
   unfocused: {fileID: -5591204781322116360, guid: 5b1b2e0dd6cd6bf43acf1ee09541870a, type: 3}
   focused: {fileID: 1762290106, guid: 5b1b2e0dd6cd6bf43acf1ee09541870a, type: 3}
   Index: 4
-  icon: {fileID: 898835375}
   border: {fileID: 165440114}
+  hotbar: {fileID: 0}
 --- !u!114 &165440114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -498,6 +503,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 165440111}
   m_CullTransparentMesh: 1
+--- !u!114 &165440116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165440111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b073897c2f759434da98ccd313d019f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragDrop
+--- !u!114 &165440117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165440111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad69688bd068a2a4ebee5319e9b1fe77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSlotVisuals
+  itemIcon: {fileID: 898835375}
+  border: {fileID: 165440114}
+  noItemImage: {fileID: 8995154407686431259, guid: 5eb06de9f19c43046a0a29a2becf8568, type: 3}
+--- !u!114 &165440118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165440111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0215d7ce24193254a84fe3e039a847e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSlotScript
+  descriptionPrefab: {fileID: 0}
+  visuals: {fileID: 165440117}
+--- !u!114 &165440119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165440111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e264f22497d35184bbc4d17289759cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
+  inventory: {fileID: 0}
+--- !u!225 &165440120
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165440111}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &258692012
 GameObject:
   m_ObjectHideFlags: 0
@@ -1396,7 +1467,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -855298285791758126, guid: af2f8a670a552930aa8c46152c8b38bf, type: 3}
+  m_Sprite: {fileID: 8995154407686431259, guid: 5eb06de9f19c43046a0a29a2becf8568, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1896,7 +1967,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -855298285791758126, guid: af2f8a670a552930aa8c46152c8b38bf, type: 3}
+  m_Sprite: {fileID: 8995154407686431259, guid: 5eb06de9f19c43046a0a29a2becf8568, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2092,7 +2163,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -855298285791758126, guid: af2f8a670a552930aa8c46152c8b38bf, type: 3}
+  m_Sprite: {fileID: 8995154407686431259, guid: 5eb06de9f19c43046a0a29a2becf8568, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2235,6 +2306,11 @@ GameObject:
   - component: {fileID: 823649775}
   - component: {fileID: 823649774}
   - component: {fileID: 823649773}
+  - component: {fileID: 823649776}
+  - component: {fileID: 823649778}
+  - component: {fileID: 823649777}
+  - component: {fileID: 823649779}
+  - component: {fileID: 823649780}
   m_Layer: 5
   m_Name: HotbarSlot_1
   m_TagString: Untagged
@@ -2277,8 +2353,8 @@ MonoBehaviour:
   unfocused: {fileID: -5591204781322116360, guid: 5b1b2e0dd6cd6bf43acf1ee09541870a, type: 3}
   focused: {fileID: 1762290106, guid: 5b1b2e0dd6cd6bf43acf1ee09541870a, type: 3}
   Index: 0
-  icon: {fileID: 632125482}
   border: {fileID: 823649774}
+  hotbar: {fileID: 0}
 --- !u!114 &823649774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2317,6 +2393,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823649771}
   m_CullTransparentMesh: 1
+--- !u!114 &823649776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823649771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b073897c2f759434da98ccd313d019f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragDrop
+--- !u!114 &823649777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823649771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad69688bd068a2a4ebee5319e9b1fe77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSlotVisuals
+  itemIcon: {fileID: 632125482}
+  border: {fileID: 823649774}
+  noItemImage: {fileID: 8995154407686431259, guid: 5eb06de9f19c43046a0a29a2becf8568, type: 3}
+--- !u!114 &823649778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823649771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0215d7ce24193254a84fe3e039a847e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSlotScript
+  descriptionPrefab: {fileID: 0}
+  visuals: {fileID: 823649777}
+--- !u!114 &823649779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823649771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e264f22497d35184bbc4d17289759cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
+  inventory: {fileID: 0}
+--- !u!225 &823649780
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823649771}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &836022097
 GameObject:
   m_ObjectHideFlags: 0
@@ -2329,6 +2471,11 @@ GameObject:
   - component: {fileID: 836022101}
   - component: {fileID: 836022100}
   - component: {fileID: 836022099}
+  - component: {fileID: 836022102}
+  - component: {fileID: 836022104}
+  - component: {fileID: 836022103}
+  - component: {fileID: 836022105}
+  - component: {fileID: 836022106}
   m_Layer: 5
   m_Name: HotbarSlot_3
   m_TagString: Untagged
@@ -2371,8 +2518,8 @@ MonoBehaviour:
   unfocused: {fileID: -5591204781322116360, guid: 5b1b2e0dd6cd6bf43acf1ee09541870a, type: 3}
   focused: {fileID: 1762290106, guid: 5b1b2e0dd6cd6bf43acf1ee09541870a, type: 3}
   Index: 2
-  icon: {fileID: 1538341212}
   border: {fileID: 836022100}
+  hotbar: {fileID: 0}
 --- !u!114 &836022100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2411,6 +2558,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836022097}
   m_CullTransparentMesh: 1
+--- !u!114 &836022102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836022097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b073897c2f759434da98ccd313d019f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragDrop
+--- !u!114 &836022103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836022097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad69688bd068a2a4ebee5319e9b1fe77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSlotVisuals
+  itemIcon: {fileID: 1538341212}
+  border: {fileID: 836022100}
+  noItemImage: {fileID: 8995154407686431259, guid: 5eb06de9f19c43046a0a29a2becf8568, type: 3}
+--- !u!114 &836022104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836022097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0215d7ce24193254a84fe3e039a847e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSlotScript
+  descriptionPrefab: {fileID: 0}
+  visuals: {fileID: 836022103}
+--- !u!114 &836022105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836022097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e264f22497d35184bbc4d17289759cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
+  inventory: {fileID: 0}
+--- !u!225 &836022106
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836022097}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &858654915
 GameObject:
   m_ObjectHideFlags: 0
@@ -2573,6 +2786,11 @@ GameObject:
   - component: {fileID: 915496016}
   - component: {fileID: 915496015}
   - component: {fileID: 915496014}
+  - component: {fileID: 915496017}
+  - component: {fileID: 915496019}
+  - component: {fileID: 915496018}
+  - component: {fileID: 915496020}
+  - component: {fileID: 915496021}
   m_Layer: 5
   m_Name: HotbarSlot_7
   m_TagString: Untagged
@@ -2615,8 +2833,8 @@ MonoBehaviour:
   unfocused: {fileID: -5591204781322116360, guid: 5b1b2e0dd6cd6bf43acf1ee09541870a, type: 3}
   focused: {fileID: 1762290106, guid: 5b1b2e0dd6cd6bf43acf1ee09541870a, type: 3}
   Index: 6
-  icon: {fileID: 75350685}
   border: {fileID: 915496015}
+  hotbar: {fileID: 0}
 --- !u!114 &915496015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2655,6 +2873,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 915496012}
   m_CullTransparentMesh: 1
+--- !u!114 &915496017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915496012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b073897c2f759434da98ccd313d019f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragDrop
+--- !u!114 &915496018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915496012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad69688bd068a2a4ebee5319e9b1fe77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSlotVisuals
+  itemIcon: {fileID: 75350685}
+  border: {fileID: 915496015}
+  noItemImage: {fileID: 8995154407686431259, guid: 5eb06de9f19c43046a0a29a2becf8568, type: 3}
+--- !u!114 &915496019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915496012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0215d7ce24193254a84fe3e039a847e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSlotScript
+  descriptionPrefab: {fileID: 0}
+  visuals: {fileID: 915496018}
+--- !u!114 &915496020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915496012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e264f22497d35184bbc4d17289759cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
+  inventory: {fileID: 0}
+--- !u!225 &915496021
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915496012}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &924565363
 GameObject:
   m_ObjectHideFlags: 0
@@ -45578,7 +45862,7 @@ Tilemap:
       - {fileID: 475806399, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
       - {fileID: -581906228, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
       - {fileID: 1337139000, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
-      m_AnimationSpeed: 2.5
+      m_AnimationSpeed: 2.5000002
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -21, y: -25, z: 0}
@@ -47648,7 +47932,7 @@ Tilemap:
       - {fileID: -1628169057, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
       - {fileID: 40615822, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
       - {fileID: 1422542245, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
-      m_AnimationSpeed: 2.5
+      m_AnimationSpeed: 2.5000002
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 41, y: -11, z: 0}
@@ -48568,7 +48852,7 @@ Tilemap:
       - {fileID: 1107502818, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
       - {fileID: 865270538, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
       - {fileID: 72385504, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
-      m_AnimationSpeed: 2.5
+      m_AnimationSpeed: 2.5000002
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -11, y: -4, z: 0}
@@ -49580,7 +49864,7 @@ Tilemap:
       - {fileID: -1628169057, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
       - {fileID: 40615822, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
       - {fileID: 1422542245, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
-      m_AnimationSpeed: 2.5000002
+      m_AnimationSpeed: 2.5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -11, y: 6, z: 0}
@@ -49810,7 +50094,7 @@ Tilemap:
       - {fileID: 475806399, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
       - {fileID: -581906228, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
       - {fileID: 1337139000, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
-      m_AnimationSpeed: 2.5
+      m_AnimationSpeed: 2.5000002
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 5, y: 7, z: 0}
@@ -50638,7 +50922,7 @@ Tilemap:
       - {fileID: -1628169057, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
       - {fileID: 40615822, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
       - {fileID: 1422542245, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
-      m_AnimationSpeed: 2.5
+      m_AnimationSpeed: 2.5000002
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 41, y: 17, z: 0}
@@ -51351,7 +51635,7 @@ Tilemap:
       - {fileID: 1133128325, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
       - {fileID: 1708104942, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
       - {fileID: -209832231, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
-      m_AnimationSpeed: 2.5
+      m_AnimationSpeed: 2.5000002
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -28, y: 22, z: 0}
@@ -51880,7 +52164,7 @@ Tilemap:
       - {fileID: 1133128325, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
       - {fileID: 1708104942, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
       - {fileID: -209832231, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
-      m_AnimationSpeed: 2.5
+      m_AnimationSpeed: 2.5000002
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -5, y: 22, z: 0}
@@ -52340,7 +52624,7 @@ Tilemap:
       - {fileID: 1133128325, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
       - {fileID: 1708104942, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
       - {fileID: -209832231, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
-      m_AnimationSpeed: 2.5
+      m_AnimationSpeed: 2.5000002
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 15, y: 22, z: 0}
@@ -52432,7 +52716,7 @@ Tilemap:
       - {fileID: 1133128325, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
       - {fileID: 1708104942, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
       - {fileID: -209832231, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
-      m_AnimationSpeed: 2.5000002
+      m_AnimationSpeed: 2.5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 19, y: 22, z: 0}
@@ -52639,7 +52923,7 @@ Tilemap:
       - {fileID: 1133128325, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
       - {fileID: 1708104942, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
       - {fileID: -209832231, guid: fb5a82b1f233b44ab934cb17882550c8, type: 3}
-      m_AnimationSpeed: 2.5000002
+      m_AnimationSpeed: 2.5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 28, y: 22, z: 0}
@@ -53390,6 +53674,11 @@ GameObject:
   - component: {fileID: 1368389501}
   - component: {fileID: 1368389500}
   - component: {fileID: 1368389499}
+  - component: {fileID: 1368389502}
+  - component: {fileID: 1368389504}
+  - component: {fileID: 1368389503}
+  - component: {fileID: 1368389505}
+  - component: {fileID: 1368389506}
   m_Layer: 5
   m_Name: HotbarSlot_8
   m_TagString: Untagged
@@ -53432,8 +53721,8 @@ MonoBehaviour:
   unfocused: {fileID: -5591204781322116360, guid: 5b1b2e0dd6cd6bf43acf1ee09541870a, type: 3}
   focused: {fileID: 1762290106, guid: 5b1b2e0dd6cd6bf43acf1ee09541870a, type: 3}
   Index: 7
-  icon: {fileID: 509292801}
   border: {fileID: 1368389500}
+  hotbar: {fileID: 0}
 --- !u!114 &1368389500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53472,6 +53761,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368389497}
   m_CullTransparentMesh: 1
+--- !u!114 &1368389502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368389497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b073897c2f759434da98ccd313d019f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragDrop
+--- !u!114 &1368389503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368389497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad69688bd068a2a4ebee5319e9b1fe77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSlotVisuals
+  itemIcon: {fileID: 509292801}
+  border: {fileID: 1368389500}
+  noItemImage: {fileID: 8995154407686431259, guid: 5eb06de9f19c43046a0a29a2becf8568, type: 3}
+--- !u!114 &1368389504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368389497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0215d7ce24193254a84fe3e039a847e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSlotScript
+  descriptionPrefab: {fileID: 0}
+  visuals: {fileID: 1368389503}
+--- !u!114 &1368389505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368389497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e264f22497d35184bbc4d17289759cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
+  inventory: {fileID: 0}
+--- !u!225 &1368389506
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368389497}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1405529396
 GameObject:
   m_ObjectHideFlags: 0
@@ -53748,7 +54103,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -855298285791758126, guid: af2f8a670a552930aa8c46152c8b38bf, type: 3}
+  m_Sprite: {fileID: 8995154407686431259, guid: 5eb06de9f19c43046a0a29a2becf8568, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -53853,6 +54208,11 @@ GameObject:
   - component: {fileID: 1594903506}
   - component: {fileID: 1594903505}
   - component: {fileID: 1594903504}
+  - component: {fileID: 1594903507}
+  - component: {fileID: 1594903509}
+  - component: {fileID: 1594903508}
+  - component: {fileID: 1594903510}
+  - component: {fileID: 1594903511}
   m_Layer: 5
   m_Name: HotbarSlot_6
   m_TagString: Untagged
@@ -53895,8 +54255,8 @@ MonoBehaviour:
   unfocused: {fileID: -5591204781322116360, guid: 5b1b2e0dd6cd6bf43acf1ee09541870a, type: 3}
   focused: {fileID: 1762290106, guid: 5b1b2e0dd6cd6bf43acf1ee09541870a, type: 3}
   Index: 5
-  icon: {fileID: 1896505003}
   border: {fileID: 1594903505}
+  hotbar: {fileID: 0}
 --- !u!114 &1594903505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53935,6 +54295,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1594903502}
   m_CullTransparentMesh: 1
+--- !u!114 &1594903507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594903502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b073897c2f759434da98ccd313d019f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragDrop
+--- !u!114 &1594903508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594903502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad69688bd068a2a4ebee5319e9b1fe77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSlotVisuals
+  itemIcon: {fileID: 1896505003}
+  border: {fileID: 1594903505}
+  noItemImage: {fileID: 8995154407686431259, guid: 5eb06de9f19c43046a0a29a2becf8568, type: 3}
+--- !u!114 &1594903509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594903502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0215d7ce24193254a84fe3e039a847e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSlotScript
+  descriptionPrefab: {fileID: 0}
+  visuals: {fileID: 1594903508}
+--- !u!114 &1594903510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594903502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e264f22497d35184bbc4d17289759cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
+  inventory: {fileID: 0}
+--- !u!225 &1594903511
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594903502}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1599811494
 GameObject:
   m_ObjectHideFlags: 0
@@ -59464,7 +59890,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -855298285791758126, guid: af2f8a670a552930aa8c46152c8b38bf, type: 3}
+  m_Sprite: {fileID: 8995154407686431259, guid: 5eb06de9f19c43046a0a29a2becf8568, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -59526,6 +59952,11 @@ GameObject:
   - component: {fileID: 1996809343}
   - component: {fileID: 1996809342}
   - component: {fileID: 1996809341}
+  - component: {fileID: 1996809344}
+  - component: {fileID: 1996809346}
+  - component: {fileID: 1996809345}
+  - component: {fileID: 1996809347}
+  - component: {fileID: 1996809348}
   m_Layer: 5
   m_Name: HotbarSlot_2
   m_TagString: Untagged
@@ -59568,8 +59999,8 @@ MonoBehaviour:
   unfocused: {fileID: -5591204781322116360, guid: 5b1b2e0dd6cd6bf43acf1ee09541870a, type: 3}
   focused: {fileID: 1762290106, guid: 5b1b2e0dd6cd6bf43acf1ee09541870a, type: 3}
   Index: 1
-  icon: {fileID: 535688284}
   border: {fileID: 1996809342}
+  hotbar: {fileID: 0}
 --- !u!114 &1996809342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59608,6 +60039,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1996809339}
   m_CullTransparentMesh: 1
+--- !u!114 &1996809344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996809339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b073897c2f759434da98ccd313d019f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragDrop
+--- !u!114 &1996809345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996809339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad69688bd068a2a4ebee5319e9b1fe77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSlotVisuals
+  itemIcon: {fileID: 535688284}
+  border: {fileID: 1996809342}
+  noItemImage: {fileID: 8995154407686431259, guid: 5eb06de9f19c43046a0a29a2becf8568, type: 3}
+--- !u!114 &1996809346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996809339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0215d7ce24193254a84fe3e039a847e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSlotScript
+  descriptionPrefab: {fileID: 0}
+  visuals: {fileID: 1996809345}
+--- !u!114 &1996809347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996809339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e264f22497d35184bbc4d17289759cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
+  inventory: {fileID: 0}
+--- !u!225 &1996809348
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996809339}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2006180430
 GameObject:
   m_ObjectHideFlags: 0
@@ -59620,6 +60117,11 @@ GameObject:
   - component: {fileID: 2006180434}
   - component: {fileID: 2006180433}
   - component: {fileID: 2006180432}
+  - component: {fileID: 2006180435}
+  - component: {fileID: 2006180437}
+  - component: {fileID: 2006180436}
+  - component: {fileID: 2006180438}
+  - component: {fileID: 2006180439}
   m_Layer: 5
   m_Name: HotbarSlot_4
   m_TagString: Untagged
@@ -59662,8 +60164,8 @@ MonoBehaviour:
   unfocused: {fileID: -5591204781322116360, guid: 5b1b2e0dd6cd6bf43acf1ee09541870a, type: 3}
   focused: {fileID: 1762290106, guid: 5b1b2e0dd6cd6bf43acf1ee09541870a, type: 3}
   Index: 3
-  icon: {fileID: 713065197}
   border: {fileID: 2006180433}
+  hotbar: {fileID: 0}
 --- !u!114 &2006180433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59702,6 +60204,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2006180430}
   m_CullTransparentMesh: 1
+--- !u!114 &2006180435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006180430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b073897c2f759434da98ccd313d019f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragDrop
+--- !u!114 &2006180436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006180430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad69688bd068a2a4ebee5319e9b1fe77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSlotVisuals
+  itemIcon: {fileID: 713065197}
+  border: {fileID: 2006180433}
+  noItemImage: {fileID: 8995154407686431259, guid: 5eb06de9f19c43046a0a29a2becf8568, type: 3}
+--- !u!114 &2006180437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006180430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0215d7ce24193254a84fe3e039a847e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSlotScript
+  descriptionPrefab: {fileID: 0}
+  visuals: {fileID: 2006180436}
+--- !u!114 &2006180438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006180430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e264f22497d35184bbc4d17289759cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
+  inventory: {fileID: 0}
+--- !u!225 &2006180439
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006180430}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2107169339
 GameObject:
   m_ObjectHideFlags: 0

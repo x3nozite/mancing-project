@@ -11,11 +11,11 @@ public class ItemSlotScript : MonoBehaviour, IPointerClickHandler, IPointerExitH
     private InventoryItemDescription popup;
     [SerializeField] private ItemSlotVisuals visuals;
 
-    public void SetItem(ItemInstance item)
+    public void SetItem(ItemInstance item, bool showRankColor = false)
     {
         this.item = item;
 
-        visuals.SetVisuals(item);
+        visuals.SetVisuals(item, showRankColor);
     }
 
     public void SetDraggable()
@@ -29,22 +29,32 @@ public class ItemSlotScript : MonoBehaviour, IPointerClickHandler, IPointerExitH
 
     }
 
+    //public void OnPointerClick(PointerEventData eventData)
+    //{
+    //    if (eventData.button == PointerEventData.InputButton.Right && !openedDescription)
+    //    {
+    //        openedDescription = PopUpMenuManager.Instance.OpenOverlayPopUpMenu(descriptionPrefab);
+    //        openedDescription.transform.position = transform.position;
+
+    //        popup = openedDescription.GetComponent<InventoryItemDescription>();
+    //        popup.SetDescription(item);
+    //    }
+    //}
+
+    //public void OnPointerExit(PointerEventData eventData)
+    //{
+    //    PopUpMenuManager.Instance.CloseOverlayPopUpMenu(openedDescription);
+    //    openedDescription = null;
+    //}
+
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (eventData.button == PointerEventData.InputButton.Right && !openedDescription)
-        {
-            openedDescription = PopUpMenuManager.Instance.OpenOverlayPopUpMenu(descriptionPrefab);
-            openedDescription.transform.position = transform.position;
-
-            popup = openedDescription.GetComponent<InventoryItemDescription>();
-            popup.SetDescription(item);
-        }
+        return;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        PopUpMenuManager.Instance.CloseOverlayPopUpMenu(openedDescription);
-        openedDescription = null;
+        return;
     }
 
     public void OnDrop(PointerEventData eventData)

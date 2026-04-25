@@ -5,7 +5,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public List<ItemInstance> items = new List<ItemInstance>();
-    [SerializeField] private int inventorySize = 100;
+    [SerializeField] private int inventorySize = 108;
 
     [SerializeField] private ItemData placeholder_common;
     [SerializeField] private ItemData placeholder_uncommon;
@@ -19,10 +19,13 @@ public class Inventory : MonoBehaviour
 
     void Awake()
     {
-        placeholder_rod = new ItemInstance { item = placeholder_common};
-        populate_placeholder();
-        placeholder_rod = new ItemInstance { item = placeholder_uncommon };
-        populate_placeholder();
+        for (int i = 0; i < inventorySize; i++)
+        {
+            items.Add(null);
+        }
+            
+
+        placeholderPopulate();
     }
 
     void Start() {
@@ -54,12 +57,18 @@ public class Inventory : MonoBehaviour
         inventoryUIInstance = null;
     }
 
-    void populate_placeholder()
+    void placeholderPopulate()
     {
-        items.Add(placeholder_rod);
-        items.Add(placeholder_rod);
-        items.Add(placeholder_rod);
-        items.Add(placeholder_rod);
+        placeholder_rod = new ItemInstance { item = placeholder_common };
+        items[8] = placeholder_rod;
+        items[9] = placeholder_rod;
+        items[10] = placeholder_rod;
+        items[11] = placeholder_rod;
+        placeholder_rod = new ItemInstance { item = placeholder_uncommon };
+        items[20] = placeholder_rod;
+        items[13] = placeholder_rod;
+        items[14] = placeholder_rod;
+        items[15] = placeholder_rod;
     }
 
     void HandleInventoryItemDrop(InventorySlot from, InventorySlot to)

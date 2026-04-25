@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad69688bd068a2a4ebee5319e9b1fe77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemSlotVisuals
-  image: {fileID: 4921022689984737560}
+  itemIcon: {fileID: 4921022689984737560}
   border: {fileID: 176755355596068749}
   noItemImage: {fileID: 8995154407686431259, guid: 5eb06de9f19c43046a0a29a2becf8568, type: 3}
 --- !u!114 &4213973534858542971

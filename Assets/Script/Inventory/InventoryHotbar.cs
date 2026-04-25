@@ -6,17 +6,24 @@ public class InventoryHotbar : MonoBehaviour
     [SerializeField] private PlayerItemManager playerItemManager;
     [SerializeField] HotbarSlot[] slots = new HotbarSlot[8];
 
-    private int selectedItem;
+    private int selectedIndex;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
+    {
+        RefreshUI();
+        changeSelecteditem(0);
+        inventory.OnInventoryChanged += RefreshUI;
+    }
+
+    void RefreshUI()
     {
         int i = 0;
         foreach (HotbarSlot s in slots)
         {
-            s.SetItem(-1, inventory);
-            i++;
-
+            s.SetIndex(i, inventory);
             s.hotbar = this;
+            s.SetSlotItem(inventory.items[i]);
+            i++;
         }
     }
 
@@ -27,7 +34,7 @@ public class InventoryHotbar : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Alpha1 + i))
             {
-                selectedItem = i;
+                selectedIndex = i;
                 changeSelecteditem();
             }
         }
@@ -37,20 +44,18 @@ public class InventoryHotbar : MonoBehaviour
     {
         for (int i = 0; i < slots.Length; i++)
         {
-            slots[i].SetFocused(i == selectedItem);
+            slots[i].SetFocused(i == selectedIndex);
         }
-        int itemIndex = slots[selectedItem].GetItemIndex();
-        playerItemManager.SetEquippedItem(inventory.items[itemIndex]);
+        playerItemManager.SetEquippedItem(inventory.items[selectedIndex]);
     }
 
     public void changeSelecteditem(int newSelected)
     {
-        selectedItem = newSelected;
+        selectedIndex = newSelected;
         for (int i = 0; i < slots.Length; i++)
         {
-            slots[i].SetFocused(i == selectedItem);
+            slots[i].SetFocused(i == selectedIndex);
         }
-        int itemIndex = slots[selectedItem].GetItemIndex();
-        playerItemManager.SetEquippedItem(inventory.items[itemIndex]);
+        playerItemManager.SetEquippedItem(inventory.items[selectedIndex]);
     }
 }
