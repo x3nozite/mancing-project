@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishingRod
   itemName: bad rod
   description: tets object
+  maxStack: 1
   rank: 1
   sprite: {fileID: -4424780041397978121, guid: 2146a8b95cdda7af68e724abbde36771, type: 3}
   uiPrefab: {fileID: 0}

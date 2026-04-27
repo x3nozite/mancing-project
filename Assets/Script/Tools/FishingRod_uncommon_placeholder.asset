@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishingRodData
   itemName: okay rod
   description: this is a placeholder
+  maxStack: 1
   rank: 2
   sprite: {fileID: -128642785104722354, guid: 657393a68fc985a58a9f0dbc2418f2ee, type: 3}
   uiPrefab: {fileID: 0}

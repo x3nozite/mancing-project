@@ -6,9 +6,11 @@ public class Inventory : MonoBehaviour
 {
     public List<ItemInstance> items = new List<ItemInstance>();
     [SerializeField] private int inventorySize = 108;
+    [SerializeField] private int maxItemStack;
 
     [SerializeField] private ItemData placeholder_common;
     [SerializeField] private ItemData placeholder_uncommon;
+    [SerializeField] private ItemData placeholder_potion;
     private ItemInstance placeholder_rod;
 
     [SerializeField] private GameObject inventoryPrefab;
@@ -23,12 +25,13 @@ public class Inventory : MonoBehaviour
         {
             items.Add(null);
         }
-            
+
 
         placeholderPopulate();
     }
 
-    void Start() {
+    void Start()
+    {
         InventoryEvents.instance.OnItemDropped += HandleInventoryItemDrop;
     }
 
@@ -37,7 +40,7 @@ public class Inventory : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
-            if(inventoryUIInstance != null)
+            if (inventoryUIInstance != null)
             {
                 return;
             }
@@ -59,21 +62,24 @@ public class Inventory : MonoBehaviour
 
     void placeholderPopulate()
     {
-        placeholder_rod = new ItemInstance { item = placeholder_common };
+        placeholder_rod = new ItemInstance { item = placeholder_common, quantity = 1 };
         items[8] = placeholder_rod;
         items[9] = placeholder_rod;
         items[10] = placeholder_rod;
         items[11] = placeholder_rod;
-        placeholder_rod = new ItemInstance { item = placeholder_uncommon };
+        placeholder_rod = new ItemInstance { item = placeholder_uncommon, quantity = 1 };
         items[20] = placeholder_rod;
         items[13] = placeholder_rod;
         items[14] = placeholder_rod;
         items[15] = placeholder_rod;
+
+        placeholder_rod = new ItemInstance { item = placeholder_potion, quantity = 10 };
+        items[50] = placeholder_rod;
     }
 
     void HandleInventoryItemDrop(InventorySlot from, InventorySlot to)
     {
-        if(from.inventory == to.inventory)
+        if (from.inventory == to.inventory)
         {
             Swap(from, to);
         }
@@ -86,5 +92,19 @@ public class Inventory : MonoBehaviour
         ItemInstance temp = items[from.getIndex()];
         items[from.getIndex()] = items[to.getIndex()];
         items[to.getIndex()] = temp;
+    }
+
+    void SplitExcessItemStack(ItemInstance item)
+    {
+        int maxStack = Math.Min(maxItemStack, item.item.maxStack);
+        int overflow = item.quantity - maxStack;
+        item.quantity -= overflow;
+
+        if (overflow > 0)
+        {
+            ItemInstance overflowStack = new ItemInstance { item = item.item, level = item.level, quantity = overflow };
+            int firstEmptySlot = items.IndexOf(null);
+            items.Insert(firstEmptySlot, overflowStack);
+        }
     }
 }
