@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private SpriteRenderer spriteRenderer;
     public BoxCollider2D col;
+    public Inventory inventory;
     
     Vector3 targetDirection;
     void Update()

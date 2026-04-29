@@ -107,4 +107,39 @@ public class Inventory : MonoBehaviour
             items.Insert(firstEmptySlot, overflowStack);
         }
     }
+
+    public void AddItem(ItemInstance incoming)
+    {
+        int maximumAmount = Mathf.Min(maxItemStack, incoming.item.maxStack);
+
+        for (int i = 8; i < items.Count; i++)
+        {
+            if (items[i] == null || items[i] != incoming) continue;
+            int space = maximumAmount - items[i].quantity;
+            if (space < 0) continue;
+
+            int transferred = Mathf.Min(space, incoming.quantity);
+            items[i].quantity += transferred;
+            incoming.quantity -= transferred;
+
+            if (incoming.quantity == 0) return;
+        }
+
+        // Item is not in the inventory yet
+        while (incoming.quantity > 0)
+        {
+            int emptyIndex = items.IndexOf(null);
+            if (emptyIndex != -1)
+            {
+                int transferred = Mathf.Min(maximumAmount, incoming.quantity);
+                Debug.Log("Transferring: " + transferred);
+                items[emptyIndex] = new ItemInstance { item = incoming.item, level = incoming.level, quantity = transferred };
+                incoming.quantity -= transferred;
+            }
+            else
+            {
+                return;
+            }
+        }
+    }       
 }
