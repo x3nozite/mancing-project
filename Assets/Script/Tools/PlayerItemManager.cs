@@ -17,7 +17,6 @@ public class PlayerItemManager : MonoBehaviour
         if (equippedItem == null)
         {
             FishingRodManager.SetActive(false);
-            Debug.Log("inactive");
             return;
         }else if (equippedItem.item is FishingRodData)
         {

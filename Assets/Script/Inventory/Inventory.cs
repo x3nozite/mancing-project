@@ -112,9 +112,9 @@ public class Inventory : MonoBehaviour
     {
         int maximumAmount = Mathf.Min(maxItemStack, incoming.item.maxStack);
 
-        for (int i = 8; i < items.Count; i++)
+        for (int i = 0; i < items.Count; i++)
         {
-            if (items[i] == null || items[i] != incoming) continue;
+            if (items[i] == null || items[i].item != incoming.item) continue;
             int space = maximumAmount - items[i].quantity;
             if (space < 0) continue;
 
