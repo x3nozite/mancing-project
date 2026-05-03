@@ -21,11 +21,7 @@ public class ItemSlotScript : MonoBehaviour, IPointerClickHandler, IPointerExitH
     public void SetDraggable()
     {
         DragDrop dd = GetComponent<DragDrop>();
-        if (item == null)
-        {
-            dd.enabled = false;
-        }
-        else dd.enabled = true;
+        dd.SetDraggable(item != null);
 
     }
 

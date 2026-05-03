@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
@@ -12,9 +13,17 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         rt = GetComponent<RectTransform>();
         cg = GetComponent<CanvasGroup>();
     }
+
+    public void SetDraggable(bool i)
+    {
+        cg.blocksRaycasts = true;
+        enabled = i;
+    }
+
     public void OnPointerDown(PointerEventData eventData)
     {
         originalPosition = rt.anchoredPosition;
+
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -25,6 +34,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public void OnDrag(PointerEventData eventData)
     {
         rt.anchoredPosition += eventData.delta;
+
     }
 
     public void OnEndDrag(PointerEventData eventData)

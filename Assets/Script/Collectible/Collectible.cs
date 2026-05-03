@@ -18,7 +18,7 @@ public class Collectible : MonoBehaviour
         {
             Player player = col.GetComponent<Player>();
             player.inventory.AddItem(itemInstance);
-            // Next refresh UI so collected item immediately shows up
+            player.inventory.OnInventoryChanged.Invoke();
             Destroy(gameObject);
         }
     }

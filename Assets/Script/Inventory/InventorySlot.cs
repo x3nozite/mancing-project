@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class InventorySlot : MonoBehaviour
 {
-    private int slotIndex;
+    [SerializeField] private int slotIndex;
     public Inventory inventory;
 
     public int getIndex()
