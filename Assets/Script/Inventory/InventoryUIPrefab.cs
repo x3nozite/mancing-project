@@ -22,8 +22,8 @@ public class InventoryUIPrefab : MonoBehaviour
             Transform currentParent = (i < totalSlots / 2) ? slotRootLeft.transform : slotRootRight.transform;
 
             GameObject itemSlot = Instantiate(itemSlotPrefab, currentParent);
-            InventorySlot IS = itemSlot.GetComponent<InventorySlot>();
-            ItemSlotScript ISS = itemSlot.GetComponent<ItemSlotScript>();
+            InventorySlot IS = itemSlot.GetComponentInChildren<InventorySlot>();
+            ItemSlotScript ISS = itemSlot.GetComponentInChildren<ItemSlotScript>();
 
             IS.inventory = inventory;
             IS.SetIndex(i+ hotbarLength);

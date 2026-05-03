@@ -17,13 +17,13 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public void SetDraggable(bool i)
     {
         cg.blocksRaycasts = true;
+        rt.anchoredPosition = originalPosition;
         enabled = i;
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
         originalPosition = rt.anchoredPosition;
-
     }
 
     public void OnBeginDrag(PointerEventData eventData)
