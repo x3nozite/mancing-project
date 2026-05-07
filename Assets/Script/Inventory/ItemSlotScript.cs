@@ -18,6 +18,11 @@ public class ItemSlotScript : MonoBehaviour, IPointerClickHandler, IPointerExitH
         visuals.SetVisuals(item, showRankColor);
     }
 
+    public ItemInstance GetItem()
+    {
+        return item;
+    }
+
     public void SetDraggable()
     {
         DragDrop dd = GetComponent<DragDrop>();

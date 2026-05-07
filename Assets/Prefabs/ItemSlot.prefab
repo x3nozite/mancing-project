@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9180189035871891305}
   - component: {fileID: 2994960458875041872}
   - component: {fileID: 6880044365221492174}
+  - component: {fileID: 6049266244270764978}
   - component: {fileID: 7116797325285624279}
   - component: {fileID: 4181039792584700540}
   m_Layer: 0
@@ -131,6 +132,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
   slotIndex: 0
   inventory: {fileID: 0}
+--- !u!114 &6049266244270764978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531207132354861164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 721663ef0d208214f99e398319f3e271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemContainer
+  descriptionPrefab: {fileID: 4108586943112410785, guid: 5f71b32350c45174cbbe55fbe675be3c, type: 3}
 --- !u!225 &7116797325285624279
 CanvasGroup:
   m_ObjectHideFlags: 0
