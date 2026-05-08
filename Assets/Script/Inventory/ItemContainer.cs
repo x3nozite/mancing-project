@@ -14,9 +14,10 @@ public class ItemContainer : MonoBehaviour, IPointerClickHandler
             openedDescription.transform.position = transform.position;
 
             ItemSlotScript iss = GetComponent<ItemSlotScript>();
+            InventorySlot inventorySlot = GetComponent<InventorySlot>();
             InventoryItemDescription iid = openedDescription.GetComponent<InventoryItemDescription>();
 
-            iid.SetDescription(iss.GetItem());
+            iid.SetDescription(iss.GetItem(), inventorySlot.inventory);
         }
     }
 }

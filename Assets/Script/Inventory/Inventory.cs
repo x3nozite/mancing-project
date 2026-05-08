@@ -1,11 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
     public List<ItemInstance> items = new List<ItemInstance>();
-    [SerializeField] private int inventorySize = 108;
+    public int inventorySize = 108;
     [SerializeField] private int maxItemStack;
 
     [SerializeField] private ItemData placeholder_common;
@@ -111,7 +112,6 @@ public class Inventory : MonoBehaviour
     public void AddItem(ItemInstance incoming)
     {
         int maximumAmount = Mathf.Min(maxItemStack, incoming.item.maxStack);
-
         for (int i = 0; i < items.Count; i++)
         {
             if (items[i] == null || items[i].item != incoming.item) continue;
@@ -141,5 +141,26 @@ public class Inventory : MonoBehaviour
                 return;
             }
         }
-    }       
+    }
+
+    public void AddItemToNewSlot(ItemInstance incoming)
+    {
+        int maximumAmount = Mathf.Min(maxItemStack, incoming.item.maxStack);
+        // Item is not in the inventory yet
+        while (incoming.quantity > 0)
+        {
+            int emptyIndex = items.IndexOf(null);
+            if (emptyIndex != -1)
+            {
+                int transferred = Mathf.Min(maximumAmount, incoming.quantity);
+                Debug.Log("Transferring: " + transferred);
+                items[emptyIndex] = new ItemInstance { item = incoming.item, level = incoming.level, quantity = transferred };
+                incoming.quantity -= transferred;
+            }
+            else
+            {
+                return;
+            }
+        }
+    }
 }
