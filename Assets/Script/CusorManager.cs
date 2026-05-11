@@ -2,9 +2,15 @@ using UnityEngine;
 
 public class CursorManager : MonoBehaviour
 {
-    void Update()
+    void Start()
     {
         Cursor.visible = false;
-        transform.position = Input.mousePosition;
+    }
+
+    void Update()
+    {
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = 10f; 
+        transform.position = Camera.main.ScreenToWorldPoint(mousePos);
     }
 }
