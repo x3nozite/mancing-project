@@ -10,10 +10,11 @@ public class ItemContainer : MonoBehaviour, IPointerClickHandler
     {
         if (eventData.button == PointerEventData.InputButton.Left)
         {
+            ItemSlotScript iss = GetComponent<ItemSlotScript>();
+            if (iss.GetItem() == null) return;
             openedDescription = PopUpMenuManager.Instance.OpenOverlayPopUpMenu(descriptionPrefab);
             openedDescription.transform.position = transform.position;
 
-            ItemSlotScript iss = GetComponent<ItemSlotScript>();
             InventorySlot inventorySlot = GetComponent<InventorySlot>();
             InventoryItemDescription iid = openedDescription.GetComponent<InventoryItemDescription>();
 

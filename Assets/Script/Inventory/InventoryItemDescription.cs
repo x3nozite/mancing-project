@@ -19,11 +19,14 @@ public class InventoryItemDescription : MonoBehaviour
 
     private void SplitStack(int newStackQuantity)
     {
-        if(sourceInventory.items.IndexOf(null) == -1)
+        if (sourceInventory.items.IndexOf(null) == -1)
         {
             Debug.Log("inventory full");
             return;
         }
+
+        newStackQuantity = Mathf.Min(newStackQuantity, item.quantity);
+        if (item.quantity <= 0 || item.quantity == newStackQuantity) return;
 
         // make sure to delete the item instance from inventory if quantity reaches 0
         item.quantity -= newStackQuantity;
