@@ -24,7 +24,7 @@ public class FishingRodScript : MonoBehaviour
     private GameObject currentMinigame;
 
     public FishingState state = FishingState.Idle;
-    private float duration;
+    public float duration;
     private float currentTime;
 
     void Awake()
@@ -49,12 +49,7 @@ public class FishingRodScript : MonoBehaviour
         // TEMPORARY. ONLY FOR TESTING
         if (state == FishingState.Waiting)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                PopUpMenuManager.Instance.CloseOverlayPopUpMenu(currentMinigame);
-                state = FishingState.Idle;
-                ResetRod();
-            }
+            
 
             if(currentTime < duration)
             {
@@ -65,6 +60,16 @@ public class FishingRodScript : MonoBehaviour
                     StartReelingMinigame();
                     currentTime = 0f;
                 }
+            }
+        }
+
+        if( state != FishingState.Idle)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                PopUpMenuManager.Instance.CloseOverlayPopUpMenu(currentMinigame);
+                state = FishingState.Idle;
+                ResetRod();
             }
         }
     }
@@ -100,7 +105,7 @@ public class FishingRodScript : MonoBehaviour
     {
         if (state != FishingState.Casting) return;
 
-        duration = Random.Range(2.0f, 4.0f);
+        duration = Random.Range(10.0f, 11.0f);
         StartWaitingMinigame();
     }
 
@@ -108,12 +113,15 @@ public class FishingRodScript : MonoBehaviour
     {
         state = FishingState.Waiting;
 
-        currentMinigame = PopUpMenuManager.Instance.OpenOverlayPopUpMenu(IdleMinigame, player.transform);
+        currentMinigame = PopUpMenuManager.Instance.OpenOverlayPopUpMenu(IdleMinigame, player.transform);    
         currentMinigame.transform.position = new Vector3(
             currentMinigame.transform.position.x,
             1f,
             currentMinigame.transform.position.z
         );
+
+        IdleFishingMinigame idleMinigame = currentMinigame.GetComponent<IdleFishingMinigame>();
+        idleMinigame.fishingRod = this;
     }
 
     void StopWaitingMinigame()

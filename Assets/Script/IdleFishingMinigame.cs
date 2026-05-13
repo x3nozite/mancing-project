@@ -14,6 +14,8 @@ public class IdleFishingMinigame : MonoBehaviour
     [SerializeField] private int maxNotes;
 
     private Queue<GameObject> currentNotes = new Queue<GameObject>();
+
+    public FishingRodScript fishingRod;
     
     private float timeoutMiss = 0f;
     void Update()
@@ -68,6 +70,7 @@ public class IdleFishingMinigame : MonoBehaviour
             // TODO adding what happened on hit
             Debug.Log("Hit");
             PopNotes();
+            fishingRod.duration -= 0.2f;
         }else
         {
             Debug.Log("Miss");
