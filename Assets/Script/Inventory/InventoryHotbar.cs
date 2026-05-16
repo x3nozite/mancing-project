@@ -25,6 +25,7 @@ public class InventoryHotbar : MonoBehaviour
             s.SetSlotItem(inventory.items[i]);
             i++;
         }
+        changeSelecteditem();
     }
 
     // Update is called once per frame

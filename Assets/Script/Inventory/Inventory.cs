@@ -12,6 +12,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] private ItemData placeholder_common;
     [SerializeField] private ItemData placeholder_uncommon;
     [SerializeField] private ItemData placeholder_potion;
+    [SerializeField] private ItemData bomb;
     private ItemInstance placeholder_rod;
 
     [SerializeField] private GameObject inventoryPrefab;
@@ -76,6 +77,9 @@ public class Inventory : MonoBehaviour
 
         placeholder_rod = new ItemInstance { item = placeholder_potion, quantity = 10 };
         items[50] = placeholder_rod;
+
+        placeholder_rod = new ItemInstance { item = bomb, quantity = 5 };
+        items[27] = placeholder_rod;
     }
 
     void HandleInventoryItemDrop(InventorySlot from, InventorySlot to)
@@ -162,5 +166,23 @@ public class Inventory : MonoBehaviour
                 return;
             }
         }
+    }
+
+    public void ReduceItemQuantity(ItemInstance targetItem, int reduction)
+    {
+        targetItem.quantity -= reduction;
+
+        int targetIndexs = items.IndexOf(targetItem);
+        if (targetItem.quantity <= 0)
+        {
+            int targetIndex = items.IndexOf(targetItem);
+            if (targetIndex != -1)
+            {
+                items[targetIndex] = null;
+                Debug.Log("set too null");
+            }
+            
+        }
+        OnInventoryChanged?.Invoke();
     }
 }
