@@ -62,7 +62,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1410357031844669329}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
   m_LocalScale: {x: 0.8479472, y: 0.80555, z: 0.80555}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -172,6 +172,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6501361098353642699}
+  - component: {fileID: 5487597475370830470}
   m_Layer: 0
   m_Name: Meter
   m_TagString: Untagged
@@ -200,6 +201,14 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5487597475370830470
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2236444538420723408}
+  m_CullTransparentMesh: 1
 --- !u!1 &2434319982369454477
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,6 +218,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8697915682568720417}
+  - component: {fileID: 6133479436138067430}
   m_Layer: 0
   m_Name: ReelingMinigame
   m_TagString: Untagged
@@ -226,12 +236,32 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -253.09, y: -151.36, z: 0}
-  m_LocalScale: {x: 0.55410796, y: 0.55410796, z: 0.55410796}
+  m_LocalScale: {x: 0.6064745, y: 0.6064745, z: 0.6064745}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1827155391011866871}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6133479436138067430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2434319982369454477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d4f23191aba2432e977a302f2255609, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Reeling
+  greenLeftImage: {fileID: 3612248664120971295}
+  greenRightImage: {fileID: 2760840684209929431}
+  arrowPivot: {fileID: 4126000704562536280}
+  greenLeftRange: 0.2
+  greenRightRange: 0.5
+  progressGainAndLoss: 5
+  arrowSensitifity: 0.3
+  arrowSpeedLimit: 2
 --- !u!1 &2797221107055669260
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,13 +291,13 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 8.365, y: 4.8000007, z: 5.1403284}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 9167580803355807043}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -16.61}
+  m_AnchoredPosition: {x: -0, y: -16.61}
   m_SizeDelta: {x: 98.6, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2063987731043079471
@@ -358,7 +388,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 455.67, y: 275.02}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 909, y: 546}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7084394049206786573
