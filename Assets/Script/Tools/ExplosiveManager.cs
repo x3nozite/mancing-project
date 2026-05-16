@@ -1,18 +1,20 @@
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class ExplosiveManager : MonoBehaviour
 {
     [SerializeField] private ItemInstance explosive;
-    [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Player player;
-    [SerializeField] private ExplosiveScript explosiveObject;
+    [SerializeField] private GameObject explosivePrefab;
+    private ExplosiveScript explosiveObject;
+    [SerializeField] private SpriteRenderer ownSpriteRenderer;
 
     public Inventory inventory;
 
     void Awake()
     {
         transform.SetParent(player.transform);
-        transform.localPosition = new Vector2(0.4f, 0f);
+        transform.localPosition = new Vector2(0.0f, 0f);
         transform.rotation = Quaternion.Euler(0f, 0f, -45f);
     }
 
@@ -20,6 +22,11 @@ public class ExplosiveManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F) && explosive.quantity > 0)
         {
+            GameObject newExplosive = Instantiate(explosivePrefab, transform);
+            explosiveObject = newExplosive.GetComponent<ExplosiveScript>();
+            explosiveObject.explosive = (Throwable)explosive.item;
+            explosiveObject.spriteRenderer.sprite = explosive.item.sprite;
+
             explosiveObject.ThrowExplosive();
             inventory.ReduceItemQuantity(explosive, 1);
         }
@@ -28,7 +35,6 @@ public class ExplosiveManager : MonoBehaviour
     public void SetItem(ItemInstance item)
     {
         explosive = item;
-        explosiveObject.explosive = (Throwable)item.item;
-        spriteRenderer.sprite = explosive.item.sprite;
+        ownSpriteRenderer.sprite = explosive.item.sprite;
     }
 }

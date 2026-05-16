@@ -102,7 +102,7 @@ public class FishingRodScript : MonoBehaviour
     {
         if (state != FishingState.Casting) return;
 
-        duration = Random.Range(10.0f, 11.0f);
+        duration = UnityEngine.Random.Range(5f, 10f);
         StartWaitingMinigame();
     }
 

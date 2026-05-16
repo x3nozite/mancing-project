@@ -6,6 +6,8 @@ public class ExplosiveScript : MonoBehaviour
 {
     public float Gravity = 1.0f;
     public Throwable explosive;
+    public GameObject explosionPrefab;
+    public SpriteRenderer spriteRenderer;
     public void ThrowExplosive()
     {
         Vector2 start = transform.position;
@@ -39,5 +41,16 @@ public class ExplosiveScript : MonoBehaviour
             t += Time.deltaTime / duration;
             yield return null;
         }
+        //trigger explosion
+        StartExplosion();
+        Destroy(gameObject);
+    }
+
+    void StartExplosion()
+    {
+        GameObject explosion = Instantiate(explosionPrefab);
+        explosion.transform.position = transform.position;
+
+        Destroy(explosion, 2f);
     }
 }
