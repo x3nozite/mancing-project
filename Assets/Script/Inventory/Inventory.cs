@@ -78,7 +78,7 @@ public class Inventory : MonoBehaviour
         placeholder_rod = new ItemInstance { item = placeholder_potion, quantity = 10 };
         items[50] = placeholder_rod;
 
-        placeholder_rod = new ItemInstance { item = bomb, quantity = 64 };
+        placeholder_rod = new ItemInstance { item = bomb, quantity = 10 };
         items[27] = placeholder_rod;
     }
 

@@ -110,12 +110,8 @@ public class FishingRodScript : MonoBehaviour
     {
         state = FishingState.Waiting;
 
-        currentMinigame = PopUpMenuManager.Instance.OpenOverlayPopUpMenu(IdleMinigame, player.transform);    
-        currentMinigame.transform.localPosition = new Vector3(
-            currentMinigame.transform.position.x,
-            1f,
-            currentMinigame.transform.position.z
-        );
+        currentMinigame = PopUpMenuManager.Instance.OpenOverlayPopUpMenu(IdleMinigame, player.transform);
+        currentMinigame.transform.localPosition = new Vector3(0, 0.5f, 0);
 
         IdleFishingMinigame idleMinigame = currentMinigame.GetComponent<IdleFishingMinigame>();
         idleMinigame.fishingRod = this;
