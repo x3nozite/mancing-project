@@ -22,7 +22,7 @@ public class ExplosiveManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F) && explosive.quantity > 0)
         {
-            GameObject newExplosive = Instantiate(explosivePrefab, transform);
+            GameObject newExplosive = Instantiate(explosivePrefab, player.transform);
             explosiveObject = newExplosive.GetComponent<ExplosiveScript>();
             explosiveObject.explosive = (Throwable)explosive.item;
             explosiveObject.spriteRenderer.sprite = explosive.item.sprite;

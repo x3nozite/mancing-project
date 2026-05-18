@@ -40,20 +40,16 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.I) || Input.GetKeyDown(KeyCode.Tab))
         {
             if (inventoryUIInstance != null)
             {
+                PopUpMenuManager.Instance.ClosePrimaryPopUpMenu(inventoryUIInstance);
                 return;
             }
             inventoryUIInstance = PopUpMenuManager.Instance.OpenPrimaryPopUpMenu(inventoryPrefab);
             InventoryUIPrefab UIInventory = inventoryUIInstance.GetComponent<InventoryUIPrefab>();
             UIInventory.SetInventory(this);
-
-            for (int i = 4; i < inventorySize; i++)
-            {
-                items.Add(null);
-            }
         }
     }
 
@@ -64,6 +60,10 @@ public class Inventory : MonoBehaviour
 
     void placeholderPopulate()
     {
+        for (int i = 4; i < inventorySize; i++)
+        {
+            items.Add(null);
+        }
         placeholder_rod = new ItemInstance { item = placeholder_common, quantity = 1 };
         items[8] = placeholder_rod;
         items[9] = placeholder_rod;
@@ -78,7 +78,7 @@ public class Inventory : MonoBehaviour
         placeholder_rod = new ItemInstance { item = placeholder_potion, quantity = 10 };
         items[50] = placeholder_rod;
 
-        placeholder_rod = new ItemInstance { item = bomb, quantity = 64 };
+        placeholder_rod = new ItemInstance { item = bomb, quantity = 10 };
         items[27] = placeholder_rod;
     }
 

@@ -14,9 +14,12 @@ public class Reeling : MonoBehaviour
 
     [SerializeField] private float progressGainAndLoss = 2; 
     private float fishProgress = 50;
+    private float maxProgress = 100f;
 
     // Update is called once per frame
     private float greenRightRange;
+
+    public event Action<float> OnProgressChanged;
     void Update()
     {
         FishAttackHandler();
@@ -116,7 +119,11 @@ public class Reeling : MonoBehaviour
             fishProgress -= Time.deltaTime * progressGainAndLoss;
         }
 
-        Mathf.Clamp(fishProgress, 0f, 100f);
+        fishProgress = Mathf.Clamp(fishProgress, 0f, maxProgress);
+
+        float progressNorm = fishProgress / maxProgress;
+
+        OnProgressChanged.Invoke(progressNorm);
     }
 
     [Header("Arrow Settings")]

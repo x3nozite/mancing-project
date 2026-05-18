@@ -27,6 +27,7 @@ public class FishingRodScript : MonoBehaviour
     public float duration;
     private float currentTime;
 
+    private Hook hookScript;
     void Awake()
     {
         spriteRenderer.sprite = fishingRod.FishingRodSprite;
@@ -88,7 +89,7 @@ public class FishingRodScript : MonoBehaviour
     {
         hook.transform.SetParent(null);
         hook.transform.position = rodTip.transform.position;
-        Hook hookScript = hook.GetComponentInChildren<Hook>();
+        hookScript = hook.GetComponentInChildren<Hook>();
         hookScript.Launch(accuracy, OnHookCastFinished);
     }
 
@@ -110,12 +111,8 @@ public class FishingRodScript : MonoBehaviour
     {
         state = FishingState.Waiting;
 
-        currentMinigame = PopUpMenuManager.Instance.OpenOverlayPopUpMenu(IdleMinigame, player.transform);    
-        currentMinigame.transform.localPosition = new Vector3(
-            currentMinigame.transform.position.x,
-            1f,
-            currentMinigame.transform.position.z
-        );
+        currentMinigame = PopUpMenuManager.Instance.OpenOverlayPopUpMenu(IdleMinigame, player.transform);
+        currentMinigame.transform.localPosition = new Vector3(0, 0.5f, 0);
 
         IdleFishingMinigame idleMinigame = currentMinigame.GetComponent<IdleFishingMinigame>();
         idleMinigame.fishingRod = this;
@@ -131,6 +128,36 @@ public class FishingRodScript : MonoBehaviour
         state = FishingState.Reeling;
         currentMinigame = PopUpMenuManager.Instance.OpenOverlayPopUpMenu(ReelingMinigame, player.transform);
         currentMinigame.transform.localPosition = new Vector3(0, 1.5f, 0);
+
+        Reeling reelingMinigame = currentMinigame.GetComponent<Reeling>();
+        reelingMinigame.OnProgressChanged += hookScript.UpdateHookPosition;
+
+        hookScript.OnFishingFinished += FishingFinished;
+    }
+
+    void StopReelingMinigame()
+    {
+        Reeling reelingMinigame = currentMinigame.GetComponent<Reeling>();
+        reelingMinigame.OnProgressChanged -= hookScript.UpdateHookPosition;
+        hookScript.OnFishingFinished -= FishingFinished;
+
+        PopUpMenuManager.Instance.CloseOverlayPopUpMenu(currentMinigame);
+    }
+
+    void FishingFinished(bool success)
+    {
+        if (success)
+        {
+            Debug.Log("success");
+        }
+        else
+        {
+            Debug.Log("fail");
+        }
+
+        StopReelingMinigame();
+        state = FishingState.Idle;
+        ResetRod();
     }
 }
 

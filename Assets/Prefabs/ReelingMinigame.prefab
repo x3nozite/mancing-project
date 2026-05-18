@@ -260,8 +260,8 @@ MonoBehaviour:
   greenLeftRange: 0
   gapSize: 0.2
   progressGainAndLoss: 5
-  attackedChance: 50
-  attackCooldown: 1
+  attackedChance: 25
+  attackCooldown: 3
   attackIntensity: 5
   greenBorderAccelMin: 0.1
   greenBorderAccelMax: 0.3
