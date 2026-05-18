@@ -6,27 +6,23 @@ using UnityEngine;
 public class IdleFishingMinigame : MonoBehaviour
 {
     [Header ("References")]
-    [SerializeField] private RectTransform notesSpawnLocation;
-    public List<GameObject> availableNotes;
+    [SerializeField] private List<GameObject> notesSpawnLocation;
+    [SerializeField] private GameObject notes;
 
-    [Header ("Judgement Setting")]
-    [SerializeField] private int minNotes;
-    [SerializeField] private int maxNotes;
+    [Header ("Notes Setting")]
+    [SerializeField] private float minNoteSpawnTime = 0.5f;
+    [SerializeField] private float maxNoteSpawnTime = 1f;
+    [SerializeField] private float hitJudgement = 0.15f; 
 
-    private Queue<GameObject> currentNotes = new Queue<GameObject>();
+    private Queue<IdleFishingMinigameRing> currentNotes = new Queue<IdleFishingMinigameRing>();
 
     public FishingRodScript fishingRod;
     
-    private float timeoutMiss = 0f;
     void Update()
     {
-        if(timeoutMiss > 0) timeoutMiss -= Time.deltaTime;
-
         HandleInputs(); 
-        if(currentNotes.Count == 0 && timeoutMiss <= 0)
-        {
-            HandleNoteSpawns();
-        }
+        HandleNoteSpawns();
+        Pop(false);
 
         // Debug
         // if(currentNotes.Count > 0)
@@ -38,45 +34,58 @@ public class IdleFishingMinigame : MonoBehaviour
         // }
     }
 
-    void HandleNoteSpawns()
+    private IdleFishingMinigameRing top = null;
+    void Pop(bool forcePop)
     {
-        int toSpawn = UnityEngine.Random.Range(minNotes, maxNotes + 1);
+        if(currentNotes.Count == 0) return;
 
-        while(currentNotes.Count < toSpawn)
+        if(top == null) top = currentNotes.Peek().GetComponent<IdleFishingMinigameRing>();
+        if(!forcePop)
         {
-            int chosenNotes = UnityEngine.Random.Range(0, availableNotes.Count);
-            GameObject notesToSpawn = Instantiate(availableNotes[chosenNotes], notesSpawnLocation);
-            notesToSpawn.transform.localPosition = Vector3.zero;
-            notesToSpawn.transform.localScale = Vector3.one;
-
-            currentNotes.Enqueue(notesToSpawn);
+            if(top.GetJudgement() < -hitJudgement)
+            {
+                currentNotes.Dequeue();
+                top.Popped();
+            }
+            top = null;
+        }else
+        {
+            currentNotes.Dequeue();
+            top.Popped();
+            top = null;
         }
+
+        if(top == null && currentNotes.Count > 0) top = currentNotes.Peek().GetComponent<IdleFishingMinigameRing>();
     }
 
-    void PopNotes()
+    private float timeToSpawn = 0f;
+    void HandleNoteSpawns()
     {
-        GameObject buffer = currentNotes.Peek();
-        currentNotes.Dequeue();
-        Destroy(buffer);
+        timeToSpawn -= Time.deltaTime;
+        if(timeToSpawn > 0f) return;
+        timeToSpawn = UnityEngine.Random.Range(minNoteSpawnTime, maxNoteSpawnTime);
+        int typesRandom = UnityEngine.Random.Range(0, 2);
+
+        GameObject notesToSpawn = Instantiate(notes, notesSpawnLocation[typesRandom].transform);
+        if(typesRandom == 0) notesToSpawn.GetComponent<IdleFishingMinigameRing>().SetAttributes(KeyCode.Mouse0);
+        else notesToSpawn.GetComponent<IdleFishingMinigameRing>().SetAttributes(KeyCode.Mouse1);
+
+        currentNotes.Enqueue(notesToSpawn.GetComponent<IdleFishingMinigameRing>());
     }
 
     void HandleJudgment(KeyCode buttonPressed)
     {
         if(currentNotes.Count == 0) return;
 
-        KeyCode currentTopType = currentNotes.Peek().GetComponent<Notes>().notesType;
+        KeyCode currentTopType = currentNotes.Peek().GetComponent<IdleFishingMinigameRing>().GetNoteType();
         if(currentTopType == buttonPressed)
         {
-            // TODO adding what happened on hit
-            Debug.Log("Hit");
-            PopNotes();
-            fishingRod.duration -= 0.2f;
-        }else
-        {
-            Debug.Log("Miss");
-            // Reset on miss
-            while(currentNotes.Count > 0) PopNotes();
-            timeoutMiss = 1f;
+            if(top != null && top.GetJudgement() >= -hitJudgement && top.GetJudgement() <= hitJudgement)
+            {
+                Debug.Log("hit");
+                fishingRod.duration -= 0.2f;
+            }
+            Pop(true);
         }
     }
 
@@ -85,10 +94,8 @@ public class IdleFishingMinigame : MonoBehaviour
         if(currentNotes.Count > 0)
         {
             // for handling inputs
-            if(Input.GetKeyDown(KeyCode.UpArrow)) HandleJudgment(KeyCode.UpArrow);  
-            if(Input.GetKeyDown(KeyCode.LeftArrow)) HandleJudgment(KeyCode.LeftArrow);  
-            if(Input.GetKeyDown(KeyCode.DownArrow)) HandleJudgment(KeyCode.DownArrow);  
-            if(Input.GetKeyDown(KeyCode.RightArrow)) HandleJudgment(KeyCode.RightArrow);  
+            if(Input.GetKeyDown(KeyCode.Mouse0)) HandleJudgment(KeyCode.Mouse0);  
+            if(Input.GetKeyDown(KeyCode.Mouse1)) HandleJudgment(KeyCode.Mouse1);  
         }
     }
 }
