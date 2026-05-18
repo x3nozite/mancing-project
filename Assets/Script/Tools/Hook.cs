@@ -10,6 +10,12 @@ public class Hook : MonoBehaviour
 
     [SerializeField] private float maxDistance;
     [SerializeField] private float maxDeviationRadius;
+
+    private Vector2 startPoint;
+    private Vector2 failPoint;
+    private Vector2 successPoint;
+
+    public Action<bool> OnFishingFinished;
     public void Launch(float accuracy, Action hookFinish)
     {
         onCastFinished = hookFinish;
@@ -23,7 +29,7 @@ public class Hook : MonoBehaviour
 
         float currentDistance = Vector2.Distance(start, target);
 
-        if(currentDistance > maxDistance)
+        if (currentDistance > maxDistance)
         {
             Vector2 dir = (target - start).normalized;
             target = start + (dir * maxDistance);
@@ -33,6 +39,8 @@ public class Hook : MonoBehaviour
 
         Vector2 randomOffset = UnityEngine.Random.insideUnitCircle * errorRange;
         target += randomOffset;
+
+        SetMovementBoundaries(start, target);
 
         StartCoroutine(MoveHook(start, target, 1f, arcHeight));
     }
@@ -50,5 +58,35 @@ public class Hook : MonoBehaviour
             yield return null;
         }
         onCastFinished?.Invoke();
+    }
+
+    void SetMovementBoundaries(Vector2 start, Vector2 target)
+    {
+        startPoint = target;
+        successPoint = start;
+
+        Vector2 directionToFish = (target - start).normalized;
+        float distanceToFish = Vector2.Distance(start, target);
+
+        failPoint = target + (directionToFish * distanceToFish);
+    }
+
+    public void UpdateHookPosition(float progress)
+    {
+        transform.position = Vector2.Lerp(failPoint, successPoint, progress);
+        CheckHookPosition(progress);
+    }
+
+    void CheckHookPosition(float progress)
+    {
+        // unsuccessful
+        if(progress <= 0)
+        {
+            OnFishingFinished.Invoke(false);
+        }
+        else if(progress >= 1)
+        {
+            OnFishingFinished.Invoke(true);
+        }
     }
 }
