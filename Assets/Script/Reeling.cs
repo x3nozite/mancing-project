@@ -9,12 +9,13 @@ public class Reeling : MonoBehaviour
     [SerializeField] private Image greenRightImage;
     [SerializeField] private RectTransform arrowPivot;
     [SerializeField] [Range(0f, 1f)] private float greenLeftRange;
-    [SerializeField] [Range(0f, 1f)] private float greenRightRange;   
+    [SerializeField] private float gapSize = 0.2f;
 
     [SerializeField] private float progressGainAndLoss = 2; 
     private float fishProgress = 50;
 
     // Update is called once per frame
+    private float greenRightRange;
     void Update()
     {
         Debug.Log(fishProgress);
@@ -24,8 +25,37 @@ public class Reeling : MonoBehaviour
 
     void FixedUpdate()
     {
+        VariablesHandler();
         MoveArrow();
         HandleJudgement();
+        GreenBorderHandler();
+    }
+
+    [SerializeField] private float greenBorderAccelMin = 0.1f;
+    [SerializeField] private float greenBorderAccelMax = 0.3f;
+    float targetLeft = -1f;
+    float accel = 0f;
+    void GreenBorderHandler()
+    {
+        if(greenLeftRange != targetLeft && targetLeft != -1)
+        {
+            if(targetLeft < greenLeftRange)
+            {
+                greenLeftRange = Mathf.Max(targetLeft, greenLeftRange - accel * Time.deltaTime);
+            }else if(targetLeft > greenLeftRange)
+            {
+                greenLeftRange = Mathf.Min(targetLeft, greenLeftRange + accel * Time.deltaTime);
+            }
+            return;
+        }
+        accel = UnityEngine.Random.Range(greenBorderAccelMin, greenBorderAccelMax);
+        targetLeft = UnityEngine.Random.Range(0f, 1f - gapSize); 
+    }
+
+    void VariablesHandler()
+    {
+        greenRightRange = greenLeftRange + gapSize;
+        greenLeftRange = Mathf.Min(1f - gapSize, greenLeftRange);
     }
 
     void HandleJudgement()

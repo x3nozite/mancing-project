@@ -257,9 +257,11 @@ MonoBehaviour:
   greenLeftImage: {fileID: 3612248664120971295}
   greenRightImage: {fileID: 2760840684209929431}
   arrowPivot: {fileID: 4126000704562536280}
-  greenLeftRange: 0.2
-  greenRightRange: 0.5
+  greenLeftRange: 0
+  gapSize: 0.2
   progressGainAndLoss: 5
+  greenBorderAccelMin: 0.1
+  greenBorderAccelMax: 0.3
   arrowSensitifity: 0.3
   arrowSpeedLimit: 2
 --- !u!1 &2797221107055669260
