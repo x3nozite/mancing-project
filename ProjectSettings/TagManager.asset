@@ -7,6 +7,7 @@ TagManager:
   - PopUpRoot
   - Water
   - ItemMenu
+  - Ship
   layers:
   - Default
   - TransparentFX

@@ -10,9 +10,10 @@ public class Collectible : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("Player"))
+        if (col.isTrigger) return;
+        if (col.CompareTag("Player") || col.CompareTag("Ship"))
         {
-            Player player = col.GetComponent<Player>();
+            Player player = col.GetComponentInChildren<Player>();
             player.inventory.AddItem(itemInstance);
             player.inventory.OnInventoryChanged.Invoke();
             Destroy(gameObject);
