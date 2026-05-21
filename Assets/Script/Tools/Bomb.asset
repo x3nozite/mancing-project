@@ -18,7 +18,7 @@ MonoBehaviour:
   rank: 1
   sprite: {fileID: -2613247888821195678, guid: b5cc8a27772c2fd40b38210bdbcf42c3, type: 3}
   uiPrefab: {fileID: 0}
-  blastRadius: 10
-  throwDistance: 10
-  speed: 10
+  blastRadius: 1
+  throwDistance: 5
+  speed: 15
   environmentDamage: 25

@@ -8,6 +8,7 @@ public class ExplosiveManager : MonoBehaviour
     [SerializeField] private GameObject explosivePrefab;
     private ExplosiveScript explosiveObject;
     [SerializeField] private SpriteRenderer ownSpriteRenderer;
+    [SerializeField] private FishSpawner fishSpawner;
 
     public Inventory inventory;
 
@@ -26,6 +27,7 @@ public class ExplosiveManager : MonoBehaviour
             explosiveObject = newExplosive.GetComponent<ExplosiveScript>();
             explosiveObject.explosive = (Throwable)explosive.item;
             explosiveObject.spriteRenderer.sprite = explosive.item.sprite;
+            explosiveObject.fishSpawner = fishSpawner;
 
             explosiveObject.ThrowExplosive();
             inventory.ReduceItemQuantity(explosive, 1);
