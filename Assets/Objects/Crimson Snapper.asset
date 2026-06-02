@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d19f7cc3d010ea1408ebad79fac468e8, type: 3}
+  m_Name: Crimson Snapper
+  m_EditorClassIdentifier: Assembly-CSharp::Fish
+  itemName: Crimson Snapper
+  description: 
+  maxStack: 10
+  rank: 1
+  sprite: {fileID: -2111657281896581752, guid: 6e48985917e8de149a9fb1d1fd409e27, type: 3}
+  uiPrefab: {fileID: 0}
+  Tenacity: 0
+  chanceWeight: 0
