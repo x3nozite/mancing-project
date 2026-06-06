@@ -49,18 +49,18 @@ public class FishSpawner : MonoBehaviour
         if (fishPool == null || fishPool.Count == 0) return null;
 
         // determine rarity
-        float randomRoll = Random.Range(0f, 100f);
+        float randomRoll = Random.Range(1f, 100f);
         float currentChance = 0f;
         ItemRank selectedFishRank = ItemRank.Common;
-        //foreach(RankChance ranking in rankChances)
-        //{
-        //    currentChance += ranking.chance;
-        //    if(randomRoll < currentChance)
-        //    {
-        //        selectedFishRank = ranking.rank;
-        //        break;
-        //    }
-        //}
+        foreach(RankChance ranking in rankChances)
+        {
+           currentChance += ranking.chance;
+           if(randomRoll <= currentChance)
+           {
+               selectedFishRank = ranking.rank;
+               break;
+           }
+        }
 
         List<Fish> validFishes = fishPool.FindAll(f => f.rank == selectedFishRank);
 

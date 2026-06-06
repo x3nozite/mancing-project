@@ -3,17 +3,17 @@ using UnityEngine.Rendering.Universal;
 
 public class DayNightManager : MonoBehaviour
 {
-    [Header("Siklus Waktu")]
+    [Header("Time cycle")]
     public float lengthOfDayInSeconds = 120f; 
     [Range(0f, 1f)] public float currentTime = 0.25f; 
 
-    [Header("Palet Warna & Cahaya Global")]
+    [Header("Color & global light palette")]
     public Gradient dayNightGradient;
     public Light2D globalLight; 
 
-    [Header("Cahaya Player (Malam Hari)")]
+    [Header("Player Light")]
     public Light2D playerLight;
-    [Tooltip("Kurva untuk mengatur intensitas lampu player (0 = mati, 1 = terang)")]
+    [Tooltip("Curve for light intesity")]
     public AnimationCurve playerLightIntensityCurve;
 
     void Update()
