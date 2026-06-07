@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class FishSpawner : MonoBehaviour
 {
+    public SeaEnvironment seaEnvironment;
     [SerializeField] private GameObject collectiblePrefab;
     [System.Serializable]
     public struct RankChance
@@ -21,6 +22,15 @@ public class FishSpawner : MonoBehaviour
     public void SpawnSchoolOfFish(Vector3 spawnPos, float blastRadius)
     {
         int spawnCount = Random.Range(minFishSpawn, maxFishSpawn + 1);
+
+        if(seaEnvironment.fishPopulation <= 50f)
+        {
+            float healthPercent = seaEnvironment.fishPopulation / seaEnvironment.maxFishPopulation;
+
+            float randomRoll = Random.value;
+
+            if (randomRoll > healthPercent) spawnCount = 0;
+        }
 
         for (int i = 0; i < spawnCount; i++)
         {
@@ -69,4 +79,5 @@ public class FishSpawner : MonoBehaviour
         Fish chosenFish = validFishes[Random.Range(0, validFishes.Count)];
         return chosenFish;
     }
+
 }

@@ -9,6 +9,7 @@ public class ExplosiveScript : MonoBehaviour
     public GameObject explosionPrefab;
     public SpriteRenderer spriteRenderer;
     public FishSpawner fishSpawner;
+    public SeaEnvironment seaEnvironment;
     public void ThrowExplosive()
     {
         Vector3 start = transform.position;
@@ -45,6 +46,8 @@ public class ExplosiveScript : MonoBehaviour
         //trigger explosion
         StartExplosion();
         fishSpawner.SpawnSchoolOfFish(target, explosive.blastRadius);
+        //reduce environment health
+        seaEnvironment.decreaseFishPopulation(20f);
         Destroy(gameObject);
     }
 
