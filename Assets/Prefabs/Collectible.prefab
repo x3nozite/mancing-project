@@ -50,6 +50,9 @@ MonoBehaviour:
   sprite: {fileID: 4821289640525700047}
   quantity: 1
   level: 1
+  floatSpeed: 2
+  amplitude: 0.25
+  rotateSpeed: 100
 --- !u!61 &9108761362430033283
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -143,7 +146,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -600640595
   m_SortingLayer: 1
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 8995154407686431259, guid: 5eb06de9f19c43046a0a29a2becf8568, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

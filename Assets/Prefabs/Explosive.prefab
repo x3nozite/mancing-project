@@ -80,7 +80,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -600640595
   m_SortingLayer: 1
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2613247888821195678, guid: b5cc8a27772c2fd40b38210bdbcf42c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -108,3 +108,4 @@ MonoBehaviour:
   explosive: {fileID: 0}
   explosionPrefab: {fileID: 3155876497826101591, guid: 48416e844260d534a9fbbf3ac96ef400, type: 3}
   spriteRenderer: {fileID: 2039280171916274080}
+  fishSpawner: {fileID: 0}
