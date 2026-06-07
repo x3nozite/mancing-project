@@ -16,6 +16,8 @@ MonoBehaviour:
   description: tets object
   maxStack: 1
   rank: 1
-  sprite: {fileID: -4424780041397978121, guid: 2146a8b95cdda7af68e724abbde36771, type: 3}
+  sprite: {fileID: -4332138556418214985, guid: 16fd8ad55f5c6e641b1de7c0a686642f, type: 3}
   uiPrefab: {fileID: 0}
   luck: 100
+  RodOnlySprite: {fileID: 3494372877584107510, guid: 166094e3a9a46c34c8906f85c8c11ddd, type: 3}
+  HookOnlySprite: {fileID: 3494372877584107510, guid: 166094e3a9a46c34c8906f85c8c11ddd, type: 3}

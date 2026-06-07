@@ -30,10 +30,9 @@ public class FishingRodScript : MonoBehaviour
     private Hook hookScript;
     void Awake()
     {
-        spriteRenderer.sprite = fishingRod.FishingRodSprite;
+        spriteRenderer.sprite = fishingRod.RodOnlySprite;
         transform.SetParent(player.transform);
         transform.localPosition = new Vector2(0.4f, 0f);
-        transform.rotation = Quaternion.Euler(0f, 0f, -45f);
     }
 
     void Update()
@@ -75,7 +74,7 @@ public class FishingRodScript : MonoBehaviour
     public void SetItem(FishingRodData item)
     {
         fishingRod = item;
-        spriteRenderer.sprite = fishingRod.FishingRodSprite;
+        spriteRenderer.sprite = fishingRod.RodOnlySprite;
     }
 
     void HandleCastConfirmed(float accuracy)
@@ -87,9 +86,11 @@ public class FishingRodScript : MonoBehaviour
 
     void CastRod(float accuracy)
     {
+        
         hook.transform.SetParent(null);
         hook.transform.position = rodTip.transform.position;
         hookScript = hook.GetComponentInChildren<Hook>();
+        hookScript.spriteRenderer.enabled = true;
         hookScript.Launch(accuracy, OnHookCastFinished);
     }
 
@@ -97,6 +98,8 @@ public class FishingRodScript : MonoBehaviour
     {
         hook.transform.SetParent(gameObject.transform);
         hook.transform.position = rodTip.transform.position;
+        hookScript = hook.GetComponentInChildren<Hook>();
+        hookScript.spriteRenderer.enabled = false;
     }
 
     void OnHookCastFinished()

@@ -10,6 +10,7 @@ public class Hook : MonoBehaviour
 
     [SerializeField] private float maxDistance;
     [SerializeField] private float maxDeviationRadius;
+    public SpriteRenderer spriteRenderer;
 
     private Vector2 startPoint;
     private Vector2 failPoint;
