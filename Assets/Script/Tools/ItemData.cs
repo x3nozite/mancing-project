@@ -19,6 +19,7 @@ public class ItemData : ScriptableObject
         case ItemRank.Common: return new Color32(147, 147, 147, 255);
         case ItemRank.Uncommon: return new Color32(89, 178, 31, 255);
         case ItemRank.Rare: return new Color32(40, 126, 224, 255);
+                case ItemRank.Mythical: return new Color32(236, 170, 45, 255);
         default: return new Color32(255, 255, 255, 255);
       }
     }
