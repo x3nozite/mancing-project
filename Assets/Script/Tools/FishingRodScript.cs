@@ -25,9 +25,13 @@ public class FishingRodScript : MonoBehaviour
 
     public FishingState state = FishingState.Idle;
     public float duration;
-    private float currentTime;
+    public float currentTime;
 
     private Hook hookScript;
+
+    public FishSpawner fishSpawner;
+    public Inventory inventory;
+    public SeaEnvironment seaEnvironment;
     void Awake()
     {
         spriteRenderer.sprite = fishingRod.RodOnlySprite;
@@ -45,13 +49,12 @@ public class FishingRodScript : MonoBehaviour
             state = FishingState.Casting;
         }
 
-        // TEMPORARY. ONLY FOR TESTING
         if (state == FishingState.Waiting)
         {
-            if(currentTime < duration)
+            if (currentTime < duration)
             {
                 currentTime += Time.deltaTime;
-                if(currentTime >= duration)
+                if (currentTime >= duration)
                 {
                     StopWaitingMinigame();
                     StartReelingMinigame();
@@ -60,7 +63,7 @@ public class FishingRodScript : MonoBehaviour
             }
         }
 
-        if( state != FishingState.Idle)
+        if (state != FishingState.Idle)
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
@@ -86,7 +89,7 @@ public class FishingRodScript : MonoBehaviour
 
     void CastRod(float accuracy)
     {
-        
+
         hook.transform.SetParent(null);
         hook.transform.position = rodTip.transform.position;
         hookScript = hook.GetComponentInChildren<Hook>();
@@ -151,7 +154,14 @@ public class FishingRodScript : MonoBehaviour
     {
         if (success)
         {
-            Debug.Log("success");
+            if (seaEnvironment.fishPopulation > 5f)
+            {
+                Debug.Log("sucess");
+                Fish newFish = fishSpawner.GetRandomFish();
+                ItemInstance newItem = new ItemInstance { item = newFish, quantity = 1, level = 1 };
+                inventory.AddItem(newItem);
+            }
+
         }
         else
         {

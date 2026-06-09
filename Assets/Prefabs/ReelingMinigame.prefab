@@ -258,8 +258,8 @@ MonoBehaviour:
   greenRightImage: {fileID: 2760840684209929431}
   arrowPivot: {fileID: 4126000704562536280}
   greenLeftRange: 0
-  gapSize: 0.2
-  progressGainAndLoss: 5
+  gapSize: 0.4
+  progressGainAndLoss: 10
   attackedChance: 25
   attackCooldown: 3
   attackIntensity: 5

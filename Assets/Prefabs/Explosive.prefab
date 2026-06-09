@@ -109,3 +109,5 @@ MonoBehaviour:
   explosionPrefab: {fileID: 3155876497826101591, guid: 48416e844260d534a9fbbf3ac96ef400, type: 3}
   spriteRenderer: {fileID: 2039280171916274080}
   fishSpawner: {fileID: 0}
+  seaEnvironment: {fileID: 0}
+  environmentDamage: 10

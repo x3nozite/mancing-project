@@ -23,7 +23,7 @@ public class FishSpawner : MonoBehaviour
     {
         int spawnCount = Random.Range(minFishSpawn, maxFishSpawn + 1);
 
-        if(seaEnvironment.fishPopulation <= 50f)
+        if (seaEnvironment.fishPopulation <= 50f)
         {
             float healthPercent = seaEnvironment.fishPopulation / seaEnvironment.maxFishPopulation;
 
@@ -35,7 +35,7 @@ public class FishSpawner : MonoBehaviour
         for (int i = 0; i < spawnCount; i++)
         {
             Fish chosenFish = GetRandomFish();
-            ItemInstance newFish = new ItemInstance { item = chosenFish, level = 1, quantity = 1};
+            ItemInstance newFish = new ItemInstance { item = chosenFish, level = 1, quantity = 1 };
 
             Vector3 randomOffset = RandomizeFishSpawnOffset(blastRadius);
             GameObject fishObj = Instantiate(collectiblePrefab, spawnPos + randomOffset, Quaternion.identity);
@@ -54,7 +54,7 @@ public class FishSpawner : MonoBehaviour
         return offset;
     }
 
-    Fish GetRandomFish()
+    public Fish GetRandomFish()
     {
         if (fishPool == null || fishPool.Count == 0) return null;
 
@@ -62,14 +62,14 @@ public class FishSpawner : MonoBehaviour
         float randomRoll = Random.Range(1f, 100f);
         float currentChance = 0f;
         ItemRank selectedFishRank = ItemRank.Common;
-        foreach(RankChance ranking in rankChances)
+        foreach (RankChance ranking in rankChances)
         {
-           currentChance += ranking.chance;
-           if(randomRoll <= currentChance)
-           {
-               selectedFishRank = ranking.rank;
-               break;
-           }
+            currentChance += ranking.chance;
+            if (randomRoll <= currentChance)
+            {
+                selectedFishRank = ranking.rank;
+                break;
+            }
         }
 
         List<Fish> validFishes = fishPool.FindAll(f => f.rank == selectedFishRank);
